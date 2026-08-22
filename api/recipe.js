@@ -1,10 +1,8 @@
-// PantryPulse — recipe query proxy -> Bhavya's Apps Script on the Recipe Master sheet.
-// GET /api/recipe?dish=<name>  -> { matches:[{dish,score,rows:[[ing,perAdult,unit,class],...]}] }
-const APPS = ''; // <- paste the Apps Script /exec URL here
-const KEY = ''; // <- shared secret (same as SECRET in the script)
+// PantryPulse — recipe query proxy -> Apps Script on Recipe Master sheet.
+const APPS = 'https://script.google.com/macros/s/AKfycbyw2-4MILZ-u-CjhTcoCmqZNiOJIaVgj7QDWRXTvgrsC1ME8Uqs43gTbzLq8wFtST6j9A/exec';
+const KEY = 'pp';
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
-  if (!APPS) { res.status(503).json({ error: 'apps-script URL not configured yet' }); return; }
   try {
     const r = await fetch(APPS + '?key=' + encodeURIComponent(KEY) + '&q=' + encodeURIComponent(req.query.dish || ''), { redirect: 'follow' });
     const txt = await r.text();
