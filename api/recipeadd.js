@@ -1,12 +1,10 @@
-// PantryPulse — append a NEW recipe (from Rasoi) into Recipe Master, as Bhavya, dupe-guarded.
-// POST /api/recipeadd { dish, rows:[[ingredient, perAdultQty, unit, class],...] }
-const APPS = ''; // <- same Apps Script /exec URL
-const KEY = ''; // <- same shared secret
+// PantryPulse — append NEW recipe (Rasoi) into Recipe Master, dupe-guarded, append-only.
+const APPS = 'https://script.google.com/macros/s/AKfycbyw2-4MILZ-u-CjhTcoCmqZNiOJIaVgj7QDWRXTvgrsC1ME8Uqs43gTbzLq8wFtST6j9A/exec';
+const KEY = 'pp';
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   if (req.method === 'OPTIONS') { res.status(204).end(); return; }
-  if (!APPS) { res.status(503).json({ error: 'apps-script URL not configured yet' }); return; }
   try {
     const b = req.body || {};
     const r = await fetch(APPS, { method: 'POST', headers: { 'Content-Type': 'application/json' },
