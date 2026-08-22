@@ -429,7 +429,7 @@ function ppDeductionAudit(wb){
 }
 window.ppDeductionAudit=ppDeductionAudit;
 
-const BUILD='v21_565'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
+const BUILD='v21_566'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
 const SEED={date:'2026-07-12',currentHouse:null,dishes:[],__build:BUILD,houses:[]};function __reseedFromEmbed(){try{if(!window.__EMBEDDED_WB_B64__)return false;var bs=atob(window.__EMBEDDED_WB_B64__);var ua=new Uint8Array(bs.length);for(var i=0;i<bs.length;i++)ua[i]=bs.charCodeAt(i);var st=parseWorkbookToApp(ua);if(st&&st.houses&&st.houses.length){S=st;try{rollDate();}catch(e){}try{applyAllSubs();}catch(e){}try{save();}catch(e){}return true;}}catch(e){}return false;}
 /* ===== household data is loaded at runtime from PantryPulse-MASTER.xlsx (thin app, no baked data) ===== */
 function _wb_num(v){var n=parseFloat(v);return isNaN(n)?0:n;}
@@ -1582,6 +1582,37 @@ function ppSyncPlans(force,manual){if(typeof fetch==='undefined')return;window.L
    fetch('https://smart-meal-planner-40.emergent.host/api/plans/by-house?house='+encodeURIComponent(nm)).then(function(r){return r.json();}).then(function(plans){var now=new Date(Date.now()+5.5*3600e3);var d=new Date(Date.UTC(now.getUTCFullYear(),now.getUTCMonth(),now.getUTCDate()));var dy=d.getUTCDay()||7;d.setUTCDate(d.getUTCDate()+4-dy);var y=d.getUTCFullYear();var wk=Math.ceil((((d-Date.UTC(y,0,1))/86400000)+1)/7);var want=y+'-W'+String(wk).padStart(2,'0');var pl=null;plans.forEach(function(p){if(p.week===want)pl=p;});if(!pl){plans.sort(function(a,b){return String(b.week).localeCompare(String(a.week));});pl=plans.filter(function(p){return String(p.week)<=want;})[0]||plans[0];}return fetch('https://smart-meal-planner-40.emergent.host/api/plans/'+pl.id);}).then(function(r){return r.json();}).then(function(f){apply({weekly_menu:f.weekly_menu});}).catch(fail);});});}
 function ppEnsureSyncBtn(){try{if(typeof document==='undefined'||document.getElementById('ppSyncBtn'))return;var b=document.createElement('button');b.id='ppSyncBtn';b.textContent='\u27F3 Sync Emergent';b.style.cssText='position:fixed;right:14px;bottom:14px;z-index:9999;padding:10px 16px;border-radius:24px;border:0;background:#1c5c33;color:#fff;font-weight:700;box-shadow:0 4px 14px rgba(0,0,0,.25);cursor:pointer;font-size:13px';b.onclick=function(){b.textContent='\u27F3 syncing\u2026';ppSyncPlans(true,true);setTimeout(function(){var x=document.getElementById('ppSyncBtn');if(x)x.textContent='\u27F3 Sync Emergent';},2500);};document.body.appendChild(b);}catch(e){}}
 setTimeout(function(){try{ppEnsureSyncBtn();ppSyncPlans(false,false);setInterval(ppEnsureSyncBtn,3000);setInterval(function(){ppSyncPlans(false,false);},10*60*1000);}catch(e){}},2500);
+/* ===== Phase 2: dish -> recipe-repo fuzzy match -> Rasoi breakdown -> handover needs ===== */
+var PP_SHEET_CACHE=null,PP_SHEET_AT=0;
+function ppCsvParse(t){var rows=[],row=[],cur='',q=false;for(var i=0;i<t.length;i++){var c=t[i];if(q){if(c=='"'){if(t[i+1]=='"'){cur+='"';i++;}else q=false;}else cur+=c;}else{if(c=='"')q=true;else if(c==','){row.push(cur);cur='';}else if(c=='\n'){row.push(cur);rows.push(row);row=[];cur='';}else if(c!='\r')cur+=c;}}if(cur!==''||row.length){row.push(cur);rows.push(row);}return rows;}
+function ppSheetRows(cb){var now=Date.now();if(PP_SHEET_CACHE&&now-PP_SHEET_AT<30*60*1000){cb(PP_SHEET_CACHE);return;}
+ fetch('/api/sheet').then(function(r){if(!r.ok)throw 0;return r.text();}).then(function(t){var rows=ppCsvParse(t);if(!rows.length){cb([]);return;}
+  var hd=rows[0].map(function(x){return String(x).toLowerCase();});
+  function col(pats){for(var i=0;i<hd.length;i++){for(var p=0;p<pats.length;p++){if(hd[i].indexOf(pats[p])>=0)return i;}}return -1;}
+  var cH=col(['hh','house']),cI=col(['item','dish','recipe']),cY=col(['youtube','link','url']),cN=col(['note']);
+  var out=rows.slice(1).map(function(r){return {hh:cH>=0?r[cH]:'',item:cI>=0?r[cI]:'',yt:cY>=0?r[cY]:'',notes:cN>=0?r[cN]:''};}).filter(function(x){return x.item;});
+  PP_SHEET_CACHE=out;PP_SHEET_AT=now;cb(out);}).catch(function(){cb(PP_SHEET_CACHE||[]);});}
+function ppTok(s){return String(s||'').toLowerCase().replace(/[^a-z0-9 ]/g,' ').split(/\s+/).filter(function(w){return w.length>2&&['the','and','with','for'].indexOf(w)<0;});}
+function ppFuzzy(dish,rows,house){var dt=ppTok(dish);var best=null,bs=0;rows.forEach(function(r){if(r.hh&&house&&r.hh.toLowerCase().indexOf(house.split(' ')[0].toLowerCase())<0&&r.hh.trim()!=='')return;var rt=ppTok(r.item);if(!rt.length)return;var inter=rt.filter(function(w){return dt.indexOf(w)>=0;}).length;var sc=inter/Math.max(rt.length,1);if(sc>bs){bs=sc;best=r;}});return bs>=0.5?best:null;}
+function ppParseNeeds(js){var arr=(js&&(js.ingredients||js.items||(js.recipe&&js.recipe.ingredients)))||[];if(!Array.isArray(arr))return [];
+ return arr.map(function(x){var n=x.name||x.item||x.ingredient||'';var q=parseFloat(x.quantity||x.qty||x.amount)||0;var u=String(x.unit||'g');return [String(n).slice(0,60),String(n).toLowerCase().replace(/[^a-z0-9]/g,''),q,u,'rasoi'];}).filter(function(t){return t[0];});}
+function ppInlineNeeds(line){var out=[];var re=/([A-Za-z ]{3,30})\s*\((\d+(?:\.\d+)?)\s*(g|gm|ml|kg|pc)s?\)/g;var m;while((m=re.exec(line))){var q=parseFloat(m[2]);var u=m[3]==='kg'?'g':(m[3]==='gm'?'g':m[3]);if(m[3]==='kg')q*=1000;out.push([m[1].trim(),m[1].toLowerCase().replace(/[^a-z0-9]/g,''),q,u,'plan']);}return out;}
+function ppEnrich(house,dayKey,done){var lp=window.LIVEPLANS&&window.LIVEPLANS[house];if(!lp||!lp[dayKey]){if(done)done(0);return;}
+ var jobs=[];['B','L','D'].forEach(function(sl){(lp[dayKey][sl]||[]).forEach(function(ent){var line=ent[0]||'';if(!line||line.charAt(0)==='('||(ent[1]&&ent[1].length))return;jobs.push({sl:sl,ent:ent,line:line});});});
+ if(!jobs.length){if(done)done(0);return;} var i=0,enriched=0;
+ ppSheetRows(function(rows){(function next(){if(i>=jobs.length||i>=15){try{paint();}catch(e){}if(done)done(enriched);return;}
+  var j=jobs[i++];var key='ppbk_'+j.line.toLowerCase().replace(/[^a-z0-9]/g,'').slice(0,60);
+  var cached=null;try{cached=localStorage.getItem(key);}catch(e){}
+  if(cached){try{j.ent[1]=JSON.parse(cached);enriched++;}catch(e){}next();return;}
+  var inline=ppInlineNeeds(j.line);var match=ppFuzzy(j.line,rows,house);
+  fetch('/api/rasoi',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({dish:j.line.slice(0,120),youtube_url:match?match.yt:undefined,notes:match?match.notes:undefined})})
+   .then(function(r){return r.json();}).then(function(js){var needs=ppParseNeeds(js);if(!needs.length)needs=inline;
+     if(match&&match.notes)needs.push(['NOTE: '+String(match.notes).slice(0,80),'note',0,'','sheet']);
+     j.ent[1]=needs;enriched++;try{localStorage.setItem(key,JSON.stringify(needs));}catch(e){}next();})
+   .catch(function(){if(inline.length){j.ent[1]=inline;enriched++;try{localStorage.setItem(key,JSON.stringify(inline));}catch(e){}}next();});})();});}
+function ppEnrichTomorrow(){try{var t=new Date(Date.now()+5.5*3600e3);t.setUTCDate(t.getUTCDate()+1);var dk=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][t.getUTCDay()];
+ PP_LIVE_HOUSES.forEach(function(nm){ppEnrich(nm,dk,null);});}catch(e){}}
+setInterval(ppEnrichTomorrow,12*60*1000);setTimeout(ppEnrichTomorrow,20000);
 function setMealPeople(v){UI.meal.people=Math.max(1,parseInt(v)||cur().people);paint();}
 
 /* Portions & learning (dish-role model) */
@@ -2282,7 +2313,7 @@ function _boot(){
   // paint FIRST so the UI always comes up, even if a later step misbehaves
   try{paint();}catch(e){try{var v=document.getElementById('view');if(v)v.innerHTML='<div class="card"><div class="eyebrow">Notice</div><h2>Couldn\u2019t render this view</h2><div class="note">'+(e&&e.message||'error')+'</div></div>';}catch(_){}}
   try{applyAllSubs();paint();}catch(e){}
-  try{var __eid='PP_EMBED::MASTER_639::v21_565';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{var _su2=_sheetUrl();if(_su2){loadFromUrl(_su2);}else{hydrate();}}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{var _su=_sheetUrl();if(_su){loadFromUrl(_su);}else{hydrate();}}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
+  try{var __eid='PP_EMBED::MASTER_639::v21_566';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{var _su2=_sheetUrl();if(_su2){loadFromUrl(_su2);}else{hydrate();}}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{var _su=_sheetUrl();if(_su){loadFromUrl(_su);}else{hydrate();}}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
   try{armMidnightRoll();}catch(e){}
 }
 // Fire boot as soon as the DOM is usable, with multiple safety nets. _boot is idempotent.
