@@ -429,7 +429,7 @@ function ppDeductionAudit(wb){
 }
 window.ppDeductionAudit=ppDeductionAudit;
 
-const BUILD='v21_588'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
+const BUILD='v21_590'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
 const SEED={date:'2026-07-12',currentHouse:null,dishes:[],__build:BUILD,houses:[]};function __reseedFromEmbed(){try{if(!window.__EMBEDDED_WB_B64__)return false;var bs=atob(window.__EMBEDDED_WB_B64__);var ua=new Uint8Array(bs.length);for(var i=0;i<bs.length;i++)ua[i]=bs.charCodeAt(i);var st=parseWorkbookToApp(ua);if(st&&st.houses&&st.houses.length){S=st;try{rollDate();}catch(e){}try{applyAllSubs();}catch(e){}try{save();}catch(e){}return true;}}catch(e){}return false;}
 /* ===== household data is loaded at runtime from PantryPulse-MASTER.xlsx (thin app, no baked data) ===== */
 function _wb_num(v){var n=parseFloat(v);return isNaN(n)?0:n;}
@@ -1628,7 +1628,7 @@ function ppEnrich(house,dayKey,done,wk){wk=wk||ppIstWeek(0);var store=(window.LI
   var j=jobs[i++];var advanced=false;
   function go(){if(advanced)return;advanced=true;setTimeout(next,60);}   // GUARANTEE: always advance once
   var guard=setTimeout(go,12000);                                        // hard timeout per dish
-  function done1(needs,tag){clearTimeout(guard);if(needs&&needs.length){j.ent[1]=needs;enriched++;try{localStorage.setItem(ckey,JSON.stringify(needs));}catch(e){}try{if(typeof TAB!=='undefined'&&TAB==='Handover'){if(window.__hovRepaintT)clearTimeout(window.__hovRepaintT);window.__hovRepaintT=setTimeout(function(){try{paint();}catch(e){}},300);}}catch(e){}}go();}
+  function done1(needs,tag){clearTimeout(guard);if(needs&&needs.length){j.ent[1]=needs;enriched++;try{localStorage.setItem(ckey,JSON.stringify(needs));}catch(e){}}else{j.ent[1]=[['(no recipe found — add to sheet)','__none',0,'','none']];enriched++;try{localStorage.setItem(ckey,JSON.stringify(j.ent[1]));}catch(e){}}try{if(typeof TAB!=='undefined'&&TAB==='Handover'){if(window.__hovRepaintT)clearTimeout(window.__hovRepaintT);window.__hovRepaintT=setTimeout(function(){try{paint();}catch(e){}},300);}}catch(e){}go();}
   var clean=ppCleanDish(j.line);var _firstSeg=clean.split(/\s+(?:with|and)\s+/i)[0].trim();if(_firstSeg&&_firstSeg.length>=4&&_firstSeg.length<clean.length)clean=_firstSeg;var pax=lp[dayKey]['p'+j.sl]||2;
   var ckey='ppbk3_'+clean.toLowerCase().replace(/[^a-z0-9]/g,'').slice(0,60)+'_'+pax;
   var cached=null;try{cached=localStorage.getItem(ckey);}catch(e){}
@@ -1653,9 +1653,18 @@ function ppEnrich(house,dayKey,done,wk){wk=wk||ppIstWeek(0);var store=(window.LI
  next();
 }
 function ppEnrichAll(){try{var weeks={};weeks[ppIstWeek(0)]=1;weeks[ppIstWeek(7)]=1;try{if(window.LIVEPLANS_W)for(var w in window.LIVEPLANS_W)weeks[w]=1;}catch(e){}
- var DK=['Mon','Tue','Wed','Thu','Fri','Sat'];var q=[];
- Object.keys(weeks).forEach(function(wk){PP_LIVE_HOUSES.forEach(function(nm){DK.forEach(function(dk){q.push([nm,dk,wk]);});});});
- var i=0;(function step(){if(i>=q.length)return;var job=q[i++];ppEnrich(job[0],job[1],function(){setTimeout(step,150);},job[2]);})();}catch(e){}}
+ var DK=['Mon','Tue','Wed','Thu','Fri','Sat'];
+ // prioritise the currently-viewed house first, then the rest
+ var viewed='';try{viewed=hovKeyName(cur().name);}catch(e){}
+ var houses=PP_LIVE_HOUSES.slice();if(viewed){houses=houses.filter(function(x){return x!==viewed&&x!==(HOV_NAME[viewed]||'');});houses.unshift(viewed);}
+ var curWk=ppIstWeek(0);
+ // each HOUSE runs its own day-queue; houses run in PARALLEL so no house waits for another
+ houses.forEach(function(nm,hix){
+  var jobs=[];Object.keys(weeks).forEach(function(wk){DK.forEach(function(dk){jobs.push([dk,wk]);});});
+  // current week days first for this house
+  jobs.sort(function(a,b){return (a[1]===curWk?0:1)-(b[1]===curWk?0:1);});
+  var qi=0;setTimeout(function run(){if(qi>=jobs.length)return;var jb=jobs[qi++];ppEnrich(nm,jb[0],function(){setTimeout(run,80);},jb[1]);},hix*120);
+ });}catch(e){}}
 function ppEnrichTomorrow(){ppEnrichAll();}
 setTimeout(function(){try{window.LIVEPLANS_W=window.LIVEPLANS_W||{};var wkC=ppIstWeek(0),wkN=ppIstWeek(7);[['2026-W34',null],[wkC,null],[wkN,null]].forEach(function(pair){var wk=pair[0];if(!window.LIVEPLANS_W[wk])window.LIVEPLANS_W[wk]={};PP_LIVE_HOUSES.forEach(function(nm){var kn=(typeof hovKeyName==='function')?hovKeyName(nm):nm;var baked=AI_HANDOVER[kn]||AI_HANDOVER[nm];if(baked){var obj=window.LIVEPLANS_W[wk][nm]||JSON.parse(JSON.stringify(baked));window.LIVEPLANS_W[wk][nm]=obj;window.LIVEPLANS_W[wk][kn]=obj;}});});}catch(e){}},1000);setInterval(ppEnrichAll,12*60*1000);setTimeout(ppEnrichAll,15000);
 function setMealPeople(v){UI.meal.people=Math.max(1,parseInt(v)||cur().people);paint();}
@@ -2358,7 +2367,7 @@ function _boot(){
   // paint FIRST so the UI always comes up, even if a later step misbehaves
   try{paint();}catch(e){try{var v=document.getElementById('view');if(v)v.innerHTML='<div class="card"><div class="eyebrow">Notice</div><h2>Couldn\u2019t render this view</h2><div class="note">'+(e&&e.message||'error')+'</div></div>';}catch(_){}}
   try{applyAllSubs();paint();}catch(e){}
-  try{var __eid='PP_EMBED::MASTER_644::v21_588';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{var _su2=_sheetUrl();if(_su2){loadFromUrl(_su2);}else{hydrate();}}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{var _su=_sheetUrl();if(_su){loadFromUrl(_su);}else{hydrate();}}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
+  try{var __eid='PP_EMBED::MASTER_644::v21_590';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{var _su2=_sheetUrl();if(_su2){loadFromUrl(_su2);}else{hydrate();}}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{var _su=_sheetUrl();if(_su){loadFromUrl(_su);}else{hydrate();}}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
   try{armMidnightRoll();}catch(e){}
 }
 // Fire boot as soon as the DOM is usable, with multiple safety nets. _boot is idempotent.
