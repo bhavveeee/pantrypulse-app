@@ -429,7 +429,7 @@ function ppDeductionAudit(wb){
 }
 window.ppDeductionAudit=ppDeductionAudit;
 
-const BUILD='v21_573'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
+const BUILD='v21_574'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
 const SEED={date:'2026-07-12',currentHouse:null,dishes:[],__build:BUILD,houses:[]};function __reseedFromEmbed(){try{if(!window.__EMBEDDED_WB_B64__)return false;var bs=atob(window.__EMBEDDED_WB_B64__);var ua=new Uint8Array(bs.length);for(var i=0;i<bs.length;i++)ua[i]=bs.charCodeAt(i);var st=parseWorkbookToApp(ua);if(st&&st.houses&&st.houses.length){S=st;try{rollDate();}catch(e){}try{applyAllSubs();}catch(e){}try{save();}catch(e){}return true;}}catch(e){}return false;}
 /* ===== household data is loaded at runtime from PantryPulse-MASTER.xlsx (thin app, no baked data) ===== */
 function _wb_num(v){var n=parseFloat(v);return isNaN(n)?0:n;}
@@ -786,13 +786,12 @@ function hovSuggest(nm,L){var dl=hovCanon(nm);var dt=hovTok(dl);var best=null;
 
 
 /* v21_470: day locking — past days freeze at their at-the-time status */
-const HOV_CLOSED='Sun'; /* W34: board closed through Sun 16 Aug; no W34 day closed yet */ /* board closed through this day (14-Aug EOD) — set at every Claude close */
+const HOV_CLOSED='Sun';const HOV_CLOSED_WEEK='2026-W34';/* close applies to this ISO week only */ /* W34: board closed through Sun 16 Aug; no W34 day closed yet */ /* board closed through this day (14-Aug EOD) — set at every Claude close */
 function hovTodayIdx(){var cal=0;try{var yr=new Date().getFullYear();var t=new Date();t.setHours(0,0,0,0);cal=HOV_DAYS.length;
  for(var i=0;i<HOV_DAYS.length;i++){var p=HOV_DAYS[i][1].split(' ');var d=new Date(p[1]+' '+p[2]+' '+yr);d.setHours(0,0,0,0);
   if(d.getTime()===t.getTime()){cal=i;break;} if(d>t){cal=i;break;} }
  }catch(e){cal=0;}
- var ci=['Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(typeof HOV_CLOSED!=='undefined'?HOV_CLOSED:'')+1;
- return Math.max(cal,ci); }
+ var _cw;try{var nw=new Date(Date.now()+5.5*3600e3);var dd=new Date(Date.UTC(nw.getUTCFullYear(),nw.getUTCMonth(),nw.getUTCDate()));var dy=dd.getUTCDay()||7;dd.setUTCDate(dd.getUTCDate()+4-dy);var yy=dd.getUTCFullYear();var wk=Math.ceil((((dd-Date.UTC(yy,0,1))/86400000)+1)/7);_cw=yy+'-W'+String(wk).padStart(2,'0');}catch(e){_cw='';}var ci=0;if(typeof HOV_CLOSED_WEEK==='undefined'||HOV_CLOSED_WEEK===_cw){ci=['Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(typeof HOV_CLOSED!=='undefined'?HOV_CLOSED:'')+1;} return Math.max(cal,ci); }
 function hovLockOf(key){try{S.hovLock=S.hovLock||{};S.hovLock[key]=S.hovLock[key]||{};return S.hovLock[key];}catch(e){return {};}}
 
 /* ===== v21_476: merged admin checks + urgent attention ===== */
@@ -2330,7 +2329,7 @@ function _boot(){
   // paint FIRST so the UI always comes up, even if a later step misbehaves
   try{paint();}catch(e){try{var v=document.getElementById('view');if(v)v.innerHTML='<div class="card"><div class="eyebrow">Notice</div><h2>Couldn\u2019t render this view</h2><div class="note">'+(e&&e.message||'error')+'</div></div>';}catch(_){}}
   try{applyAllSubs();paint();}catch(e){}
-  try{var __eid='PP_EMBED::MASTER_644::v21_573';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{var _su2=_sheetUrl();if(_su2){loadFromUrl(_su2);}else{hydrate();}}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{var _su=_sheetUrl();if(_su){loadFromUrl(_su);}else{hydrate();}}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
+  try{var __eid='PP_EMBED::MASTER_644::v21_574';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{var _su2=_sheetUrl();if(_su2){loadFromUrl(_su2);}else{hydrate();}}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{var _su=_sheetUrl();if(_su){loadFromUrl(_su);}else{hydrate();}}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
   try{armMidnightRoll();}catch(e){}
 }
 // Fire boot as soon as the DOM is usable, with multiple safety nets. _boot is idempotent.
