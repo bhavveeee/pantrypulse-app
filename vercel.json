@@ -1,0 +1,19 @@
+{
+  "functions": {
+    "api/recipe.js": {
+      "maxDuration": 60
+    },
+    "api/recipeadd.js": {
+      "maxDuration": 60
+    },
+    "api/rasoi.js": {
+      "maxDuration": 60
+    },
+    "api/emergent.js": {
+      "maxDuration": 30
+    },
+    "api/sheet.js": {
+      "maxDuration": 30
+    }
+  }
+}
