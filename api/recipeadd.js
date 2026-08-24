@@ -1,4 +1,6 @@
 // PantryPulse — append NEW recipe (Rasoi) into Recipe Master, dupe-guarded, append-only.
+// Vercel Pro: allow a longer run — Apps Script and Rasoi can take 10-30s.
+export const config = { maxDuration: 60 };
 const APPS = 'https://script.google.com/macros/s/AKfycbyw2-4MILZ-u-CjhTcoCmqZNiOJIaVgj7QDWRXTvgrsC1ME8Uqs43gTbzLq8wFtST6j9A/exec';
 const KEY = 'pp';
 export default async function handler(req, res) {
