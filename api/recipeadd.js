@@ -1,17 +1,33 @@
-// PantryPulse — append NEW recipe (Rasoi) into Recipe Master, dupe-guarded, append-only.
-// Prefer Vercel env vars. Literals are a temporary fallback and will be removed
-// once APPS_URL / APPS_KEY are set in Settings -> Environment Variables.
+// PantryPulse — append a NEW recipe into Recipe Master, dupe-guarded, append-only.
+// Prefer Vercel env vars; literals are a temporary fallback.
+export const config = { maxDuration: 60 };
 const APPS = process.env.APPS_URL || 'https://script.google.com/macros/s/AKfycbyw2-4MILZ-u-CjhTcoCmqZNiOJIaVgj7QDWRXTvgrsC1ME8Uqs43gTbzLq8wFtST6j9A/exec';
 const KEY = process.env.APPS_KEY || 'pp';
+const BUSY = /too many scripts running simultaneously|Service invoked too many times/i;
+const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   if (req.method === 'OPTIONS') { res.status(204).end(); return; }
-  try {
-    const b = req.body || {};
-    const r = await fetch(APPS, { method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ key: KEY, dish: b.dish, rows: b.rows }), redirect: 'follow' });
-    const txt = await r.text();
-    res.setHeader('Content-Type', 'application/json'); res.status(200).send(txt);
-  } catch (e) { res.status(502).json({ error: String(e && e.message || e) }); }
+  const b = req.body || {};
+  let lastTxt = '';
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const r = await fetch(APPS, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ key: KEY, dish: b.dish, rows: b.rows }), redirect: 'follow' });
+      const txt = await r.text();
+      lastTxt = txt;
+      if (txt && txt.trim().charAt(0) === '{') {
+        res.setHeader('Content-Type', 'application/json');
+        res.status(200).send(txt);
+        return;
+      }
+      if (BUSY.test(txt)) { await sleep(900 * Math.pow(2, attempt)); continue; }
+      break;
+    } catch (e) { lastTxt = String((e && e.message) || e); await sleep(600 * (attempt + 1)); }
+  }
+  res.status(BUSY.test(lastTxt) ? 429 : 502)
+     .json({ error: 'apps_script_unavailable', detail: String(lastTxt).slice(0, 160) });
 }
