@@ -1,19 +1,20 @@
 // PantryPulse — recipe query proxy -> Apps Script on the Recipe Master sheet.
-// Prefer Vercel env vars. Literals are a temporary fallback and will be removed
-// once APPS_URL / APPS_KEY are set in Settings -> Environment Variables.
-// Vercel Pro: allow a longer run — Apps Script can take 10-30s.
+// Credentials come from Vercel env vars only: APPS_URL, APPS_KEY.
 export const config = { maxDuration: 60 };
-const APPS = process.env.APPS_URL || 'https://script.google.com/macros/s/AKfycbyw2-4MILZ-u-CjhTcoCmqZNiOJIaVgj7QDWRXTvgrsC1ME8Uqs43gTbzLq8wFtST6j9A/exec';
-const KEY = process.env.APPS_KEY || 'pp';
+const APPS = process.env.APPS_URL;
+const KEY = process.env.APPS_KEY;
 
-// Google allows only ~30 concurrent Apps Script executions per account. When the
-// enrichment sweep runs it can blow past that, and Apps Script answers with an
-// HTML error page instead of JSON. Detect it and retry with backoff.
+// Google allows ~30 concurrent Apps Script executions per account. Past that it
+// returns an HTML error page instead of JSON — detect it and retry with backoff.
 const BUSY = /too many scripts running simultaneously|Service invoked too many times|exceeded maximum execution time/i;
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
+  if (!APPS || !KEY) {
+    res.status(503).json({ error: 'config_missing', detail: 'Set APPS_URL and APPS_KEY in Vercel env vars, then redeploy.' });
+    return;
+  }
   const dish = req.query.dish || '';
   const url = APPS + '?key=' + encodeURIComponent(KEY) + '&q=' + encodeURIComponent(dish);
   let lastTxt = '';
@@ -27,11 +28,8 @@ export default async function handler(req, res) {
         res.status(200).send(txt);
         return;
       }
-      if (BUSY.test(txt)) {                 // quota — wait and retry
-        await sleep(700 * Math.pow(2, attempt) + Math.random() * 400);
-        continue;
-      }
-      break;                                 // some other non-JSON reply
+      if (BUSY.test(txt)) { await sleep(700 * Math.pow(2, attempt) + Math.random() * 400); continue; }
+      break;
     } catch (e) {
       lastTxt = String((e && e.message) || e);
       await sleep(500 * (attempt + 1));
