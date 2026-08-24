@@ -1,4 +1,6 @@
 // PantryPulse — Emergent Meal Planner proxy. GET /api/emergent?house=<name>[&week=YYYY-Www]
+// Vercel Pro: allow a longer run — Apps Script and Rasoi can take 10-30s.
+export const config = { maxDuration: 30 };
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Cache-Control', 'no-store');
