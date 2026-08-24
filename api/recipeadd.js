@@ -1,8 +1,8 @@
 // PantryPulse — append a NEW recipe into Recipe Master, dupe-guarded, append-only.
-// Prefer Vercel env vars; literals are a temporary fallback.
+// Credentials come from Vercel env vars only: APPS_URL, APPS_KEY.
 export const config = { maxDuration: 60 };
-const APPS = process.env.APPS_URL || 'https://script.google.com/macros/s/AKfycbyw2-4MILZ-u-CjhTcoCmqZNiOJIaVgj7QDWRXTvgrsC1ME8Uqs43gTbzLq8wFtST6j9A/exec';
-const KEY = process.env.APPS_KEY || 'pp';
+const APPS = process.env.APPS_URL;
+const KEY = process.env.APPS_KEY;
 const BUSY = /too many scripts running simultaneously|Service invoked too many times/i;
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
@@ -10,6 +10,10 @@ export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   if (req.method === 'OPTIONS') { res.status(204).end(); return; }
+  if (!APPS || !KEY) {
+    res.status(503).json({ error: 'config_missing', detail: 'Set APPS_URL and APPS_KEY in Vercel env vars, then redeploy.' });
+    return;
+  }
   const b = req.body || {};
   let lastTxt = '';
   for (let attempt = 0; attempt < 3; attempt++) {
