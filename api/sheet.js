@@ -1,4 +1,6 @@
 // PantryPulse — recipe repository sheet proxy. GET /api/sheet[?tab=<tabName>]
+// Vercel Pro: allow a longer run — Apps Script and Rasoi can take 10-30s.
+export const config = { maxDuration: 30 };
 const SHEET_ID = '13xim-o6uZMDiIHkp2CnFXwnYq8wNKS_Y5lsHxeCg__Q';
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
