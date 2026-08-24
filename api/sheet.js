@@ -1,5 +1,5 @@
 // PantryPulse — recipe repository sheet proxy. GET /api/sheet[?tab=<tabName>]
-const SHEET_ID = process.env.RECIPE_SHEET_ID || '13xim-o6uZMDiIHkp2CnFXwnYq8wNKS_Y5lsHxeCg__Q';
+const SHEET_ID = process.env.RECIPE_SHEET_ID;
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Cache-Control', 'no-store');
