@@ -1,4 +1,6 @@
 // PantryPulse — Rasoi recipe-breakdown proxy. POST /api/rasoi {dish, pax?}
+// Vercel Pro: allow a longer run — Apps Script and Rasoi can take 10-30s.
+export const config = { maxDuration: 60 };
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
