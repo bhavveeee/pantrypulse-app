@@ -65,6 +65,44 @@ navigate → https://app.tellm.co/households/<TEQUILA_ID>
 ```
 `alt+Left` does **not** work from the image page — it stays put. Explicit navigation is the only reliable exit.
 
+## 4b. TRIAGE — decide from the chat text whether an image is worth opening
+
+Opening an image costs a navigation, an 8s wait and a screenshot. Most images do not deserve that.
+**Read the surrounding message text first and classify without opening.**
+
+**SKIP — do not open:**
+- Meal-plan cards ("Here's the meal plan for tomorrow", "Here's the updated meal plan"). **Emergent is the whole truth for meal plans** — the image can only ever be a copy, and a stale one.
+- Recipe or dish photos, food pictures, "how it turned out" images.
+- Anything already recorded in `last_cart_read` for that household.
+
+**OPEN — these change the ledger:**
+- "Here's the cart" / "cart for tomorrow" / "sharing the cart"
+- "These are the items required" / a shortage or requirement list
+- "Placing the order" / "order placed" / "ordered" / "booked"
+- Delivery confirmations and invoices
+- Anything with prices or quantities being discussed
+
+**Cheap pre-check before opening:** the right-hand **Cart** and **Tasks** panels carry the same data as structured text (item · source · pcs · price). If the panel already shows the cart, read it there and skip the image entirely.
+
+## 4c. WAS IT ACTUALLY ORDERED? — cart shared ≠ order placed
+
+A cart image is a **proposal** until something says it was placed. Households often share a cart at night for information and then order a **different** cart in the morning. Booking the night cart is wrong.
+
+**Rules:**
+1. **An image alone is never an order.** It needs explicit placement language — "placed", "ordered", "booked", "done", "delivered" — or a delivery confirmation/invoice.
+2. **Supersession:** when several carts cover the same ordering window, only the **last one carrying placement confirmation** counts. Earlier ones are info-only, even if they are more detailed.
+3. **The order date is the placement day**, not the day the cart image was shared.
+4. **Read forward past the cart.** The confirmation usually arrives in a later message, sometimes the next morning. A cart with nothing after it is not an order.
+5. **Diffs matter.** If a morning cart replaces a night cart, book only the morning one — and if part of the night cart was already delivered separately, book that part on its own delivery date.
+6. **When it is ambiguous, ask.** Say which carts were seen, which looks placed and why, and let Bhavya confirm. Never assume.
+
+Record the outcome per cart in the state file so the next session does not re-litigate it:
+```
+"carts_seen": [
+  {"id":"<date/desc>", "status":"info-only | placed | superseded", "booked_on":"<date or null>"}
+]
+```
+
 ## 5. Itemise the cart
 
 For each line record **item · quantity · unit · pack size · price** — quantity is the field that was being lost, so read it explicitly per row rather than skimming the list.
