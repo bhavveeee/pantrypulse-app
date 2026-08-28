@@ -5,7 +5,8 @@
     "last_message_seen": "text snippet + timestamp of the newest message read, so the next session knows where to stop scrolling back",
     "last_cart_read": "identifier/date of the newest cart image already itemised",
     "orders_booked_through": "date up to which orders from this chat are already in the Orders ledger",
-    "notes": "anything the next session must know (pending confirmations, ambiguities)"
+    "notes": "anything the next session must know (pending confirmations, ambiguities)",
+    "carts_seen": "list of {id, status: info-only|placed|superseded, booked_on} so a cart is never re-litigated or double-booked"
   },
   "households": {
     "h1b": {
@@ -15,7 +16,8 @@
       "last_message_seen": null,
       "last_cart_read": null,
       "orders_booked_through": "2026-08-28",
-      "notes": ""
+      "notes": "",
+      "carts_seen": []
     },
     "h2": {
       "name": "Munz & Soozy",
@@ -24,7 +26,8 @@
       "last_message_seen": null,
       "last_cart_read": null,
       "orders_booked_through": "2026-08-28",
-      "notes": ""
+      "notes": "",
+      "carts_seen": []
     },
     "h3": {
       "name": "Disha & Anirudh",
@@ -33,7 +36,8 @@
       "last_message_seen": null,
       "last_cart_read": null,
       "orders_booked_through": "2026-08-28",
-      "notes": ""
+      "notes": "",
+      "carts_seen": []
     },
     "h4": {
       "name": "Kartik & Dhara",
@@ -42,7 +46,8 @@
       "last_message_seen": null,
       "last_cart_read": null,
       "orders_booked_through": "2026-08-28",
-      "notes": ""
+      "notes": "",
+      "carts_seen": []
     },
     "h5": {
       "name": "Rahul & Radhika",
@@ -51,7 +56,8 @@
       "last_message_seen": null,
       "last_cart_read": null,
       "orders_booked_through": "2026-08-28",
-      "notes": ""
+      "notes": "",
+      "carts_seen": []
     },
     "h7": {
       "name": "Paxal & Sana",
@@ -60,7 +66,8 @@
       "last_message_seen": null,
       "last_cart_read": null,
       "orders_booked_through": "2026-08-28",
-      "notes": ""
+      "notes": "",
+      "carts_seen": []
     },
     "h8": {
       "name": "Pratik & Sakshi",
@@ -69,7 +76,8 @@
       "last_message_seen": null,
       "last_cart_read": null,
       "orders_booked_through": "2026-08-28",
-      "notes": ""
+      "notes": "",
+      "carts_seen": []
     },
     "h10": {
       "name": "Yash & Manik",
@@ -78,7 +86,15 @@
       "last_message_seen": "'Hey Manik, Here's the meal plan for tomorrow...' \u2014 Aug 28, 5:00 PM (scheduled)",
       "last_cart_read": "meal-plan image Sat 29 Aug (read at native 1500x1500)",
       "orders_booked_through": "2026-08-28",
-      "notes": "Copilot flagged a chicken shortage on 28-Aug 4:01 PM \u2014 worth checking before the next order."
+      "notes": "Copilot flagged a chicken shortage on 28-Aug 4:01 PM \u2014 worth checking before the next order.",
+      "carts_seen": [
+        {
+          "id": "meal-plan card Sat 29 Aug (28-Aug 5:00 PM)",
+          "status": "info-only",
+          "booked_on": null,
+          "note": "meal-plan image, not a cart \u2014 should not have been opened; Emergent is the source of truth"
+        }
+      ]
     },
     "h11": {
       "name": "Padmaja & Rohan",
@@ -87,7 +103,16 @@
       "last_message_seen": null,
       "last_cart_read": null,
       "orders_booked_through": null,
-      "notes": "Tequila household id still needed"
+      "notes": "Tequila household id still needed",
+      "carts_seen": []
     }
-  }
+  },
+  "_rules": [
+    "Emergent is the whole truth for meal plans \u2014 never open a meal-plan image, it is only ever a stale copy.",
+    "A cart image is a proposal. It becomes an order only with explicit placement language or a delivery confirmation.",
+    "When several carts cover the same window, only the LAST one with placement confirmation counts; earlier ones are info-only.",
+    "The order date is the placement day, not the day the image was shared.",
+    "Read forward past a cart \u2014 confirmation often arrives later, sometimes next morning.",
+    "If it is ambiguous which cart was placed, ask Bhavya rather than assume."
+  ]
 }
