@@ -1,0 +1,93 @@
+{
+  "_readme": "PantryPulse <-> Tequila read state. Claude has no memory between sessions; this file IS the memory. Read it BEFORE reading any Tequila chat, update it AFTER. Committed to the repo so it survives sessions.",
+  "_schema": {
+    "last_read_at": "ISO timestamp of when Claude last read this household's chat",
+    "last_message_seen": "text snippet + timestamp of the newest message read, so the next session knows where to stop scrolling back",
+    "last_cart_read": "identifier/date of the newest cart image already itemised",
+    "orders_booked_through": "date up to which orders from this chat are already in the Orders ledger",
+    "notes": "anything the next session must know (pending confirmations, ambiguities)"
+  },
+  "households": {
+    "h1b": {
+      "name": "Shunyam & Ishan",
+      "tequila_url": "https://app.tellm.co/households/902eefaa-18d1-4479-9190-b26c93386b29",
+      "last_read_at": null,
+      "last_message_seen": null,
+      "last_cart_read": null,
+      "orders_booked_through": "2026-08-28",
+      "notes": ""
+    },
+    "h2": {
+      "name": "Munz & Soozy",
+      "tequila_url": "https://app.tellm.co/households/3aec5c75-d395-4cda-b930-224f984cb040",
+      "last_read_at": null,
+      "last_message_seen": null,
+      "last_cart_read": null,
+      "orders_booked_through": "2026-08-28",
+      "notes": ""
+    },
+    "h3": {
+      "name": "Disha & Anirudh",
+      "tequila_url": "https://app.tellm.co/households/cf86f8ff-7842-4337-a8b1-3f3023b3e442",
+      "last_read_at": null,
+      "last_message_seen": null,
+      "last_cart_read": null,
+      "orders_booked_through": "2026-08-28",
+      "notes": ""
+    },
+    "h4": {
+      "name": "Kartik & Dhara",
+      "tequila_url": "https://app.tellm.co/households/8ebf4396-4aa7-4774-b096-1925a1aedc87",
+      "last_read_at": null,
+      "last_message_seen": null,
+      "last_cart_read": null,
+      "orders_booked_through": "2026-08-28",
+      "notes": ""
+    },
+    "h5": {
+      "name": "Rahul & Radhika",
+      "tequila_url": "https://app.tellm.co/households/097a41ec-ab0b-44f8-9472-631a21fed479",
+      "last_read_at": null,
+      "last_message_seen": null,
+      "last_cart_read": null,
+      "orders_booked_through": "2026-08-28",
+      "notes": ""
+    },
+    "h7": {
+      "name": "Paxal & Sana",
+      "tequila_url": "https://app.tellm.co/households/7c9be830-7632-4a16-802b-318fd7d02b84",
+      "last_read_at": null,
+      "last_message_seen": null,
+      "last_cart_read": null,
+      "orders_booked_through": "2026-08-28",
+      "notes": ""
+    },
+    "h8": {
+      "name": "Pratik & Sakshi",
+      "tequila_url": "https://app.tellm.co/households/ca664726-dd79-4648-b675-fad5a46a20cb",
+      "last_read_at": null,
+      "last_message_seen": null,
+      "last_cart_read": null,
+      "orders_booked_through": "2026-08-28",
+      "notes": ""
+    },
+    "h10": {
+      "name": "Yash & Manik",
+      "tequila_url": "https://app.tellm.co/households/ed8dd224-05ed-4fbe-acca-3c28133690fc",
+      "last_read_at": "2026-08-28T11:37:00+05:30",
+      "last_message_seen": "'Hey Manik, Here's the meal plan for tomorrow...' \u2014 Aug 28, 5:00 PM (scheduled)",
+      "last_cart_read": "meal-plan image Sat 29 Aug (read at native 1500x1500)",
+      "orders_booked_through": "2026-08-28",
+      "notes": "Copilot flagged a chicken shortage on 28-Aug 4:01 PM \u2014 worth checking before the next order."
+    },
+    "h11": {
+      "name": "Padmaja & Rohan",
+      "tequila_url": null,
+      "last_read_at": null,
+      "last_message_seen": null,
+      "last_cart_read": null,
+      "orders_booked_through": null,
+      "notes": "Tequila household id still needed"
+    }
+  }
+}
