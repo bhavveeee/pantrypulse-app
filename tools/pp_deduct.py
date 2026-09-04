@@ -1,6 +1,8 @@
 """PantryPulse deduction engine — resolves SKUs via the 'SKU Knowledge' sheet.
 Usage:
-    from pp_deduct import Deductor
+    from pp_deduct import sys as _s; _s.path.insert(0,'/mnt/user-data/outputs')
+from pp_changelog import log as _changelog
+import Deductor
     d = Deductor('/mnt/user-data/outputs/PantryPulse-MASTER_2026-08-17_EOD.xlsx')
     d.deduct('Soozy & Munz','h2','2026-08-23','L bang bang chicken',
              [('chicken breast',350,'g','L 2pax'),('rice',200,'g','L')])
@@ -96,6 +98,21 @@ class Deductor:
             return round(need * self.CONV[(u, ru)], 3), f'converted {need}{u} -> {ru}'
         return None, f'unit mismatch: asked {u}, row is {ru}'
 
+    def _already_deducted(self, sheet, date, dish, sku):
+        """A (household, date, dish, SKU) combination must appear ONCE in the ledger.
+        On 3-Sep-2026 a deduction script ran twice and produced 53 double deductions
+        across all 8 households; this guard makes that impossible."""
+        ds = self.wb['Deductions']
+        for r in range(2, ds.max_row + 1):
+            if (str(ds.cell(r, 1).value or '') == sheet
+                    and str(ds.cell(r, 3).value or '')[:10] == str(date)[:10]
+                    and str(ds.cell(r, 4).value or '') == dish
+                    and str(ds.cell(r, 5).value or '') == sku):
+                q = ds.cell(r, 6).value
+                if isinstance(q, (int, float)) and q > 0:
+                    return q
+        return None
+
     def deduct(self, sheet, hid, date, dish, items, allow_zero_flag=True):
         """items: (term, qty, unit, why). Plan-stated grams override estimates.
         Never guesses across incompatible units, records SHORT, never goes negative."""
@@ -128,6 +145,11 @@ class Deductor:
                 ds.append([sheet, hid, date, dish, term, 0, unit, '', '', f'{reason} — {detail}'])
                 continue
             e, r, cur, ru, conv, note = hit
+            prev = self._already_deducted(sheet, date, dish, e['sku'])
+            if prev is not None:
+                report.append(f"SKIP {e['sku']}: already deducted {prev}{ru} "
+                              f"for '{dish}' on {str(date)[:10]} — refusing to double-deduct")
+                continue
             take = min(conv, cur)                      # never over-deduct
             nv = round(cur - take, 3)
             if nv == int(nv):
