@@ -17,6 +17,9 @@
     },
     "api/pp.js": {
       "maxDuration": 60
+    },
+    "api/pplog.js": {
+      "maxDuration": 30
     }
   },
   "headers": [
