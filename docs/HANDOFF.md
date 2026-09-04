@@ -195,3 +195,27 @@ Terse, directive, correction-oriented. Expects immediate execution, every judgem
 2. Cowork → Projects → **+** → **"Use an existing folder"** (not "Import a project") → point it at that folder.
 3. Add a standing project instruction: *"Always read `PANTRYPULSE_HANDOFF.md` first if you haven't already this session."*
 4. First task: *"Read the handoff doc and the master workbook, then tell me the current build, which households are closed through when, and what's open."* Sense-check the answer before doing real work.
+
+
+## DATA-CAPTURE WORKFLOW (mandatory from 4-Sep-2026)
+
+Every change to any board goes through a tool that writes to the **Change Log** sheet. No exceptions, no hand-edits.
+
+| Change | Tool | Change Log `kind` | `source` |
+|---|---|---|---|
+| Order booked | `book.py` | order | Bhavya-dictated order list / Tequila cart read |
+| Physical count / overwrite | `apply.py` | board-overwrite | Bhavya overwrote — smart-list check result |
+| Meal deduction | `pp_deduct.py` | deduction | pp_deduct engine (Emergent plan) |
+| Correction / reversal | `pp_changelog.log()` directly | correction / reversal | Claude correction (with the reason) |
+| New rule | `pp_changelog.log()` | rule | Bhavya |
+
+**Change Log columns:** when · household · hid · kind · sku · field · old · new · delta · unit · source · reason · build · ref.
+`ref` points at the exact sheet row. `reason` must be a full sentence with pax, norm and plan reference.
+
+**Reason standard (every deduction line):** date (weekday) · household · meal and dish · SKU −qty (before→after) · pax · basis/norm · source · flags (SHORT / NO STOCK / NO ROW / CORRECTED) · close-note excerpt. The 4-Sep enrichment pass brought all 1,224 historical lines to this standard; `pp_deduct.py` now writes it automatically.
+
+**Overwrite standard:** any value set from a count is labelled *"Bhavya overwrote — smart-list check result"* on the board row, in History, and in the Change Log. A short list is set-these-values-only; a full overwrite never removes the everyday-aromatics set (green chilli, curry leaves, coriander, mint, ginger, garlic, onion, potato).
+
+**PP assistant** reads Change Log + Orders + Deductions + History per item, so every "why" question is answered from these records. If PP says "not recorded", the workflow was bypassed — fix the workflow, not the answer.
+
+**Hard rules the tools enforce:** one (household, date, dish, SKU) deduction only; confusable-family guards (methi/coriander forms, fresh vs sauce/dried/snack); never-match guards on combined and look-alike rows; Yash & Manik at one-third of the 2-pax norm.
