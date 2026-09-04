@@ -351,6 +351,7 @@ tr.pl-low .pl-q{background:#fdf6e8;color:#a3690e}.pl-dt{font-size:10px;color:#8a
 .pl-foot{font-size:10.5px;color:#8a958c;margin-top:8px;line-height:1.5}
 @media(max-width:700px){.ppbot-panel,.ppbot-bigmode .ppbot-panel{width:calc(100vw - 24px);height:calc(100vh - 90px)}#ppbot{right:12px;bottom:72px}.pl-ask{width:90px}}
 }
+.ppq td{font-size:11px;vertical-align:top}.ppq-w{white-space:nowrap;color:#8a958c}.ppq-u{color:#1b5e3f;font-weight:600}.ppq-q{min-width:180px}.ppq-m{font-size:10px;color:#8a958c}
 </style>
 <script>/* SheetJS (xlsx) mini build — inlined so no network is needed */
 /*! xlsx.js (C) 2013-present SheetJS -- http://sheetjs.com */
@@ -588,7 +589,7 @@ function ppDeductionAudit(wb){
 }
 window.ppDeductionAudit=ppDeductionAudit;
 
-const BUILD='v21_674'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
+const BUILD='v21_675'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
 const SEED={date:'2026-07-12',currentHouse:null,dishes:[],__build:BUILD,houses:[]};function __reseedFromEmbed(){try{if(!window.__EMBEDDED_WB_B64__)return false;var bs=atob(window.__EMBEDDED_WB_B64__);var ua=new Uint8Array(bs.length);for(var i=0;i<bs.length;i++)ua[i]=bs.charCodeAt(i);var st=parseWorkbookToApp(ua);if(st&&st.houses&&st.houses.length){S=st;try{rollDate();}catch(e){}try{applyAllSubs();}catch(e){}try{save();}catch(e){}return true;}}catch(e){}return false;}
 /* ===== household data is loaded at runtime from PantryPulse-MASTER.xlsx (thin app, no baked data) ===== */
 function _wb_num(v){var n=parseFloat(v);return isNaN(n)?0:n;}
@@ -2869,7 +2870,7 @@ function _boot(){
   // paint FIRST so the UI always comes up, even if a later step misbehaves
   try{paint();}catch(e){try{var v=document.getElementById('view');if(v)v.innerHTML='<div class="card"><div class="eyebrow">Notice</div><h2>Couldn\u2019t render this view</h2><div class="note">'+(e&&e.message||'error')+'</div></div>';}catch(_){}}
   try{applyAllSubs();paint();}catch(e){}
-  try{var __eid='PP_EMBED::MASTER_742::v21_674';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{var _su2=_sheetUrl();if(_su2){loadFromUrl(_su2);}else{hydrate();}}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{var _su=_sheetUrl();if(_su){loadFromUrl(_su);}else{hydrate();}}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
+  try{var __eid='PP_EMBED::MASTER_743::v21_675';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{var _su2=_sheetUrl();if(_su2){loadFromUrl(_su2);}else{hydrate();}}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{var _su=_sheetUrl();if(_su){loadFromUrl(_su);}else{hydrate();}}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
   try{armMidnightRoll();}catch(e){}
 }
 // Fire boot as soon as the DOM is usable, with multiple safety nets. _boot is idempotent.
@@ -3039,20 +3040,21 @@ function ppbotRender(){
     +'<div class="ppbot-chips">'+['do we have jeera','check: dhaniya, haldi, rava, cumin, bhindi, hing','when was paneer bought','where was the okra used','why did stock change this week','what did we deduct yesterday'].map(function(t){return '<button class="ppbot-chip" onclick="ppbotChip(\''+t.replace(/'/g,"\\'")+'\')">'+t+'</button>';}).join('')+'</div>'
     +'<div class="ppbot-tip">Paste a comma- or line-separated list to get a \u2713 / \u2717 availability table.</div></div>';
   el.innerHTML='<div class="ppbot-panel"><div class="ppbot-head"><div class="ppbot-avatar">PP</div><div class="ppbot-headtxt"><div class="ppbot-title">Pantry Pulse assistant</div><div class="ppbot-sub">'+ppbotEsc(hh)+' \u00b7 read-only</div></div>'
-    +'<button class="ppbot-ic" onclick="ppbotClear()" title="Clear">\u21BB</button><button class="ppbot-ic" onclick="ppbotBig()" title="Resize">'+(PPBOT.big?'\u2199':'\u2197')+'</button><button class="ppbot-ic" onclick="ppbotToggle()" title="Close">\u00d7</button></div>'
+    +'<button class="ppbot-ic" onclick="ppbotShowLog()" title="Question log (admin)">\u2630</button><button class="ppbot-ic" onclick="ppbotClear()" title="Clear">\u21BB</button><button class="ppbot-ic" onclick="ppbotBig()" title="Resize">'+(PPBOT.big?'\u2199':'\u2197')+'</button><button class="ppbot-ic" onclick="ppbotToggle()" title="Close">\u00d7</button></div>'
     +'<div class="ppbot-log" id="ppbot-log">'+msgs+(PPBOT.busy?'<div class="ppbot-m bot ppbot-think"><span></span><span></span><span></span></div>':'')+'</div>'
     +'<div class="ppbot-row"><textarea id="ppbot-in" class="ppbot-in" rows="1" placeholder="Ask, or paste a list\u2026 (Enter to send, Shift+Enter for a new line)" onkeydown="if(event.key===\'Enter\'&&!event.shiftKey){event.preventDefault();ppbotAsk();}"></textarea><button class="ppbot-send" onclick="ppbotAsk()">\u27A4</button></div></div>';
   var lg=document.getElementById('ppbot-log');if(lg)lg.scrollTop=lg.scrollHeight;
 }
 function ppbotAsk(){
   var inp=document.getElementById('ppbot-in');var q=(inp?inp.value:'').trim();if(!q||PPBOT.busy)return;inp.value='';
+  var __q0=q,__t0=Date.now();
   var h=cur();PPBOT.log.push({who:'me',html:ppbotEsc(q).replace(/\n/g,'<br>')});PPBOT.busy=true;ppbotRender();
   var list=ppIsList(q.replace(/^(check|availability|available|do we have|is there|have we got)[:\s-]*/i,''));
   var quick=null;
   if(list)quick=ppListTable(h,list);
   else quick=ppSingle(h,q);
   var needsModel=!quick||/why|explain|rca|should|correct|wrong|mistake|compare|reason|how come|analy|history|happened|change|when|where|used|bought|order|deduct/i.test(q);
-  if(quick&&!needsModel){PPBOT.log.push({who:'bot',html:quick});PPBOT.busy=false;ppbotRender();return;}
+  if(quick&&!needsModel){PPBOT.log.push({who:'bot',html:quick});PPBOT.busy=false;ppbotRender();ppLogQ(h,__q0,list?'list-check':'lookup',quick,false);return;}
   var F=ppFacts(h,q);
   if(!F.items.length&&!F.recent_changes){PPBOT.log.push({who:'bot',html:(quick||'')+'<div class="ppbot-note">I could not match that to any SKU on '+ppbotEsc(h.name)+'\u2019s board. Try the item name, or paste a list.</div>'});PPBOT.busy=false;ppbotRender();return;}
   var sys='You are PP, the assistant inside Pantry Pulse, a household food-inventory system. Answer ONLY from the JSON records provided. Every claim must cite a date from the records. '
@@ -3064,10 +3066,32 @@ function ppbotAsk(){
   .then(function(r){return r.json();})
   .then(function(j){var t=j.text||'';if(!t)t='No model answer'+(j.error?(': '+ppbotEsc(typeof j.error==='string'?j.error:(j.error.message||''))):'')+'. If this persists, ANTHROPIC_API_KEY is not set in Vercel.';
     t=ppbotEsc(t).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/^\s*[-\u2022]\s+/gm,'\u2022 ').replace(/\n/g,'<br>');
-    PPBOT.log.push({who:'bot',html:(quick?quick+'<hr class="ppbot-hr">':'')+'<div class="ppbot-ans">'+t+'</div>'});})
+    PPBOT.log.push({who:'bot',html:(quick?quick+'<hr class="ppbot-hr">':'')+'<div class="ppbot-ans">'+t+'</div>'});ppLogQ(h,__q0,'model',t,true);})
   .catch(function(e){PPBOT.log.push({who:'bot',html:(quick||'')+'<div class="ppbot-note">Model unavailable: '+ppbotEsc(e.message)+'</div>'});})
   .then(function(){PPBOT.busy=false;ppbotRender();});
 }
+
+/* ---------- question log: Google Sheet via /api/pplog, with a per-browser fallback ---------- */
+var PP_USER=null;try{fetch('/api/auth/session').then(function(r){return r.json();}).then(function(j){PP_USER=(j&&j.user&&j.user.email)||null;}).catch(function(){});}catch(e){}
+function ppLogQ(h,q,kind,answerHtml,usedModel){
+  try{var matched=[];try{(ppIsList(q)||[q]).slice(0,12).forEach(function(t){ppResolveAll(h,t).rows.slice(0,3).forEach(function(r){if(matched.indexOf(r.n)<0)matched.push(r.n);});});}catch(e){}
+    var rec={when:new Date().toISOString(),household:h?h.name:'',user:PP_USER||'unknown',question:q,kind:kind,matched:matched.join(' | '),
+      answer:String(answerHtml||'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim().slice(0,600),used_model:!!usedModel,build:(typeof BUILD!=='undefined'?BUILD:'')};
+    try{var L=JSON.parse(localStorage.getItem('pp_qlog')||'[]');L.push(rec);if(L.length>500)L=L.slice(-500);localStorage.setItem('pp_qlog',JSON.stringify(L));}catch(e){}
+    fetch('/api/pplog',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(rec)}).catch(function(){});
+  }catch(e){}}
+function ppbotShowLog(){
+  PPBOT.busy=true;ppbotRender();var h=cur();
+  fetch('/api/pplog?n=200').then(function(r){return r.json();}).then(function(j){
+    var rows=(j&&j.ok&&j.rows)?j.rows:null;var src='Google Sheet';
+    if(!rows){try{rows=JSON.parse(localStorage.getItem('pp_qlog')||'[]').reverse().map(function(r){return {when_ist:String(r.when).replace('T',' ').slice(0,16),household:r.household,user:r.user,question:r.question,kind:r.kind,matched_skus:r.matched,used_model:r.used_model?'yes':'no'};});}catch(e){rows=[];}src='this browser only'+(j&&j.error?' — '+j.error:'');}
+    var html='<div class="ppbot-wt">Question log <span class="ppbot-dim">('+rows.length+' · '+ppbotEsc(src)+')</span></div>'
+     +(rows.length?'<table class="pl-tbl ppq"><thead><tr><th>when</th><th>household</th><th>who</th><th>question</th><th>kind</th><th>matched</th></tr></thead><tbody>'
+     +rows.slice(0,200).map(function(r){return '<tr><td class="ppq-w">'+ppbotEsc(String(r.when_ist||'').slice(0,16))+'</td><td>'+ppbotEsc(r.household||'')+'</td><td class="ppq-u">'+ppbotEsc(String(r.user||'').split('@')[0])+'</td><td class="ppq-q">'+ppbotEsc(r.question||'')+'</td><td>'+ppbotEsc(r.kind||'')+(r.used_model==='yes'?' \u2728':'')+'</td><td class="ppq-m">'+ppbotEsc(r.matched_skus||'')+'</td></tr>';}).join('')+'</tbody></table>'
+     :'<div class="ppbot-note">No questions logged yet.</div>')
+     +'<div class="pl-foot">Set PP_LOG_URL in Vercel to store questions in a shared Google Sheet the admin can open directly; until then this shows the current browser only.</div>';
+    PPBOT.log.push({who:'bot',html:html});}).catch(function(e){PPBOT.log.push({who:'bot',html:'<div class="ppbot-note">Could not load the log: '+ppbotEsc(e.message)+'</div>'});})
+  .then(function(){PPBOT.busy=false;ppbotRender();});}
 try{document.addEventListener('DOMContentLoaded',ppbotRender);}catch(e){}
 try{setTimeout(ppbotRender,1500);}catch(e){}
 
