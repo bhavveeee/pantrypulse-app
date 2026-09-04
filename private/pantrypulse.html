@@ -569,7 +569,7 @@ function ppDeductionAudit(wb){
 }
 window.ppDeductionAudit=ppDeductionAudit;
 
-const BUILD='v21_668'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
+const BUILD='v21_669'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
 const SEED={date:'2026-07-12',currentHouse:null,dishes:[],__build:BUILD,houses:[]};function __reseedFromEmbed(){try{if(!window.__EMBEDDED_WB_B64__)return false;var bs=atob(window.__EMBEDDED_WB_B64__);var ua=new Uint8Array(bs.length);for(var i=0;i<bs.length;i++)ua[i]=bs.charCodeAt(i);var st=parseWorkbookToApp(ua);if(st&&st.houses&&st.houses.length){S=st;try{rollDate();}catch(e){}try{applyAllSubs();}catch(e){}try{save();}catch(e){}return true;}}catch(e){}return false;}
 /* ===== household data is loaded at runtime from PantryPulse-MASTER.xlsx (thin app, no baked data) ===== */
 function _wb_num(v){var n=parseFloat(v);return isNaN(n)?0:n;}
@@ -1450,7 +1450,7 @@ function smartListView(){
 let HOV_CARTDAYS={Mon:true,Tue:true,Wed:true,Thu:true,Fri:true,Sat:true};
 function hovCartDay(d){HOV_CARTDAYS[d]=!HOV_CARTDAYS[d];paint();}
 
-function paint(){try{[].slice.call(document.body.children).forEach(function(c){var tg=c.tagName,id=c.id||'';if(tg==='SCRIPT'||tg==='STYLE'||tg==='LINK'||tg==='HEADER')return;if(id==='view'||id==='toast'||id.indexOf('ppBatch')===0||id.indexOf('ppTray')===0||id.indexOf('hov')===0)return;c.parentNode.removeChild(c);});}catch(_sw){} 
+function paint(){try{[].slice.call(document.body.children).forEach(function(c){var tg=c.tagName,id=c.id||'';if(tg==='SCRIPT'||tg==='STYLE'||tg==='LINK'||tg==='HEADER')return;if(id==='view'||id==='toast'||id==='ppbot'||id.indexOf('ppBatch')===0||id.indexOf('ppTray')===0||id.indexOf('hov')===0)return;c.parentNode.removeChild(c);});}catch(_sw){} 
   var _view=document.getElementById('view');if(!_view)return;
   if(!S||!S.houses||!S.houses.length){if(typeof __reseedFromEmbed==='function'&&__reseedFromEmbed()){/* self-healed from baked workbook */}else{if(window.__EMBEDDED_WB_B64__){var _v=_view;_v.innerHTML='<div class="card"><div class="eyebrow">Pantry Pulse</div><h2>Loading baked data\u2026</h2><div class="note">Rebuilding from the embedded workbook.</div></div>';return;}var _h0=document.getElementById('hsel');if(_h0)_h0.innerHTML='';_view.innerHTML=_loadPromptHTML();return;}}
   var bt=document.getElementById('buildtag');if(bt)bt.textContent='build '+KEY.replace('pantrypulse_','');
@@ -1461,8 +1461,8 @@ function paint(){try{[].slice.call(document.body.children).forEach(function(c){v
   _view.innerHTML=(SHOWADD?addHouseForm():'')+(TAB==='Dashboard'?headerCard():'')+f();
   if(TAB==='Inventory check')wireUpload('check');if(TAB==='Add order')wireUpload('order');if(TAB==='Add meal plan')wireUpload('meal');
 }
-function setTab(t){TAB=t;SHOWMASTERADD=false;paint();window.scrollTo(0,0);}
-function switchHouse(id){S.currentHouse=id;UI.check=blank();UI.order=blank();UI.meal=blank();save();paint();}
+function setTab(t){TAB=t;SHOWMASTERADD=false;paint();window.scrollTo(0,0);try{ppbotRender();}catch(e){}}
+function switchHouse(id){S.currentHouse=id;UI.check=blank();UI.order=blank();UI.meal=blank();save();paint();try{PPBOT.log=[];ppbotRender();}catch(e){}}
 
 /* add household */
 function toggleAdd(){SHOWADD=!SHOWADD;paint();window.scrollTo(0,0);}
@@ -2849,7 +2849,7 @@ function _boot(){
   // paint FIRST so the UI always comes up, even if a later step misbehaves
   try{paint();}catch(e){try{var v=document.getElementById('view');if(v)v.innerHTML='<div class="card"><div class="eyebrow">Notice</div><h2>Couldn\u2019t render this view</h2><div class="note">'+(e&&e.message||'error')+'</div></div>';}catch(_){}}
   try{applyAllSubs();paint();}catch(e){}
-  try{var __eid='PP_EMBED::MASTER_738::v21_668';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{var _su2=_sheetUrl();if(_su2){loadFromUrl(_su2);}else{hydrate();}}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{var _su=_sheetUrl();if(_su){loadFromUrl(_su);}else{hydrate();}}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
+  try{var __eid='PP_EMBED::MASTER_739::v21_669';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{var _su2=_sheetUrl();if(_su2){loadFromUrl(_su2);}else{hydrate();}}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{var _su=_sheetUrl();if(_su){loadFromUrl(_su);}else{hydrate();}}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
   try{armMidnightRoll();}catch(e){}
 }
 // Fire boot as soon as the DOM is usable, with multiple safety nets. _boot is idempotent.
@@ -2945,11 +2945,11 @@ function ppbotAsk(){
    +'When asked if something was handled correctly, compare the deduction against the plan and the standing rules and give a direct verdict with the evidence. '
    +'Be concise: short paragraphs or a compact list, no preamble. Use grams/ml/pc as in the records. Never invent orders, deductions, or stock.';
   var user='Household: '+F.household+'\nToday: '+F.today+'\nQuestion: '+q+'\n\nRECORDS (JSON):\n'+JSON.stringify(F).slice(0,60000);
-  fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1000,system:sys,messages:[{role:'user',content:user}]})})
+  fetch('/api/pp',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({system:sys,question:user})})
   .then(function(r){return r.json();})
-  .then(function(j){var t=(j.content||[]).filter(function(c){return c.type==='text';}).map(function(c){return c.text;}).join('\n');
-    if(!t)t='I could not get an answer from the model'+(j.error?(': '+ppbotEsc(j.error.message||''))+'':'.');
+  .then(function(j){var t=j.text||((j.content||[]).filter(function(c){return c.type==='text';}).map(function(c){return c.text;}).join('\n'));
+    if(!t)t='I could not get an answer from the model'+(j.error?(': '+ppbotEsc(typeof j.error==='string'?j.error:(j.error.message||''))):'.')+' \u2014 if this persists, ANTHROPIC_API_KEY is probably not set in Vercel.';
     t=ppbotEsc(t).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/\n/g,'<br>');
     PPBOT.log.push({who:'bot',html:resolvedNote+(quick?quick+'<hr class="ppbot-hr">':'')+t});})
   .catch(function(e){PPBOT.log.push({who:'bot',html:resolvedNote+(quick||'')+'<br><span class="ppbot-dim">Model unavailable: '+ppbotEsc(e.message)+'</span>'});})
