@@ -2,6 +2,14 @@ import sys; sys.path.insert(0,'/mnt/user-data/outputs')
 from pp_changelog import log as _cl
 from openpyxl import load_workbook
 import re
+PP_CONVERT=[(r'peeled\s+(.+)',r'\1'),(r'grated\s+(.+)',r'\1'),(r'(.+)\s+chunks?$',r'\1'),(r'hung\s+curd',r'curd'),(r'chopped\s+(.+)',r'\1'),(r'cut\s+(.+)',r'\1')]
+def _rawform(term):
+    import re as _re
+    for pat,rep in PP_CONVERT:
+        m=_re.match(pat,term.strip(),_re.I)
+        if m: return _re.sub(pat,rep,term.strip(),flags=_re.I)
+    return term
+
 X='/mnt/user-data/outputs/PantryPulse-MASTER_2026-08-17_EOD.xlsx'
 def book(sheet,hid,items,D,note):
     wb=load_workbook(X); w=wb[sheet]; orders=wb['Orders']
