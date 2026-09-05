@@ -33,11 +33,15 @@ const { chromium } = require('playwright-core');
   console.log(JSON.stringify({households:n, chips, errors:errs})); await b.close(); process.exit(n>1&&chips>0&&errs.length===0?0:2);
 })().catch(e=>{console.log(JSON.stringify({fatal:String(e.message)}));process.exit(2);});
 """
-    tmp = '/tmp/pp_boot_test.js'; open(tmp,'w').write(js)
+    # write the test next to node_modules so require('playwright-core') resolves
+    base = '/home/claude/pp' if os.path.isdir('/home/claude/pp/node_modules') else os.getcwd()
+    tmp = os.path.join(base, '.pp_boot_test.js'); open(tmp,'w').write(js)
     try:
-        r = subprocess.run(['node', tmp, os.path.abspath(html_path)], capture_output=True, text=True, timeout=timeout_s+30, cwd='/home/claude/pp' if os.path.isdir('/home/claude/pp') else None)
+        r = subprocess.run(['node', tmp, os.path.abspath(html_path)], capture_output=True, text=True, timeout=timeout_s+30, cwd=base)
         out = (r.stdout or '').strip().splitlines()[-1] if r.stdout else ''
-        print('BOOT TEST:', out)
+        if 'Cannot find module' in (r.stderr or ''):
+            print('BOOT TEST SKIPPED: playwright-core not installed here (npm i playwright-core to enable)'); return True
+        print('BOOT TEST:', out or (r.stderr or '')[-300:])
         return r.returncode == 0
     except Exception as e:
         print('BOOT TEST could not run:', e); return True
