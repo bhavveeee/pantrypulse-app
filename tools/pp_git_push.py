@@ -14,6 +14,40 @@ PATH = "private/pantrypulse.html"
 BRANCH = "main"
 
 
+
+def _stamp_build_ts(html_path):
+    """Rewrite BUILD_TS in the HTML to the current IST time, at push time.
+    Fixes the frozen/wrong-timezone 'updated' label — every deploy now carries its real moment."""
+    import datetime, re
+    ist = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(hours=5, minutes=30)
+    ts = ist.strftime('%Y-%m-%dT%H:%M')
+    h = open(html_path, encoding='utf-8').read()
+    if "const BUILD_TS=" in h:
+        h = re.sub(r"const BUILD_TS='[^']*'", "const BUILD_TS='" + ts + "'", h, count=1)
+        open(html_path, 'w', encoding='utf-8').write(h)
+        print('BUILD_TS stamped:', ts, 'IST')
+    return ts
+
+
+def _snapshot_closed_day(html_path):
+    """Freeze today's boards into the 'Board Snapshots' sheet and re-embed, so the last push of a day = that day's locked board."""
+    import re, base64, datetime, os, sys
+    try:
+        sys.path.insert(0,'/mnt/user-data/outputs')
+        from pp_snapshot import snapshot
+        X='/mnt/user-data/outputs/PantryPulse-MASTER_2026-08-17_EOD.xlsx'
+        if not os.path.exists(X): return
+        ist=datetime.datetime.now(datetime.timezone.utc)+datetime.timedelta(hours=5,minutes=30)
+        d=ist.strftime('%Y-%m-%d')
+        n=snapshot(X,d)
+        h=open(html_path,encoding='utf-8').read()
+        b64=base64.b64encode(open(X,'rb').read()).decode()
+        h=re.sub(r'window\.__EMBEDDED_WB_B64__="[A-Za-z0-9+/=]+"','window.__EMBEDDED_WB_B64__="'+b64+'"',h,count=1)
+        open(html_path,'w',encoding='utf-8').write(h)
+        print('BOARD SNAPSHOT:',n,'rows for',d,'(re-embedded)')
+    except Exception as e:
+        print('BOARD SNAPSHOT skipped:',e)
+
 def boot_test(html_path, timeout_s=120):
     """Headless boot check. Refuses to deploy a file that does not load its households.
     Added 4-Sep-2026 after v21_678 shipped with a loader bug that node --check could not catch."""
@@ -47,6 +81,8 @@ const { chromium } = require('playwright-core');
         print('BOOT TEST could not run:', e); return True
 
 def push(html_path: str, msg: str):
+    _stamp_build_ts(html_path)
+    _snapshot_closed_day(html_path)
     if not os.environ.get('PP_SKIP_BOOT_TEST') and not boot_test(html_path):
         raise SystemExit('REFUSING TO PUSH: the build does not boot. Fix it, or set PP_SKIP_BOOT_TEST=1 to override (do not).')
     hdr = {"Authorization": "Bearer " + TOK, "Accept": "application/vnd.github+json"}
