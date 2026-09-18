@@ -5,7 +5,9 @@ import path from "path";
 const ALLOWED_DOMAIN = "curiousinc.com";
 // Only these three files, only these names — no path traversal, no directory listing.
 const FILES = {
-  "igho-needs.js":               "application/javascript; charset=utf-8",
+  "igho-needs-0.js":"application/javascript; charset=utf-8","igho-needs-1.js":"application/javascript; charset=utf-8",
+  "igho-needs-2.js":"application/javascript; charset=utf-8","igho-needs-3.js":"application/javascript; charset=utf-8",
+  "igho-needs-4.js":"application/javascript; charset=utf-8","igho-needs-5.js":"application/javascript; charset=utf-8",
   "igho-engine.js":              "application/javascript; charset=utf-8",
   "recipe-videos.generated.json":"application/json; charset=utf-8",
 };
