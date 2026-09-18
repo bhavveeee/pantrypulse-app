@@ -4,6 +4,7 @@ module.exports = {
   experimental: {
     outputFileTracingIncludes: {
       "/api/app": ["./private/**"],
+      "/api/igho": ["./private/igho/**"],
     },
   },
 };
