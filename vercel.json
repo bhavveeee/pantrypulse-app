@@ -20,6 +20,9 @@
     },
     "api/pplog.js": {
       "maxDuration": 30
+    },
+    "api/menuplan.js": {
+      "maxDuration": 60
     }
   },
   "headers": [
