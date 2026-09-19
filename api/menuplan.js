@@ -5,9 +5,10 @@ const BASE = "https://menu-planner-omega-ten.vercel.app/api/v1";
 // SERVER-SIDE ONLY. Prefer Vercel env PLANNER_KEY; the literal below is the fallback so the board works before env is set. Move to env and delete the literal.
 const KEY = String(process.env.PLANNER_KEY || "8IGg-fwcLIau4A70Dm0bi5YUNmdvAznLFvTBBUFhIKk").trim();
 export default async function handler(req, res) {
-  const { household, week } = req.query || {};
-  if (!household) { res.status(400).json({ error: "household required" }); return; }
-  const url = BASE + "/plans?household=" + encodeURIComponent(household) + (week ? "&week=" + encodeURIComponent(week) : "");
+  const { household, week, list } = req.query || {};
+  const url = list ? BASE + "/households"
+                   : (household ? BASE + "/plans?household=" + encodeURIComponent(household) + (week ? "&week=" + encodeURIComponent(week) : "") : null);
+  if (!url) { res.status(400).json({ error: "household or list required" }); return; }
   const headers = { accept: "application/json" };
   headers["X-Api-Key"] = KEY; headers.authorization = "Bearer " + KEY;
   if (process.env.PLANNER_COOKIE) headers.cookie = process.env.PLANNER_COOKIE;
