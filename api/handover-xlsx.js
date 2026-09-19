@@ -3,9 +3,9 @@
 //   sheet name "Handover <first day label>", 10 columns, bold soft-green header, per-row status fill,
 //   ONLY the ingredient cell bold when hero, frozen header, autofilter, valign top. No dropdowns/CF/merges.
 import ExcelJS from 'exceljs';
-const HEADERS = ['Status','Ingredient','Unit','Required','In kitchen','To buy','Built on','Past use-by','On the shelf as','For which dishes'];
+const HEADERS = ['Status','Ingredient','Unit','Required','In kitchen','To buy','Built on','Past use-by','On the shelf as','For which dishes','Order?','Reason'];
 // widths: col 7 (Built on) left default, exactly like theirs
-const WIDTHS = { 1:14, 2:30, 3:7, 4:10, 5:11, 6:10, 8:12, 9:34, 10:52 };
+const WIDTHS = { 1:14, 2:30, 3:7, 4:10, 5:11, 6:10, 8:12, 9:34, 10:52, 11:10, 12:40 };
 const FILL = { green:'FFE8F0E8', yellow:'FFFBEFD6', red:'FFFBE3E0', expired:'FFFBE3E0', unit:'FFEFF1EE' };
 const HEADER_FILL = 'FFE7EDE6';
 const WORD = { green:'Available', yellow:'Low', red:'Not available', expired:'Expired', unit:'Unit clash' };
@@ -39,11 +39,19 @@ export default async function handler(req, res){
         (r.pastUse!=null&&r.pastUse!=='') ? round(+r.pastUse) : '',
         String(r.shelfAs||''),          // pooled: "A + B + C"
         String(r.dishes||''),           // "Dish (L); Dish (D)"
+        '',                             // Order? — human ticks Yes/No via the dropdown
+        '',                             // Reason — human writes why
       ];
       const row = ws.addRow(line);
       const argb = FILL[st] || 'FFFFFFFF';
       row.eachCell({ includeEmpty:true }, c => { c.fill = { type:'pattern', pattern:'solid', fgColor:{ argb } }; c.alignment = { vertical:'top' }; });
       if (r.hero) row.getCell(2).font = { bold:true };   // ONLY the ingredient cell bold, like theirs
+    }
+    // "Order?" dropdown (Yes/No) on every data row; "Reason" stays free text
+    for (let i = 2; i <= rows.length + 1; i++){
+      ws.getCell('K' + i).dataValidation = { type:'list', allowBlank:true, formulae:['"Yes,No"'], showErrorMessage:true, errorTitle:'Order?', error:'Pick Yes or No' };
+      ws.getCell('K' + i).alignment = { vertical:'top' };
+      ws.getCell('L' + i).alignment = { vertical:'top', wrapText:true };
     }
     ws.views = [{ state:'frozen', ySplit:1 }];
     ws.autoFilter = { from:'A1', to:{ row: rows.length+1, column: HEADERS.length } };
