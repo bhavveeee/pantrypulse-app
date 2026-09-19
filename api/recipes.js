@@ -2,7 +2,7 @@
 // SINGLE SOURCE OF TRUTH (19-Sep-2026): no Rasoi, no text-derived breakdowns, no pack estate bake.
 // Returns JavaScript that declares PP_NEEDS (engine shape), PP_RECIPE_META (video + prep flags), PP_SHEET_UOM_LIVE (pcs items).
 const PUB = "https://docs.google.com/spreadsheets/d/e/2PACX-1vT3qoSEl31L3rAD-dTYqF3J-es2bDZ-K26WcZPaU_gMxw8vjKH4cOU_f0kAXTBKJb6gY4hW4Er21VRW/pub?single=true&output=csv&gid=";
-const GID_OVERVIEW = "0", GID_BREAKDOWN = "1292717284";
+const GID_OVERVIEW = "0", GID_BREAKDOWN = "1292717284", GID_PERPAX = "91590584";
 const TTL = 10 * 60 * 1000; const PAX_MAX = 12;
 let cache = { at: 0, body: "", dishes: 0, rows: 0 };
 
@@ -21,7 +21,7 @@ function isOpt(cls){ return /optional/i.test(String(cls||"")); }
 function unit(u){ u=String(u||"g").trim().toLowerCase(); return u==="pcs"||u==="pc"||u==="piece"||u==="pieces"?"pcs":(u==="ml"||u==="l"?"ml":"g"); }
 
 async function build(){
-  const [ov,bd]=await Promise.all([fetch(PUB+GID_OVERVIEW).then(r=>r.text()), fetch(PUB+GID_BREAKDOWN).then(r=>r.text())]);
+  const [ov,bd,pp]=await Promise.all([fetch(PUB+GID_OVERVIEW).then(r=>r.text()), fetch(PUB+GID_BREAKDOWN).then(r=>r.text()), fetch(PUB+GID_PERPAX).then(r=>r.text()).catch(()=>"")]);
   const O=parseCsv(ov), B=parseCsv(bd);
   const video={}; for(const r of O.slice(1)){ if(r[0]&&r[1]){ const d=r[0].trim().toLowerCase(); video[d]=r[1].trim(); video[d.replace(/\(.*?\)/g," ").replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim()]=r[1].trim(); video[norm(r[0])]=r[1].trim(); } }
   const hdr=B[0].map(x=>String(x).trim().toLowerCase()); const col=n=>hdr.indexOf(n);
@@ -45,8 +45,16 @@ async function build(){
   }
   for(const k in needs){ const n=needs[k]; n.q=[]; for(let p=1;p<=PAX_MAX;p++) n.q.push(n._per.map(v=>Math.round(v*p*100)/100)); delete n._per; }
   for(const k in video){ if(!meta[k]) meta[k]={yt:video[k],soak:[],marinate:[],rest:[],src:""}; else if(!meta[k].yt) meta[k].yt=video[k]; }
+  // Per-pax subsheet (FETCHING_RECIPES §2/§3): authoritative bracket quantities. Keyed by canonical ingredient AND
+  // every alias in "Names this sheet uses", so a bracket word like "carrots" resolves to Carrot 50 g.
+  const perpax = {};
+  if (pp) { const P = parseCsv(pp); const ph = P[0].map(x=>String(x).trim().toLowerCase()); const pc = n=>ph.indexOf(n);
+    const iIng=pc("ingredient"), iQ=pc("per pax qty"), iU=pc("unit"), iN=pc("names this sheet uses");
+    for (const r of P.slice(1)) { const q=parseFloat(String(r[iQ]||"").replace(/[^0-9.]/g,"")); if(!(q>0)) continue;
+      const u=unit(r[iU]); const names=[String(r[iIng]||"")].concat(String(r[iN]||"").split(/[,;]/));
+      for (let nm of names){ nm=nm.trim().toLowerCase(); if(!nm) continue; perpax[nm]={q,u}; perpax[singular(nm)]={q,u}; } } }
   const dishKeys=Object.keys(needs).filter(k=>k.indexOf("\u0001")<0);
-  const body="/* live from final-recipes sheet · "+new Date().toISOString()+" · "+Object.keys(needs).length+" dishes · "+rows+" rows */\nvar PP_NEEDS="+JSON.stringify(needs)+";\nvar PP_RECIPE_META="+JSON.stringify(meta)+";\nvar PP_SHEET_UOM_LIVE="+JSON.stringify(uom)+";\nvar PP_DISH_KEYS="+JSON.stringify(dishKeys)+";\ntry{if(typeof PP_SHEET_UOM==='object')Object.assign(PP_SHEET_UOM,PP_SHEET_UOM_LIVE);}catch(e){}\n";
+  const body="/* live from final-recipes sheet · "+new Date().toISOString()+" · "+Object.keys(needs).length+" dishes · "+rows+" rows */\nvar PP_NEEDS="+JSON.stringify(needs)+";\nvar PP_RECIPE_META="+JSON.stringify(meta)+";\nvar PP_SHEET_UOM_LIVE="+JSON.stringify(uom)+";\nvar PP_DISH_KEYS="+JSON.stringify(dishKeys)+";\nvar PP_PERPAX="+JSON.stringify(perpax)+";\ntry{if(typeof PP_SHEET_UOM==='object')Object.assign(PP_SHEET_UOM,PP_SHEET_UOM_LIVE);}catch(e){}\n";
   return { body, dishes:Object.keys(needs).length, rows };
 }
 export default async function handler(req,res){
