@@ -29,7 +29,10 @@ async function build(){
   const needs={}, meta={}, uom={}; let rows=0;
   for(const r of B.slice(1)){
     const dish=String(r[cD]||"").trim(); const ing=String(r[cI]||"").trim(); if(!dish||!ing) continue;
-    const dkeys=[dish.toLowerCase(), dish.toLowerCase().replace(/\(.*?\)/g," ").replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim(), norm(dish)];
+    function plurWord(w){ if(/s$/.test(w)) return w; if(/[^aeiou]y$/.test(w)) return w.slice(0,-1)+"ies"; if(/[sxz]$|[cs]h$/.test(w)) return w+"es"; return /[a-z0-9]$/.test(w)?w+"s":w; }
+    function plur(x){ var parts=x.split(" "); if(!parts.length) return x; parts[parts.length-1]=plurWord(parts[parts.length-1]); return parts.join(" "); }
+    const _base=[dish.toLowerCase(), dish.toLowerCase().replace(/\(.*?\)/g," ").replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim(), norm(dish)];
+    const dkeys=[..._base, ..._base.map(plur)];
     const q=parseFloat(String(r[cQ]||"").replace(/[^0-9.]/g,"")); if(!(q>=0)) continue;
     const u=unit(r[cU]); const cls=r[cC];
     const dks=[...new Set(dkeys)];
