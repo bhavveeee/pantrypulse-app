@@ -682,7 +682,7 @@ function ppDeductionAudit(wb){
 }
 window.ppDeductionAudit=ppDeductionAudit;
 
-const BUILD='v21_770';const BUILD_TS='2026-09-21T18:12'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
+const BUILD='v21_771';const BUILD_TS='2026-09-21T18:12'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
 const SEED={date:'2026-07-12',currentHouse:null,dishes:[],__build:BUILD,houses:[]};function __reseedFromEmbed(){try{if(!window.__EMBEDDED_WB_B64__)return false;var bs=atob(window.__EMBEDDED_WB_B64__);var ua=new Uint8Array(bs.length);for(var i=0;i<bs.length;i++)ua[i]=bs.charCodeAt(i);var st=parseWorkbookToApp(ua);if(st&&st.houses&&st.houses.length){S=st;try{rollDate();}catch(e){}try{applyAllSubs();}catch(e){}try{save();}catch(e){}return true;}}catch(e){}return false;}
 /* ===== household data is loaded at runtime from PantryPulse-MASTER.xlsx (thin app, no baked data) ===== */
 function _wb_num(v){var n=parseFloat(v);return isNaN(n)?0:n;}
@@ -786,7 +786,7 @@ function ppPurgeStaleSaves(){try{for(var i=localStorage.length-1;i>=0;i--){var k
   try{ppPurgeStaleSaves();}catch(e){}
   /* v21_730: HOV_NAME corrected (Akshita Prerik->Prerit etc). Drop every cached planner pull ONCE per client so the
      new names are re-fetched instead of a stale 404/empty week being shown. Guarded by a marker so it runs only once. */
-  try{ if(localStorage.getItem('pp_planpurge')!=='v21_770'){ for(var i=localStorage.length-1;i>=0;i--){ var k=localStorage.key(i); if(k&&(k.indexOf('igho_plan_')===0||k.indexOf('pplw_')===0)) localStorage.removeItem(k); } localStorage.setItem('pp_planpurge','v21_770'); } }catch(e){}
+  try{ if(localStorage.getItem('pp_planpurge')!=='v21_771'){ for(var i=localStorage.length-1;i>=0;i--){ var k=localStorage.key(i); if(k&&(k.indexOf('igho_plan_')===0||k.indexOf('pplw_')===0)) localStorage.removeItem(k); } localStorage.setItem('pp_planpurge','v21_771'); } }catch(e){}
   try{if(hasCloud){var _try=function(keys){if(!keys.length)return;var k=keys[0];Promise.race([window.storage.get(k,false),new Promise(r=>setTimeout(()=>r(null),2500))]).then(function(r){var ok=false;if(r&&r.value){try{ok=_useState(JSON.parse(r.value));}catch(e){}}if(!ok)_try(keys.slice(1));}).catch(function(){_try(keys.slice(1));});};_try([KEY].concat(PRIORKEYS_CLOUD));return;}}catch(e){}
   try{var keys=[KEY].concat(PRIORKEYS_CLOUD);for(var i=0;i<keys.length;i++){var raw=localStorage.getItem(keys[i]);if(raw){try{if(_useState(JSON.parse(raw)))return;}catch(e){}}}}catch(e){}
 }
@@ -1987,9 +1987,18 @@ function ighoSlotEntries(meal){
      and testing the full text wrongly dropped real dishes (Disha's Mon-Wed vanished for exactly this). */
   var JUNK=/^\s*water$|^\s*\(|^[~\d\s|:.,-]+$|^\s*(soak|thaw|marinate|cut|pack|inform)\b|leftover|left over/i;
   var JUNKNAME=/^(kcal|protein|carb|fibre|fiber|calories)\b|^\s*\d+\s*(g|gm|cal|kcal)\b/i;
+  /* NOTE-FRAGMENT DISHES (v21_771): cooks sometimes type a remark as a dish — "Radhika: lots of chicken",
+     "veggies", "Toppings of choice". Strip a leading "Name:" and drop pure filler / instruction fragments so
+     they never become a priced ingredient line (in IGHO or Smart list). */
+  function ighoCleanDish(s){ s=String(s||'').trim();
+    s=s.replace(/^([A-Z][a-zA-Z]*(\s*(&|and|,|\/)\s*[A-Z][a-zA-Z]*)*)\s*:\s*/,'');   /* strip a leading "Radhika:" / "R & Rk:" / "Kids/Staff:" */
+    return s.trim(); }
+  var DROPNAME=/^(radhika|rahul|skye|skyer|rk|munz|soozy|ganesh|varsha|disha|anirudh|padmaja|rohan|akshita|prerit|samidha|arinjay|joseph|teenu|saurabh|seth|shyamli|piyush|mamta|yash|manik|shunyam|ishan|kartik|dhara|paxal|sana|sakshi|pratik|kids?|staff|mom|dad|didi|bhaiya)$/i;
+  var DROPDISH=/^(veggies|veg|vegetables?|toppings?( of choice)?|lots of .*|some .*|extra .*|as (needed|required|desired)|to taste|assorted|misc|others?|etc|optional.*|garnish(es)?|sides?|accompaniments?|choice of .*|any .*|leftovers?)$/i;
   (meal.dishes||[]).forEach(function(d){
-    var nm=String(d.name||'').trim(); if(!nm) return;
-    if(JUNK.test(nm)||JUNKNAME.test(nm)) return;   /* judge by the NAME, never the note */
+    var nm=ighoCleanDish(d.name); if(!nm) return;
+    if(JUNK.test(nm)||JUNKNAME.test(nm)||DROPDISH.test(nm)||DROPNAME.test(nm)) return;   /* judge by the cleaned NAME, never the note */
+    d=Object.assign({},d,{name:nm});
     /* Rule 3: people:0 is a carry-over — listed for the cook, fed to the splitter as "x0" exactly like planner-v1.ts canonLine */
     if(+d.people===0) carry.push(d);
     if(d.known&&d.recipe&&d.recipe.prep_ahead&&d.recipe.prep_ahead.length){ d.recipe.prep_ahead.forEach(function(a){ prep.push({action:a.action,ingredient:a.ingredient,detail:a.detail,dish:d.name}); }); }
@@ -3829,7 +3838,7 @@ function _boot(){
   // paint FIRST so the UI always comes up, even if a later step misbehaves
   try{paint();}catch(e){try{var v=document.getElementById('view');if(v)v.innerHTML='<div class="card"><div class="eyebrow">Notice</div><h2>Couldn\u2019t render this view</h2><div class="note">'+(e&&e.message||'error')+'</div></div>';}catch(_){}}
   try{applyAllSubs();paint();}catch(e){}
-  try{var __eid='PP_EMBED::MASTER_999::v21_770';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{var _su2=_sheetUrl();if(_su2){loadFromUrl(_su2);}else{hydrate();}}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{var _su=_sheetUrl();if(_su){loadFromUrl(_su);}else{hydrate();}}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
+  try{var __eid='PP_EMBED::MASTER_1000::v21_771';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{var _su2=_sheetUrl();if(_su2){loadFromUrl(_su2);}else{hydrate();}}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{var _su=_sheetUrl();if(_su){loadFromUrl(_su);}else{hydrate();}}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
   try{armMidnightRoll();}catch(e){}
 }
 // Fire boot as soon as the DOM is usable, with multiple safety nets. _boot is idempotent.
