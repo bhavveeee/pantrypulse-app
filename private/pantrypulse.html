@@ -682,7 +682,7 @@ function ppDeductionAudit(wb){
 }
 window.ppDeductionAudit=ppDeductionAudit;
 
-const BUILD='v21_774';const BUILD_TS='2026-09-22T19:06'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
+const BUILD='v21_775';const BUILD_TS='2026-09-22T19:25'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
 const SEED={date:'2026-07-12',currentHouse:null,dishes:[],__build:BUILD,houses:[]};function __reseedFromEmbed(){try{if(!window.__EMBEDDED_WB_B64__)return false;var bs=atob(window.__EMBEDDED_WB_B64__);var ua=new Uint8Array(bs.length);for(var i=0;i<bs.length;i++)ua[i]=bs.charCodeAt(i);var st=parseWorkbookToApp(ua);if(st&&st.houses&&st.houses.length){S=st;try{rollDate();}catch(e){}try{applyAllSubs();}catch(e){}try{save();}catch(e){}return true;}}catch(e){}return false;}
 /* ===== household data is loaded at runtime from PantryPulse-MASTER.xlsx (thin app, no baked data) ===== */
 function _wb_num(v){var n=parseFloat(v);return isNaN(n)?0:n;}
@@ -2061,8 +2061,26 @@ function ighoSubsetKey(query){
 var IGHO_ROW_JUNK=/^(radhika|rahul|skye|skyer|rk|munz|soozy|ganesh|varsha|disha|anirudh|padmaja|rohan|akshita|prerit|samidha|arinjay|joseph|teenu|saurabh|seth|shyamli|piyush|mamta|yash|manik|shunyam|ishan|kartik|dhara|paxal|sana|sakshi|pratik|kids?|staff|mom|dad|didi|bhaiya)$|^(lots of|some|extra|a bit of|handful of|as (needed|required|desired)|to taste|toppings?|veggies|assorted|misc|others?|optional|garnish|sides?|choice of|any )\b|:\s|^\s*$/i;
 function ighoRowJunk(n){ n=String(n||'').trim(); if(!n) return true; return IGHO_ROW_JUNK.test(n); }
 function ighoNormFood(s){ return String(s||'').toLowerCase().replace(/\(.*?\)/g,' ').replace(/[^a-z]/g,'').replace(/(.)\1+/g,'$1').replace(/oo|uu|kk|cc|ck/g,function(m){return m[0];}); }
+/* RICE PRIORITY (v21_775): a bare "rice" call must consume EVERYDAY white rice first, never a specialty
+   rice (matta/brown/red/sticky/jasmine/jeera) unless the recipe names it. Ranks rice rows for consumption. */
+var RICE_SPECIALTY=/\b(brown|red|matta|sticky|black|wild|jasmine|jeera|arborio|forbidden|parboiled|hand ?pound)\b/i;
+var RICE_EVERYDAY=/\b(sona\s*masoori|sona\s*masuri|sonamasuri|ponni|kolam|surti\s*kolam|raw\s*rice|steamed\s*rice|idli\s*rice|dosa\s*rice|white\s*rice|basmati|daawat|india\s*gate|rozana)\b/i;
+function ighoRiceRank(shelfName, recipeName){
+  var rn=String(recipeName||'').toLowerCase();
+  var named=RICE_SPECIALTY.exec(rn);
+  if(named){ /* recipe NAMES a specialty (e.g. "matta rice") -> that specialty ranks first */
+    return RegExp('\\b'+named[0]+'\\b','i').test(shelfName)?0:5; }
+  /* bare "rice": everyday first (0), plain "Rice" (1), specialty LAST (9) */
+  if(RICE_EVERYDAY.test(shelfName)) return 0;
+  if(RICE_SPECIALTY.test(shelfName)) return 9;
+  return 1;
+}
 function ighoResolveFood(sim, name, want, g){
   var out={have:0,via:[],rows:[]}; if(!sim) return out; want=want||'g';
+  /* if this is a rice ingredient and the shelf has multiple rices, reorder sim so everyday rice is consumed first */
+  if(/\brice\b/i.test(String(name))&&!/flour|paper|vermic|noodle/i.test(String(name))){
+    try{ sim=sim.slice().sort(function(a,b){ var ra=/\brice\b/i.test(a.n)?ighoRiceRank(a.n,name):99; var rb=/\brice\b/i.test(b.n)?ighoRiceRank(b.n,name):99; return ra-rb; }); }catch(_){}
+  }
   var tried={}; var kw=[String(name).toLowerCase()].concat(ighoSynTokens(name));
   function take(hits){ hits.forEach(function(p){ if(!p||!(p.qty>0)||tried[p.n])return; tried[p.n]=1;
     var gg=g||ighoPieceG(p.n)||80;
@@ -3843,7 +3861,7 @@ function _boot(){
   // paint FIRST so the UI always comes up, even if a later step misbehaves
   try{paint();}catch(e){try{var v=document.getElementById('view');if(v)v.innerHTML='<div class="card"><div class="eyebrow">Notice</div><h2>Couldn\u2019t render this view</h2><div class="note">'+(e&&e.message||'error')+'</div></div>';}catch(_){}}
   try{applyAllSubs();paint();}catch(e){}
-  try{var __eid='PP_EMBED::MASTER_1025::v21_774';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{var _su2=_sheetUrl();if(_su2){loadFromUrl(_su2);}else{hydrate();}}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{var _su=_sheetUrl();if(_su){loadFromUrl(_su);}else{hydrate();}}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
+  try{var __eid='PP_EMBED::MASTER_1026::v21_775';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{var _su2=_sheetUrl();if(_su2){loadFromUrl(_su2);}else{hydrate();}}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{var _su=_sheetUrl();if(_su){loadFromUrl(_su);}else{hydrate();}}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
   try{armMidnightRoll();}catch(e){}
 }
 // Fire boot as soon as the DOM is usable, with multiple safety nets. _boot is idempotent.
