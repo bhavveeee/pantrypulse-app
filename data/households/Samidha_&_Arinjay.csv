@@ -1,0 +1,190 @@
+Category,Item,Quantity,Unit,Status,Est,Verify,Factor,Last checked,Last entered,Note
+Vegetable,brinjal,0,g,out,,,1,2026-09-18,2026-09-02,18-Sep: removed (operator) — was hidden above my row-5 scan window
+Vegetable,cabbage,0,pc,out,,,1,2026-09-23,2026-09-21,23-Sep: not in perishable overwrite
+Vegetable,Capsicum,100,g,in,,,1,2026-09-23,2026-09-21,23-Sep perishable overwrite
+Vegetable,Tomato,12,pc,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Dals,White peas,350,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Vegetable,Cauliflower,0,g,out,,,1,2026-09-16,2026-09-12,16-Sep: removed — not in perishable count
+Vegetable,Cucumber,500,g,in,,,1,2026-09-24,2026-09-18,24-Sep order (clean g)
+Vegetable,Beans,250,g,in,,,1,2026-09-23,2026-09-21,23-Sep perishable overwrite
+Vegetable,Green peas,100,g,in,,,1,2026-09-23,2026-09-21,23-Sep perishable overwrite
+Vegetable,Green chilli,110,g,in,,,1,2026-09-24,2026-09-18,24-Sep order (post-meal)
+Vegetable,Garlic,50,g,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Vegetable,Coriander leaf,0,g,out,,,1,2026-09-23,2026-09-18,23-Sep: not in perishable overwrite
+Vegetable,Mint,0,g,out,,,1,2026-09-23,2026-09-21,23-Sep: not in perishable overwrite
+Vegetable,Onion,10,pc,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Vegetable,Carrot,5,pc,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Spice,Chilli flakes,50,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Vegetable,Corn cob,0,pc,out,,,1,2026-09-07,2026-09-07,7-Sep FULL perishable overwrite (Bhavya): not in the count (was 2pc)
+Fruit,Pomegranate,0,pc,out,,,1,2026-09-16,2026-09-12,09-16: -1pc B cut fruits
+Fruit,Watermelon,0,pc,out,,,1,2026-09-04,2026-09-02,09-04: -0.5pc B cut fruit
+Meat,Eggs,4,pc,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Dairy,Ragi idly dosa batter,0,g,out,,,1,2026-09-23,2026-09-18,23-Sep: not in perishable overwrite
+Dairy,Lactose free milk,200,ml,in,,,1,2026-09-23,2026-09-12,23-Sep perishable overwrite
+Dairy,Amul butter,0,g,out,,,1,2026-09-07,2026-09-07,7-Sep FULL perishable overwrite (Bhavya): not in the count (was 200g)
+Grains,Wheat atta,0,g,out,,,1,2026-09-11,2026-09-02,09-11: -160g L roti
+Grains,Rice,0,g,out,,,1,2026-09-10,2026-09-10,10-Sep: pre-existing white rice removed (Basmati 1kg kept)
+Grains,Sattu flour,420,g,in,,,1,2026-09-15,2026-09-12,09-15: -80g B sattu paratha
+Grains,Foxtail millet,200,g,in,,,1,2026-09-24,2026-09-12,24-Sep update
+Grains,Whey protein,500,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Grains,Atta,240,g,in,,,1,2026-09-23,2026-09-16,09-23: -160g L roti
+Grains,Proso millet,100,g,in,,,1,2026-09-24,2026-09-12,24-Sep update
+Grains,Oats,400,g,in,,,1,2026-09-24,2026-09-12,24-Sep update
+Grains,Jumbo rolled oats,0,g,out,,,1,2026-09-12,2026-09-02,12-Sep: full overwrite — not in count
+Grains,Vega Sport Plant-Based Protein Powder,0,g,out,,,1,2026-09-12,2026-09-07,12-Sep: full overwrite — not in count
+Grains,Brown rice,250,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Grains,Quinoa,150,g,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Grains,Couscous,100,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Grains,Dalia,150,g,in,,,1,2026-09-24,2026-09-02,24-Sep update
+Grains,Corn starch,0,g,out,,,1,2026-09-18,2026-09-18,19-Sep post-dinner count
+Spice,Oregano,50,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Dals,Besan,350,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Dals,Black urad whole,0,g,out,,,1,2026-09-12,2026-09-02,12-Sep: full overwrite — not in count
+Dals,Chana dal,350,g,in,,,1,2026-09-16,2026-09-12,09-16: -100g L chana dal subzi
+Dals,Masoor dal,250,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Dals,Moong dal,0,g,out,,,1,2026-09-22,2026-09-18,09-22: -100g D moong dal khichdi
+Dals,Chole,0,g,out,,,1,2026-09-18,2026-09-18,21-Sep post-dinner count
+Dals,Split black urad dal,50,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Dals,Toor dal,420,g,in,,,1,2026-09-24,2026-09-12,09-24: -80g B sambar
+Spice,Pink salt,0,g,out,,,1,2026-09-12,2026-09-02,12-Sep: full overwrite — not in count
+Spice,Dhaniya seeds,100,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Spice,Coriander powder,200,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Spice,Baking soda,125,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Spice,Cinnamon sticks,100,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Spice,Haldi,0,g,out,,,1,2026-09-12,2026-09-02,12-Sep: full overwrite — not in count
+Spice,Methi dana,0,g,out,,,1,2026-09-12,2026-09-02,12-Sep: full overwrite — not in count
+Beverage,Tea powder,80,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Spice,Aamchur,80,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Spice,Mixed masala spice,0,g,out,,,1,2026-09-12,2026-09-02,12-Sep: full overwrite — not in count
+Spice,Garam masala,72,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Spice,Dhaniya powder,0,g,out,,,1,2026-09-12,2026-09-02,12-Sep: full overwrite — not in count
+Spice,Ajwain,20,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Spice,Salt,0,g,out,,,1,2026-09-12,2026-09-02,12-Sep: full overwrite — not in count
+Spice,Jeera powder,0,g,out,,,1,2026-09-12,2026-09-02,12-Sep: full overwrite — not in count
+Spice,Dried chilli,50,g,in,,,1,2026-09-12,2026-09-02,12-Sep: restored on request
+Spice,Kalonji,50,g,in,,,1,2026-09-12,2026-09-02,12-Sep: restored on request
+Spice,Rai,0,g,out,,,1,2026-09-12,2026-09-02,12-Sep: full overwrite — not in count
+Spice,Kasuri methi,15,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Spice,Jeera,0,g,out,,,1,2026-09-12,2026-09-02,12-Sep: full overwrite — not in count
+Spice,Hing,0,g,out,,,1,2026-09-12,2026-09-02,12-Sep: full overwrite — not in count
+Condiment,Mustard oil,700,ml,in,,,1,2026-09-18,2026-09-18,19-Sep post-dinner count
+Condiment,Groundnut oil,0,ml,out,,,1,2026-09-18,2026-09-18,19-Sep post-dinner count
+Condiment,Sugar,700,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Condiment,Kapiva Pure Foods Organic Gulkand,250,g,in,,,1,2026-09-12,2026-09-02,12-Sep: restored on request
+Condiment,Soy sauce,130,ml,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Condiment,Extra virgin olive oil,80,ml,in,,,1,2026-09-18,2026-09-18,19-Sep post-dinner count
+Condiment,The Little Farm Co. Grandma's Mango Pickle,200,g,in,,,1,2026-09-12,2026-09-02,12-Sep: restored on request
+Condiment,White vinegar,500,ml,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Condiment,Vinegar,0,g,out,,,1,2026-09-12,2026-09-02,12-Sep: full overwrite — not in count
+Condiment,Ghee,100,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Condiment,Vanilla essence,30,ml,in,,,1,2026-09-12,2026-09-02,12-Sep: restored on request
+Condiment,Lemon juice,50,ml,in,,,1,2026-09-16,2026-09-16,16-Sep perishable overwrite (operator)
+Staple,Almonds,100,g,in,,,1,2026-09-18,2026-09-18,21-Sep post-dinner count
+Staple,Flax seeds,500,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Vegetable,Lemon,4,pc,in,,,1,2026-09-23,2026-09-21,23-Sep perishable overwrite
+Staple,Peanuts,80,g,in,,,1,2026-09-23,2026-09-12,09-23: -20g B peanut poha
+Staple,Pumpkin seeds,130,g,in,,,1,2026-09-21,2026-09-12,09-21: -20g B yogurt bowl
+Staple,Raisins,200,g,in,,,1,2026-09-12,2026-09-02,12-Sep: restored on request
+Staple,Dates,170,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Staple,Chia seeds,200,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Staple,Chia seed,0,g,out,,,1,2026-09-12,2026-09-02,12-Sep: full overwrite — not in count
+Meat,Tofu,0,g,out,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Bread & bakery,Pav bhaji bun,0,g,out,,,1,2026-09-04,2026-09-03,09-04: -150g L burger buns
+Fruit,Pear,0,pc,out,,,1,2026-09-14,2026-09-12,09-14: -1pc B cut fruits
+Dals,Rajma,740,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Vegetable,Ginger,50,g,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Vegetable,Iceberg lettuce,0,pc,out,,,1,2026-09-21,2026-09-18,09-21: -0.5pc D lettuce tomato salad
+Condiment,Tandoori mayo,20,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Fruit,Avocado,0,pc,out,,,1,2026-09-08,2026-09-07,09-08: -1pc B sliced avocado both
+Fruit,Apple,1,pc,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Fruit,Pineapple,0,pc,out,,,1,2026-09-14,2026-09-14,14-Sep: pineapple removed
+Dairy,Yogurt,0,g,out,,,1,2026-09-07,2026-09-07,7-Sep FULL perishable overwrite (Bhavya): not in the count (was 200g)
+Beverage,Instant coffee,50,g,in,,,1,2026-09-12,2026-09-05,12-Sep: restored on request
+Dairy,Almond milk,500,ml,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Condiment,Peanut butter,250,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Vegetable,Bhindi,0,g,out,,,1,2026-09-18,2026-09-17,09-18: -200g L bhindi do pyaza
+Meat,Paneer,200,g,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Sweet potato,1,pc,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Herb,Basil,0,g,out,,,1,2026-09-11,2026-09-11,11-Sep: basil 0
+Staple,Walnuts,100,g,in,,,1,2026-09-24,2026-09-16,24-Sep update
+Bread & bakery,Sourdough bread,0,slice,out,,,1,2026-09-09,2026-09-09,9-Sep: sourdough removed
+Dairy,Butter,100,g,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Dairy,Milky Mist blueberry yogurt,0,g,out,,,1,2026-09-12,2026-09-09,12-Sep: full overwrite — not in count
+Fruit,Peeled pomegranate,0,g,out,,,1,2026-09-09,2026-09-07,9-Sep: peeled pomegranate removed (was 40g)
+Spice,Chole masala,0,g,out,,,1,2026-09-22,2026-09-12,09-22: -100g L quinoa chickpea salad
+Grains,Pasta,180,g,in,,,1,2026-09-17,2026-09-12,09-17: -200g L penne alla vodka
+Vegetable,Red bell pepper,0,pc,out,,,1,2026-09-12,2026-09-10,12-Sep: full overwrite — not in count
+Vegetable,Curry leaves,90,g,in,,,1,2026-09-24,2026-09-21,09-24: -10g B curry leaves chutney
+Dairy,Curd,280,g,in,,,1,2026-09-24,2026-09-18,24-Sep order (post-meal)
+Spice,Whole black pepper,0,g,out,,,1,2026-09-12,2026-09-10,12-Sep: full overwrite — not in count
+Vegetable,Button mushroom,0,g,out,,,1,2026-09-23,2026-09-18,09-23: -200g D garlic mushroom gravy
+Spice,Kitchen king masala,100,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite (operator)
+Grains,Basmati rice,450,g,in,,,1,2026-09-23,2026-09-12,09-23: -150g D fried rice
+Spice,Cardamom,0,g,out,,,1,2026-09-12,2026-09-10,12-Sep: full overwrite — not in count
+Dairy,Ragi dosa batter,0,g,out,,,1,2026-09-12,2026-09-10,12-Sep: full overwrite — not in count
+Spice,Tej patta,0,g,out,,,1,2026-09-12,2026-09-10,12-Sep: full overwrite — not in count
+Staple,Roasted salted peanuts,800,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Spice,Elaichi (cardamom),35,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Spice,Black pepper (whole),25,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Condiment,Cow ghee,400,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Spice,Rock salt,290,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Spice,Methi seeds,100,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Staple,Black sesame seeds,25,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Spice,Biryani masala,100,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Spice,Haldiram's Indian curry powder,100,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Spice,Pav bhaji masala,50,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Grains,Plant protein,450,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Staple,Cocoa powder,50,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Condiment,Monk fruit sweetener,150,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Staple,Pure hagelslag,500,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Grains,Yeast protein,960,g,in,,,1,2026-09-19,2026-09-12,09-19: -20g L fermented yeast protein
+Condiment,Honey,1200,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Grains,Muesli,190,g,in,,,1,2026-09-21,2026-09-12,09-21: -60g B yogurt bowl
+Staple,Boondi,100,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Dals,Black urad,520,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Grains,Barnyard millet,100,g,in,,,1,2026-09-24,2026-09-12,24-Sep update
+Spice,Dry red chilli,120,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Condiment,Tamarind (imli),200,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Spice,Sambar masala,50,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Spice,Poha masala,0,g,out,,,1,2026-09-23,2026-09-12,09-23: -50g B peanut poha
+Spice,Black pepper powder,20,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Spice,Haldi (turmeric powder),20,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Spice,Bhuna jeera,20,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Spice,Black mustard seeds,15,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Spice,Jeera (cumin seeds),20,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Spice,Mixed whole spices,25,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Staple,Sesame seeds,20,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Spice,Bay leaf,20,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Condiment,Chow white vinegar,150,ml,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Spice,Hing (asafoetida),25,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Staple,Jalapenos,100,g,in,,,1,2026-09-24,2026-09-16,24-Sep update
+Condiment,Tomato ketchup,400,g,in,,,1,2026-09-23,2026-09-16,23-Sep perishable overwrite
+Spice,Mixed khada masala,50,g,in,,,1,2026-09-12,2026-09-12,12-Sep full overwrite — NEW
+Dairy,Dosa batter,300,ml,in,,,1,2026-09-24,2026-09-12,09-24: -200ml B idli
+Spice,Chaat masala,100,g,in,,,1,2026-09-13,2026-09-13,13-Sep order — NEW
+Vegetable,Palak (spinach),0,g,out,,,1,2026-09-15,2026-09-15,15-Sep: palak 0
+Dairy,Greek yogurt mango,0,g,out,,,1,2026-09-23,2026-09-18,23-Sep: not in perishable overwrite
+Grains,Thai jasmine rice,0,g,out,,,1,2026-09-21,2026-09-17,09-21: -150g D jasmine rice
+Beverage,Cranberry lime sparkling,600,ml,in,,,1,2026-09-17,2026-09-17,17-Sep order
+Meat,Tempeh,200,g,in,,,1,2026-09-24,2026-09-18,24-Sep order (post-meal)
+Condiment,Green chilli sauce,190,g,in,,,1,2026-09-17,2026-09-17,17-Sep order
+Grains,Sooji,430,g,in,,,1,2026-09-19,2026-09-17,09-19: -30g B ragi dosa (rava)
+Vegetable,Mixed vegetables,0,g,out,,,1,2026-09-23,2026-09-18,23-Sep: not in perishable overwrite
+Vegetable,Lettuce,1,pc,in,,,1,2026-09-24,2026-09-21,"24-Sep: lettuce 1pc (removed old, added fresh)"
+Vegetable,Cherry tomato,100,g,in,,,1,2026-09-23,2026-09-21,23-Sep perishable overwrite
+Herb,Parsley,25,g,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Fruit,Kiwi,2,pc,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Vegetable,Potato,1000,g,in,,,1,2026-09-24,2026-09-18,24-Sep order (post-meal)
+Grains,Poha,500,g,in,,,1,2026-09-22,2026-09-22,22-Sep: RESTORED 500g — wrongly deleted by dup-merge (had been 500g through 21-Sep)
+Vegetable,Mint leaves,150,g,in,,,1,2026-09-23,,23-Sep perishable overwrite
+Herb,Dill leaves,30,g,in,,,1,2026-09-23,,23-Sep perishable overwrite
+Vegetable,Coriander,50,g,in,,,1,2026-09-23,,23-Sep perishable overwrite
+Staple,Raw peanuts,0,g,out,,,1,2026-09-23,,23-Sep perishable overwrite
+Grains,Bread,250,g,in,,,1,2026-09-24,,24-Sep order (post-meal)
+Vegetable,Mushroom,0,g,out,,,1,2026-09-23,,23-Sep perishable overwrite
+Staple,Makhana,200,g,in,,,1,2026-09-24,,24-Sep update
+Vegetable,Green capsicum,2,pc,in,,,1,2026-09-24,,24-Sep order (post-meal)
+Vegetable,Zucchini,1,pc,in,,,1,2026-09-24,,24-Sep order (post-meal)
+Meat,Soya chunks,200,g,in,,,1,2026-09-24,,24-Sep order (post-meal)
+Dairy,Cheese,0,g,out,,,1,2026-09-24,,24-Sep update
+Staple,Almond,100,g,in,,,1,2026-09-24,,24-Sep update

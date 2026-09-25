@@ -1,0 +1,14 @@
+from (raw form),to (processed form),same physical stock?,note
+pomegranate,peeled pomegranate,yes,"peeling the same fruit — one row, do not create a second"
+garlic,peeled garlic,yes,peeling the same garlic
+coconut,grated coconut,yes,grating the same coconut
+coconut,coconut chunks,yes,cut from the same coconut
+ginger,ginger garlic paste,partial,"ginger consumed INTO the paste — deduct ginger, the paste is a made item"
+milk,curd,yes-consumes,"milk is SET into curd — deduct milk, curd is the output; do not hold both from the same litres"
+milk,paneer,yes-consumes,"milk is CURDLED into paneer — deduct milk, paneer is the output"
+cream,butter,yes-consumes,cream churned into butter
+curd,hung curd,yes,"same curd, water drained"
+paneer,grated paneer,yes,"same paneer, grated"
+tomato,tomato puree,yes-consumes,tomatoes blended into puree
+lemon,lemon juice,yes-consumes,juiced from the same lemons
+mint,mint paste,yes-consumes,"fresh mint ground into paste — deduct mint, paste is the output"

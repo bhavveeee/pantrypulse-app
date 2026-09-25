@@ -1,0 +1,173 @@
+Yash & Manik,,,,,,,,,,
+Current stock · 2 on record · default inventory 22-Aug (Bhavya upload),,,,,,,,,,
+Category,Item,Quantity,Unit,Status,Est,Verify,Factor,Last checked,Last entered,Note
+Condiment,Bread,0,g,out,,,1,2026-09-24,2026-09-18,24-Sep: 0 (operator)
+Dairy,Butter,500,g,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Dairy,Cheese slices,3,pc,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Grains,Pasta,350,g,in,,,1,2026-09-24,2026-09-17,09-24: -75g D pesto pasta (0.5) (re-deduct from count)
+Spice,Pav bhaji masala,80,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Staple,Cornstarch,120,g,in,,,1,2026-09-21,2026-08-22,09-21: -30g L salad
+Spice,Tea masala,60,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Meat,Eggs,2,pc,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Meat,Paneer,200,g,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Beans,20,g,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Supplement,Vitafusion,500,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Spice,Peanut powder,80,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Spice,Kokam,80,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Nuts & seeds,Cashew split,200,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Supplement,One a day,100,ml,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Spice,Kasuri methi,50,g,in,,,1,2026-09-03,2026-09-03,"3-Sep: RESTORED to 50g — on 31-Aug a fresh-methi deduction wrongly hit this row, and when I corrected it I set this row to 0 instead of putting the 50g back. The kasuri methi was never used."
+Spice,Coffee powder,177,g,in,,,1,2026-09-17,2026-08-22,09-17: -8g B cold coffee
+Staple,Mangodi,200,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Staple,Boondi (raita),340,g,in,,,1,2026-08-26,2026-08-22,26-Aug: -60g L boondi raita
+Spice,Mix seeds,180,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Condiment,Red chilli sauce,50,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Condiment,Soy sauce,50,ml,in,,,1,2026-09-22,2026-08-22,09-22: -5ml D fried rice
+Condiment,Chilli vinegar,50,ml,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Condiment,Agave syrup,100,ml,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Condiment,Chipotle sauce,150,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Condiment,Dark soy sauce,210,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Staple,Green chilli sauce,180,g,in,,,1,2026-09-02,2026-08-25,2-Sep: restored — a fresh green-chilli deduction had hit this sauce row
+Spice,Kesar,5,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Dairy,Amul milk,1500,ml,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Nuts & seeds,Peanut,300,g,in,,,1,2026-08-22,2026-08-22,combined duplicate rows from upload
+Fruit,Apple,1,pc,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Fruit,Pomegranate,1,pc,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Garlic,250,g,in,,,1,2026-09-24,2026-09-18,24-Sep order
+Vegetable,Beetroot,0.65,pc,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Carrot,2,pc,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Capsicum,150,g,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Coriander,50,g,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Vegetable,Ginger,100,g,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Green chilli,150,g,in,,,1,2026-09-24,2026-09-19,24-Sep update
+Vegetable,Curry leaves,20,g,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Peeled garlic,0,g,out,,,1,2026-09-09,2026-09-09,9-Sep: peeled garlic retired — switched to normal garlic
+Vegetable,Tomato,7,pc,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Frozen,Frozen peas,0,g,out,,,1,2026-09-23,2026-09-18,23-Sep: not in perishable overwrite
+Bread & bakery,Malabar paratha,0,g,out,,,1,2026-08-25,2026-08-25,25-Aug Bhavya overwrote — smart-list check result: removed (was 100g)
+Vegetable,Grated coconut,0,g,out,,,1,2026-08-26,2026-08-26,"26-Aug Bhavya overwrote — smart-list check result (perishable count) — perishables overwritten, staples untouched: not in the 26-Aug Bhavya overwrote — smart-list check result (perishable count) (was 180g)"
+Dairy,Coconut milk,0,ml,out,,,1,2026-09-16,2026-09-12,16-Sep: removed — not in perishable count
+Vegetable,Potato,7,pc,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Grains,Atta (wheat flour),680,g,in,,,1,2026-09-24,2026-09-02,09-24: -100g L 5 roti
+Spice,Red chilli powder,10,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Spice,Elaichi powder,40,g,in,,,1,2026-08-22,2026-08-22,combined duplicate rows from upload
+Spice,Black mustard seed,200,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Staple,Turmeric,20,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Spice,Red chilli(dry),10,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Spice,Cinnamon sticks,80,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Spice,Big cardamom,100,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Spice,Black pepper,30,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Spice,Clove,30,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Condiment,Mango Pickles,250,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Spice,Ajwain powder,50,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Spice,Hing,40,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Condiment,Schezwan chutney,100,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Spice,Jeera powder,100,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Spice,Kashmiri chilli powder,100,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Spice,Black pepper powder,150,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Spice,Chaat masala,100,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Spice,Black salt,300,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Staple,Amchur,100,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Spice,Ajwain,100,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Spice,Fennel seed powder,100,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Condiment,Pikkle shikkle,50,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Grains,Oats powder,30,g,in,,,1,2026-09-21,2026-08-22,09-21: -20g B oats upma (0.5)
+Dals,Urad dal,0,g,out,,,1,2026-09-21,2026-08-22,09-21: -20g L dal fry
+Condiment,Dhaga mishri,150,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Staple,Anjeer,80,g,in,,,1,2026-08-25,2026-08-25,25-Aug Bhavya overwrote — smart-list check result: moved Fruit -> Staple (dried fruit — shelf stable)
+Dals,Chole masale,80,g,in,,,1,2026-09-03,2026-08-22,3-Sep: restored — chana masala needs the LEGUME; this is the spice mix
+Spice,Baking powder,30,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Staple,Dates,100,g,in,,,1,2026-08-25,2026-08-25,"2-Sep Bhavya overwrote — smart-list check result: confirmed under Staple — shelf-stable, not swept by Bhavya overwrote — smart-list check result (perishable count)s"
+Spice,Gunpowder,150,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Grains,Rolled oats,350,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Dals,Arhar dal,0,g,out,,,1,2026-09-07,2026-08-22,09-07: -50g L beans and dal
+Dals,Masoor dal(yellow),400,g,in,,,1,2026-08-26,2026-08-22,26-Aug: -100g L masur dal
+Dals,Moong dal,1260,g,in,,,1,2026-09-16,2026-08-22,09-16: -30g B sprout chaat
+Dals,Rajma,40,g,in,,,1,2026-09-16,2026-08-22,09-16: -40g L rajma
+Grains,Rice (basmati),0,g,out,,,1,2026-08-31,2026-08-22,31-Aug: -200g D palak rice
+Dals,Chana dal,120,g,in,,,1,2026-09-17,2026-08-22,09-17: -20g B Manik kala chana
+Dals,Chana,100,g,in,,,1,2026-09-03,2026-08-22,3-Sep: -150g L chana masala
+Dals,Urad dal split,100,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Dals,Moong (hara),400,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Oil,Groundnut oil,200,ml,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Condiment,Tomato ketchup,200,ml,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Grains,Besan,200,g,in,,,1,2026-09-24,2026-08-22,09-24: -50g B besan chilla
+Oil,Olive oil,100,ml,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Spice,Salt,800,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Grains,Oats,150,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Dals,Rajma(black),300,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Grains,Poha,160,g,in,,,1,2026-09-19,2026-08-22,09-19: -40g B vegetable poha
+Dairy,Ghee,1050,ml,in,,,1,2026-09-24,2026-09-18,24-Sep order
+Staple,Sugar,855,g,in,,,1,2026-09-03,2026-08-22,3-Sep: +15.0 restored — this item had been DOUBLE-DEDUCTED (my deduction script ran twice)
+Grains,Rice,0,g,out,,,1,2026-09-03,2026-08-22,03-Sep: -100g D garlic fried rice
+Grains,Brown rice,340,g,in,,,1,2026-09-10,2026-08-22,09-10: -130g D herbed rice
+Beverage,Coffee(nescafe),50,g,in,,,1,2026-08-29,2026-08-29,29-Aug Bhavya overwrote — smart-list check result (perishable count) — perishables overwritten
+Staple,Walnut,100,g,in,,,1,2026-08-25,2026-08-25,"2-Sep Bhavya overwrote — smart-list check result: confirmed under Staple — shelf-stable, not swept by Bhavya overwrote — smart-list check result (perishable count)s"
+Nuts & seeds,Shell pista,100,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Nuts & seeds,Almonds,150,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Staple,Raisins,100,g,in,,,1,2026-08-26,2026-08-26,26-Aug: restored and moved Fruit -> Staple — dried fruit is shelf-stable and should not be swept by a Bhavya overwrote — smart-list check result (perishable count)
+Spice,Pumpkin seeds,50,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Condiment,Honey,700,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Dals,Chole,0,g,out,,,1,2026-09-03,2026-09-02,3-Sep: -150g L chana masala
+Dals,Toor dal,970,g,in,,,1,2026-09-12,2026-08-22,09-12: -30g L yellow tur dal
+Beverage,Red label,120,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Spice,Dhaniya(whole),400,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Grains,Rawa (suji),110,g,in,,,1,2026-09-18,2026-09-04,09-18: -40g B upma
+Spice,Homemade chicken masala,0,g,out,,,1,2026-09-15,2026-08-22,09-15: -75g L chicken curry
+Spice,Homemade masala,300,g,in,,,1,2026-08-22,2026-08-22,default inventory (22-Aug upload)
+Meat,Chicken,0,g,out,,,1,2026-09-23,2026-09-18,23-Sep: not in perishable overwrite
+Dairy,Homemade curd,0,g,out,,,1,2026-09-23,2026-09-18,23-Sep: not in perishable overwrite
+Vegetable,Cucumber,0.5,pc,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Spring onion,150,g,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Lemon,3,pc,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Spinach,150,g,in,,,1,2026-09-24,2026-09-19,24-Sep update
+Vegetable,Methi leaves,0,g,out,,,1,2026-08-31,2026-08-29,31-Aug: -100g L methi malai paneer
+Fruit,Banana,0,pc,out,,,1,2026-09-22,2026-09-19,22-Sep: removed (operator)
+Vegetable,Arbi (colocasia),0,g,out,,,1,2026-09-12,2026-09-10,12-Sep perishable overwrite — not in count
+Spice,Oregano,40,g,in,,,1,2026-08-27,2026-08-27,27-Aug order
+Spice,Chilli flakes,40,g,in,,,1,2026-08-27,2026-08-27,27-Aug order
+Vegetable,Mint,0,g,out,,,1,2026-09-05,2026-09-05,"5-Sep: fresh mint converted INTO mint paste (was 125g) — not a loss, transformed"
+Fruit,Avocado,0,pc,out,,,1,2026-09-23,2026-09-18,23-Sep: not in perishable overwrite
+Spice,Biryani masala,25,g,in,,,1,2026-08-29,2026-08-29,29-Aug: -25g D hyderabadi chicken biryani
+Meat,Prawns,0,g,out,,,1,2026-09-23,2026-09-23,23-Sep perishable overwrite
+Vegetable,Green zucchini,0,pc,out,,,1,2026-09-02,2026-09-02,2-Sep Bhavya overwrote — smart-list check result: zucchini removed
+Vegetable,Button mushroom,0,g,out,,,1,2026-09-10,2026-09-09,09-10: -80g D mushroom fricassee
+Dairy,Fresh cream,0,g,out,,,1,2026-09-24,2026-09-12,24-Sep update
+Pantry,Coconut milk (tetra),0,ml,out,,,1,2026-09-02,2026-09-02,12-Sep: merged into Coconut milk
+Condiment,Veg mayonnaise,140,g,in,,,1,2026-08-31,2026-08-31,31-Aug: -40g B egg mayo sandwich
+Grains,Noodles,100,g,in,,,1,2026-09-17,2026-09-17,17-Sep: quantity update (operator)
+Vegetable,Yellow capsicum,0,pc,out,,,1,2026-09-23,2026-09-18,23-Sep: not in perishable overwrite
+Vegetable,Red capsicum,0,pc,out,,,1,2026-09-23,2026-09-18,23-Sep: not in perishable overwrite
+Meat & fish,Seer fish (surmai),0,g,out,,,1,2026-09-09,2026-09-09,9-Sep: removed on instruction
+Bread & bakery,Tortilla wrap,0,pc,out,,,1,2026-09-16,2026-09-13,16-Sep: removed — not in perishable count
+Vegetable,Corn cob,1.5,pc,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Fruit,Kiwi,0,pc,out,,,1,2026-09-12,2026-09-10,12-Sep perishable overwrite — not in count
+Frozen,Safal sweet corn,0,g,out,,,1,2026-09-12,2026-09-03,12-Sep perishable overwrite — not in count
+Vegetable,Cabbage,100,g,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Lettuce,0.5,pc,in,,,1,2026-09-23,2026-09-12,23-Sep perishable overwrite
+Vegetable,Mint paste,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep perishable overwrite — not in count
+Vegetable,Cherry tomato,50,g,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Tricolour capsicum,0,pc,out,,,1,2026-09-09,2026-09-09,9-Sep: consolidated into the single Capsicum row (r41)
+Vegetable,Basil leaves,35,g,in,,,1,2026-09-24,2026-09-19,09-24: -15g D pesto (re-deduct from count)
+Meat,Mutton mince,0,g,out,,,1,2026-09-09,2026-09-09,9-Sep: mutton mince removed
+Herb,Parsley,30,g,in,,,1,2026-09-24,2026-09-18,09-24: -10g D pesto (re-deduct from count)
+Condiment,Mustard sauce,320,g,in,,,1,2026-09-10,2026-09-10,10-Sep order — NEW row
+Vegetable,Arbi,0,g,out,,,1,2026-09-16,2026-09-12,16-Sep: removed — not in perishable count
+Meat,Chicken breast,0,g,out,,,1,2026-09-16,2026-09-12,16-Sep: removed — not in perishable count
+Fruit,Chikku,0,pc,out,,,1,2026-09-23,2026-09-19,23-Sep: not in perishable overwrite
+Spice,Garam masala,100,g,in,,,1,2026-09-21,2026-09-21,21-Sep order
+Vegetable,Onion,0.5,pc,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Bhindi,100,g,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Meat,Chicken leg boneless,500,g,in,,,1,2026-09-23,,23-Sep perishable overwrite
+Dairy,Curd,300,g,in,,,1,2026-09-24,,24-Sep update
+Vegetable,Arvi,125,g,in,,,1,2026-09-24,,09-24: -125g L arbi sabzi (0.5)
+Dairy,Amul Taaza milk,1425,ml,in,,,1,2026-09-24,,09-24: -75ml B hot milk (0.5)
+Frozen,Frozen green peas,250,g,in,,,1,2026-09-24,,24-Sep update
+Meat,Frozen chicken,600,g,in,,,1,2026-09-24,,24-Sep update
+Vegetable,Lady finger,100,g,in,,,1,2026-09-24,,24-Sep update
+Herb,Curly parsley,50,g,in,,,1,2026-09-24,,24-Sep update
+Fruit,Chikoo,2,pc,in,,,1,2026-09-24,,24-Sep update
+Dairy,Milk,100,ml,in,,,1,2026-09-24,,24-Sep update
+Vegetable,Coriander leaves,100,g,in,,,1,2026-09-24,,24-Sep update
+Meat,Health On Plants tofu,0,g,out,,,1,2026-09-24,,24-Sep update
+Dairy,Cheese,0,g,out,,,1,2026-09-24,,24-Sep update

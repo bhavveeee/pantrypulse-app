@@ -1,0 +1,179 @@
+Category,Item,Quantity,Unit,Status,Est,Verify,Factor,Last checked,Last entered,Note
+Vegetable,Tomato,1,pc,in,,,1,2026-09-24,2026-09-18,09-24: -1pc L chicken curry
+Frozen,Peas,50,g,in,,,1,2026-09-18,2026-09-18,22-Sep full perishable check
+Vegetable,Ginger,0,g,out,,,1,2026-09-18,2026-09-16,18-Sep: removed — not in perishable overwrite
+Vegetable,Grated coconut,0,g,out,,,1,2026-09-18,2026-09-17,18-Sep: removed — not in perishable overwrite
+Vegetable,Garlic,150,g,in,,,1,2026-09-18,2026-09-18,22-Sep full perishable check
+Vegetable,Green chilli,20,g,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Curry leaf,10,g,in,,,1,2026-09-18,2026-09-18,22-Sep full perishable check
+Vegetable,Onion,0,pc,out,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Lemon,4,pc,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Capsicum,0,pc,out,,,1,2026-09-24,2026-09-18,09-24: -1pc D egg fried rice
+Vegetable,Cucumber,0,pc,out,,,1,2026-09-24,2026-09-18,09-24: -1pc L cucumber salad
+Vegetable,Cabbage,0,pc,out,,,1,2026-09-11,2026-09-10,09-11: -1pc D cabbage poriyal
+Fruit,Cranberries,0,g,out,,,1,2026-09-12,2026-09-09,12-Sep perishable overwrite — not in count
+Fruit,Apple,1,pc,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Meat,Chicken curry cut,0,g,out,,,1,2026-09-24,2026-09-18,24-Sep: chicken removed (all rows incl breast)
+Meat,Egg,0,pc,out,,,1,2026-09-24,2026-09-18,09-24: -1pc D egg fried rice
+Dairy,Nandini GoodLife milk,500,ml,in,,,1,2026-09-18,2026-09-18,22-Sep full perishable check
+Dairy,Fresh cream,80,ml,in,,,1,2026-09-18,2026-09-18,19-Sep full perishable overwrite
+Dairy,Coconut milk,100,ml,in,,,1,2026-09-18,2026-09-18,22-Sep full perishable check
+Dairy,Amul garlic & herbs butter,35,g,in,,,1,2026-09-18,2026-09-18,22-Sep full perishable check
+Grains,Matta rice,0,g,out,,,1,2026-09-17,2026-09-16,09-17: -150g D prawn fried rice
+Grains,Golden crown Panko Bread Crumbs,0,g,out,,,1,2026-09-16,2026-09-09,16-Sep: full overwrite — not in mega sheet
+Grains,White basmati rice,580,g,in,,,1,2026-09-24,2026-09-16,09-24: -120g D egg fried rice
+Grains,Oats,585,g,in,,,1,2026-09-16,2026-09-16,16-Sep: restored on request (was on board pre-overwrite)
+Grains,Atta,550,g,in,,,1,2026-09-24,2026-09-16,09-24: -80g L roti
+Grains,Sooji,400,g,in,,,1,2026-09-18,2026-09-16,09-18: -100g B uttapam
+Grains,Yu whole wheat spaghetti,500,g,in,,,1,2026-09-16,2026-09-16,16-Sep: restored on request (was on board pre-overwrite)
+Grains,Kaima Raw Rice,0,g,out,,,1,2026-09-16,2026-09-09,16-Sep: full overwrite — not in mega sheet
+Grains,Poha,300,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite (mega inventory)
+Dals,Split Yellow Urad Dal,0,g,out,,,1,2026-09-16,2026-09-09,16-Sep: full overwrite — not in mega sheet
+Dals,White Urad Split,0,g,out,,,1,2026-09-16,2026-09-09,16-Sep: full overwrite — not in mega sheet
+Dals,Kabuli Chana,0,g,out,,,1,2026-09-16,2026-09-09,16-Sep: full overwrite — not in mega sheet
+Dals,Green Moong,0,g,out,,,1,2026-09-16,2026-09-09,16-Sep: full overwrite — not in mega sheet
+Spice,Jeera Powder,0,g,out,,,1,2026-09-16,2026-09-09,16-Sep: full overwrite — not in mega sheet
+Spice,Coriander powder,400,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite (mega inventory)
+Spice,Black salt,50,g,in,,,1,2026-09-17,2026-09-17,17-Sep: quantity update (operator)
+Spice,Elaichi (cardamom),20,g,in,,,1,2026-09-16,2026-09-16,16-Sep: elaichi 20g (corrected from 175 — that was the powder)
+Spice,Tata salt,145,g,in,,,1,2026-09-16,2026-09-16,16-Sep: restored on request (was on board pre-overwrite)
+Spice,Haldi Powder,0,g,out,,,1,2026-09-16,2026-09-09,16-Sep: full overwrite — not in mega sheet
+Spice,Jeera,180,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite (mega inventory)
+Spice,Custard powder,50,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite (mega inventory)
+Spice,Kashmiri paprika powder,50,g,in,,,1,2026-09-17,2026-09-17,17-Sep: quantity update (operator)
+Spice,Chicken Biryani Masala,0,g,out,,,1,2026-09-16,2026-09-09,16-Sep: full overwrite — not in mega sheet
+Spice,Fennel Seeds,0,g,out,,,1,2026-09-16,2026-09-09,16-Sep: full overwrite — not in mega sheet
+Spice,Methi seeds,50,g,in,,,1,2026-09-16,2026-09-16,16-Sep: in mega sheet under variant spelling (mehti seeds) — restored
+Spice,Black pepper powder,125,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite (mega inventory)
+Spice,Mustard Seeds,0,g,out,,,1,2026-09-16,2026-09-09,16-Sep: full overwrite — not in mega sheet
+Spice,Elaichi,0,g,out,,,1,2026-09-16,2026-09-09,16-Sep: full overwrite — not in mega sheet
+Condiment,Olive Oil,0,ml,out,,,1,2026-09-16,2026-09-09,16-Sep: full overwrite — not in mega sheet
+Condiment,tomato ketchup,485,g,in,,,1,2026-09-17,2026-09-17,17-Sep order
+Condiment,Kissan Peanut Butter,0,g,out,,,1,2026-09-16,2026-09-09,16-Sep: full overwrite — not in mega sheet
+Spice,Ghee roast masala,250,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite (mega inventory)
+Condiment,Nutella Hazelnut Spread with Cocoa,0,g,out,,,1,2026-09-16,2026-09-09,16-Sep: full overwrite — not in mega sheet
+Condiment,Tamarind,150,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite (mega inventory)
+Condiment,Red chilli sauce,170,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite (mega inventory)
+Condiment,Green chilli sauce,250,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite (mega inventory)
+Condiment,Garlic paste,100,g,in,,,1,2026-09-17,2026-09-17,17-Sep: quantity update (operator)
+Condiment,Soy sauce,150,g,in,,,1,2026-09-16,2026-09-16,16-Sep: in mega sheet under variant spelling (soya sauce) — restored
+Condiment,Honey Mustard Sauce,0,g,out,,,1,2026-09-16,2026-09-09,16-Sep: full overwrite — not in mega sheet
+Condiment,Honey,50,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite (mega inventory)
+Condiment,Synthetic vinegar,50,ml,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite (mega inventory)
+Condiment,Sandwich Spread,0,g,out,,,1,2026-09-14,2026-09-14,14-Sep: sandwich spread removed
+Staple,Peanut,0,g,out,,,1,2026-09-16,2026-09-09,16-Sep: full overwrite — not in mega sheet
+Staple,Chow Chow Noodle,0,g,out,,,1,2026-09-16,2026-09-09,16-Sep: full overwrite — not in mega sheet
+Spice,Creatine,100,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite (mega inventory)
+Condiment,Sugar,100,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite (mega inventory)
+Spice,Red chilli dry,80,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite (mega inventory)
+Staple,Hellmann mayonnaise,0,g,out,,,1,2026-09-16,2026-09-09,16-Sep: full overwrite — not in mega sheet
+Spice,Tata tea gold,50,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite (mega inventory)
+Staple,Dates,0,g,out,,,1,2026-09-16,2026-09-09,16-Sep: full overwrite — not in mega sheet
+Spice,Oregano,60,g,in,,,1,2026-09-17,2026-09-17,17-Sep: quantity update (operator)
+Staple,Oraheno,0,g,out,,,1,2026-09-16,2026-09-09,16-Sep: full overwrite — not in mega sheet
+Spice,Kasuri methi,20,g,in,,,1,2026-09-16,2026-09-16,16-Sep: in mega sheet under variant spelling (kasuri mehti) — restored
+Staple,Cashew,60,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite (mega inventory)
+Spice,Cinnamon sticks,24,g,in,,,1,2026-09-16,2026-09-16,16-Sep: in mega sheet under variant spelling (cinammon sticks) — restored
+Spice,Herbal tea,10,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite (mega inventory)
+Spice,Dry yeast,10,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite (mega inventory)
+Staple,Cloves,0,g,out,,,1,2026-09-16,2026-09-09,16-Sep: full overwrite — not in mega sheet
+Dairy,Parmesan cheese,0,g,out,,,1,2026-09-12,2026-09-09,12-Sep perishable overwrite — not in count
+Dairy,Cheese slice,0,g,out,,,1,2026-09-12,2026-09-09,12-Sep perishable overwrite — not in count
+Beverage,Filter coffee,0,g,out,,,1,2026-09-16,2026-09-09,16-Sep: full overwrite — not in mega sheet
+Meat,Chicken drumstick,0,g,out,,,1,2026-09-17,2026-09-16,09-17: -200g L kori gassi
+Meat,Paneer,0,g,out,,,1,2026-09-18,2026-09-18,19-Sep full perishable overwrite
+Vegetable,Carrot,0,g,out,,,1,2026-09-24,2026-09-18,24-Sep update
+Meat,Chicken breast,0,g,out,,,1,2026-09-18,2026-09-17,18-Sep: removed — not in perishable overwrite
+Vegetable,Coriander leaf,30,g,in,,,1,2026-09-18,2026-09-18,22-Sep full perishable check
+Spice,Hing,50,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite (mega inventory)
+Grains,Rice bran oil,350,ml,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite (mega inventory)
+Dairy,Ghee,0,g,out,,,1,2026-09-18,2026-09-16,18-Sep: removed — not in perishable overwrite
+Vegetable,Lettuce,0,g,out,,,1,2026-09-17,2026-09-16,09-17: -20g D fried rice
+Condiment,Multigrain bread,9,slice,in,,,1,2026-09-24,2026-09-18,09-24: -2slice B bread toast
+Dairy,Amul masti curd,200,g,in,,,1,2026-09-18,2026-09-18,22-Sep full perishable check
+Vegetable,Potato,8,pc,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Dairy,Cheddar cheese,0,g,out,,,1,2026-09-16,2026-09-12,16-Sep: full overwrite — not in mega sheet
+Vegetable,Capsicum tricolour,0,pc,out,,,1,2026-09-15,2026-09-14,09-15: -3pc D grilled veg
+Fruit,Avocado,0,pc,out,,,1,2026-09-16,2026-09-14,16-Sep: full overwrite — not in mega sheet
+Dairy,Feta cheese,50,g,in,,,1,2026-09-18,2026-09-18,22-Sep full perishable check
+Meat,Prawns,20,g,in,,,1,2026-09-18,2026-09-18,22-Sep full perishable check
+Vegetable,Button mushroom,0,g,out,,,1,2026-09-18,2026-09-17,18-Sep: removed — not in perishable overwrite
+Vegetable,Babycorn,0,pc,out,,,1,2026-09-18,2026-09-16,18-Sep: removed — not in perishable overwrite
+Herb,Basil,0,g,out,,,1,2026-09-16,2026-09-14,16-Sep: full overwrite — not in mega sheet
+Dairy,Lactose free milk,0,ml,out,,,1,2026-09-18,2026-09-18,19-Sep full perishable overwrite
+Meat,Fish (seer),0,g,out,,,1,2026-09-16,2026-09-15,09-16: -240g D fish tikka masala
+Spice,Garam masala,100,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite (mega inventory)
+Spice,Cardamom,120,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Spice,Black mustard,50,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Spice,Clove,10,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Spice,Mace,10,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Spice,Mehti seeds,50,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Spice,Biryani masala,40,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Spice,Coriander seeds,50,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Spice,Kasuri mehti,20,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Dals,Moong dal,250,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Spice,Red chilli powder,80,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Spice,Black pepper whole,60,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Spice,Cinammon sticks,24,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Spice,Haldi,150,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Spice,Bay leaves,30,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Condiment,Jaggery powder,390,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Grains,Suji,400,g,in,,,1,2026-09-17,2026-09-16,09-17: -100g B rava uttapam
+Staple,Peanuts,400,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Dals,Green moong whole,20,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Grains,Rice flour,100,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Dals,Chole,0,g,out,,,1,2026-09-24,2026-09-16,24-Sep update
+Bread & bakery,Breadcrumbs,0,g,out,,,1,2026-09-18,2026-09-16,18-Sep: removed — not in perishable overwrite
+Spice,Whey Protein,100,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Dals,White urad dal split,215,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Grains,Idli poddu,200,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Condiment,Mustard oil,500,ml,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Condiment,Extra virgin olive oil,200,ml,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Condiment,Coconut oil,200,ml,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Spice,Impact whey protein,500,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Spice,Muesli,100,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Spice,Plant protein,150,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Staple,Chia seeds,200,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Staple,Almonds,100,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Spice,Whey Protein concentrate,1000,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Grains,Sona masuri rice,0,g,out,,,1,2026-09-18,2026-09-16,09-18: -4.5g L herbed rice
+Dairy,Amul butter,45,g,in,,,1,2026-09-18,2026-09-18,22-Sep full perishable check
+Spice,American berries,100,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Spice,Dark chocolate chips,50,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Spice,Nutella,200,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Dairy,Peanut butter,0,g,out,,,1,2026-09-18,2026-09-16,18-Sep: removed — not in perishable overwrite
+Condiment,Ambarella chutney,350,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Condiment,Chilli oil,200,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Spice,Peanut chikki,400,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Staple,Arabian dates,165,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Dairy,Cheddar cheese slices,90,g,in,,,1,2026-09-22,2026-09-16,22-Sep: restored (operator)
+Spice,Chocolate discs,120,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Spice,Bourbon vanilla extract,25,ml,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Condiment,Honey mustard,50,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Condiment,Roasted garlic mayonnaise,65,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Condiment,Soya sauce,150,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Dairy,Extra hard cheese,90,g,in,,,1,2026-09-22,2026-09-16,22-Sep: restored (operator)
+Spice,Vannila flavour essense,10,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Beverage,Tea,50,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Spice,Rosemary,0,g,out,,,1,2026-09-19,2026-09-16,19-Sep: removed (operator)
+Spice,Table salt,150,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Spice,Shallats,90,g,in,,,1,2026-09-16,2026-09-16,16-Sep full overwrite — NEW
+Meat,Fish,0,g,out,,,1,2026-09-20,2026-09-16,20-Sep: removed (operator)
+Spice,Zucchini,0,pc,out,,,1,2026-09-18,2026-09-16,18-Sep: zucchini removed
+Spice,Basil leaves,10,g,in,,,1,2026-09-18,2026-09-16,09-18: -20g L pesto
+Spice,Black mustard seeds,50,g,in,,,1,2026-09-16,2026-09-16,16-Sep: in mega sheet under variant spelling (black mustard) — restored
+Spice,Elaichi powder,175,g,in,,,1,2026-09-16,2026-09-16,16-Sep: restored on request (was on board pre-overwrite)
+Vegetable,Cut spring onion,150,g,in,,,1,2026-09-18,2026-09-18,22-Sep full perishable check
+Spice,Piri piri spice,80,g,in,,,1,2026-09-17,2026-09-17,17-Sep: quantity update (operator)
+Vegetable,Baby corn,0,pc,out,,,1,2026-09-18,2026-09-17,09-18: -5pc L baby corn
+Dairy,Milk,500,ml,in,,,1,2026-09-22,2026-09-18,22-Sep: restored (operator)
+Spice,Chilli flakes,10,g,in,,,1,2026-09-21,2026-09-21,21-Sep: chilli flakes 10g NEW
+Vegetable,Lady finger,50,g,in,,,1,2026-09-18,2026-09-18,22-Sep full perishable check
+Bread & bakery,Ginger garlic paste,0,g,out,,,1,2026-09-18,2026-09-18,22-Sep full perishable check
+Vegetable,Beetroot,0.5,pc,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Herb,Dill leaves,30,g,in,,,1,2026-09-18,2026-09-18,22-Sep full perishable check
+Vegetable,Broccoli,0,g,out,,,1,2026-09-24,,24-Sep update
+Vegetable,Coconut,0,g,out,,,1,2026-09-24,,24-Sep update
+Vegetable,French beans,0,g,out,,,1,2026-09-24,,24-Sep update
+Frozen,Frozen peas,100,g,in,,,1,2026-09-24,,24-Sep update
+Vegetable,Coriander,0,g,out,,,1,2026-09-24,,24-Sep update

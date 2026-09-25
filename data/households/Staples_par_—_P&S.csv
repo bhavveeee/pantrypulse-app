@@ -1,0 +1,24 @@
+★ ALWAYS-CHECK (must never run out — verify every cycle & every smart list),,,,,,,
+Item,Board SKU,Current,Unit,Status,,,
+Salt,Tata salt,1000,g,OK,,,
+Sugar,Brown sugar,346,g,OK,,,
+Ghee,Ghee,100,ml,OK,,,
+Eggs,Eggs,5,pc,OK,,,
+Mushroom,Mushroom,200,g,OK,,,
+Spinach,Spinach,250,g,OK,,,
+Staple,Category,Current stock,Unit,Std buy-qty (par),20% level,Status,Source / note (EDIT ME)
+Moong dal,Dals & legumes,1 pack (full),pc,500 g,100.0 g,OK (full),India 500 g dal pack; no P&S order on record
+Chana dal,Dals & legumes,1 pack (full),pc,500 g,100.0 g,OK (full),India 500 g dal pack
+Brown rice,Rice & grains,1 box (full),pc,1000 g,200.0 g,OK (full),1 kg box (typical)
+Jowar flour,Flours & grains,500,g,500 g,100.0 g,OK (100%),India 500 g flour pack
+Quinoa,Rice & grains,1 pack (full),pc,500 g,100.0 g,OK (full),500 g pack (typical)
+Sattu,Flours & grains,1 pack (full),pc,500 g,100.0 g,OK (full),India 500 g sattu pack
+Sunflower seeds,Nuts & seeds,1 pack (full),pc,200 g,40.0 g,OK (full),order history 25-Jun = 200 g
+Soya sauce (aminos sub),Sauces & condiments,1 bottle (full),pc,200 ml,40.0 ml,OK (full),200 ml bottle (typical)
+Idli/dosa batter,Pantry,500,g,1000 g,200.0 g,50% — OK,order avg ~900-1000 g (Rishta)
+Coconut oil,Oils & vinegars,0.5,bottle,1 bottle,0.2 bottle,50% — OK,1 bottle par
+Olive oil,Oils & vinegars,1.2,bottle,1 bottle,0.2 bottle,120% — OK,order 9-Jul = 1
+Peanut butter,Spreads & nut butters,925,g,925 g,185.0 g,OK (100%),order 11-Jul = 925 g
+RULE: on-hand < 20% of Std buy-qty (par) -> add to master/smart list. Par derived from order history + typical India pack sizes; EDIT the par or note to correct.,,,,,,,
+"NOTE: items shown as ""1 pack (full)"" are counted per whole pack, so they read 100% until a fraction is recorded. To flag mid-pack, record stock as a fraction (e.g. 0.15 pc) or in grams.",,,,,,,
+TODO: extend this tab to all ~117 P&S staples so the low-stock check is complete (currently seeded for Wednesday-relevant + partial-stock staples).,,,,,,,

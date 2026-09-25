@@ -1,0 +1,19 @@
+Pantry Pulse — Master data,,,,,,,,,,
+Single source of truth · all households · as of 2026-06-29 · model build v19i,,,,,,,,,,
+Tab,Household,id,People,Effective eaters,Stock items,Perish rows,Orders,Checks,History rows,Subscriptions
+Shunyam & Ishan - latest,Shunyam & Ishan,h1b,2,,45,60,99,4,122,0
+Soozy & Munz,Munz & Soozy,h2,2,,47,125,238,6,171,0
+Disha & Anirudh,Disha & Anirudh,h3,2,,45,92,84,3,137,0
+Kartik & Dhara,Kartik & Dhara,h4,2,,45,36,77,2,115,2
+Rahul & Radhika,Rahul & Radhika,h5,3,,45,245,218,4,255,0
+Paxal & Sana,Paxal & Sana,h7,2,,45,7,1,1,29,0
+Pratik & Sakshi,Sakshi & Pratik,h8,2,9,45,142,0,3,5,0
+Yash & Manik,Yash & Manik,h10,2,0.5,118,"Tequila id ed8dd224-05ed-4fbe-acca-3c28133690fc (A001, Ground Floor, Bairavi Dhru...). STANDING RULE (4-Sep): deduct at ONE-PERSON portions despite 2 residents — they eat very little.",,,,
+Padmaja & Rohan,Padmaja & Rohan,h11,2,,80,,,,,
+Akshita & Prerit,Akshita & Prerit,h12,2,2,180,180,0,0,1,0
+Samidha & Arinjay,Samidha & Arinjay,h13,2,2,112,112,0,0,1,0
+Joseph & Teenu,Joseph & Teenu,h14,2,2,84,84,0,0,1,0
+Saurabh,Saurabh Seth,h15,1,1,28,28,0,0,1,0
+Shyamli,Shyamli,h16,1,1,129,129,0,0,1,0
+Piyush & Mamta,Piyush and Mamta,h17,2,2,127,127,0,0,1,0
+Sachin Parth Eeshan,"Sachin, Parth & Eeshan",h18,3,3,,,,,,

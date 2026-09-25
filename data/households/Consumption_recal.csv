@@ -1,0 +1,99 @@
+PantryPulse — Consumption recalibration (guardrailed),,,,,,,,,,
+actual consumed = prev physical count + orders − next physical count (TRUE counts only).,,,,,,,,,,
+"GUARDRAIL: apply factor ONLY if sane (0.6–1.8) AND >=2 counts AND consumption>0. Impossible/absurd (negative, 18x, single-sample) => IGNORED, SKU deducts with normal default.",,,,,,,,,,
+Household,SKU,#counts,#intervals,Actual (g),Logged (g),Delta (g),Learned/day,Raw factor,APPLIED factor,Decision
+h2,Tomato,2,1,-110,1185,-1295,-11,-0.09,—,IGNORED · count rose w/o order (impossible) — deduct normally
+h2,Cabbage,2,1,-375,500,-875,-22.1,-0.75,—,IGNORED · count rose w/o order (impossible) — deduct normally
+h2,Carrot,3,2,895,1617,-722,51,0.55,—,monitor · factor 0.55 borderline — deduct normally for now
+h2,Green capsicum,3,2,-240,180,-420,-9.8,-1.33,—,IGNORED · count rose w/o order (impossible) — deduct normally
+h2,Cucumber,2,1,1000,1340,-340,58.8,0.75,—,IGNORED · <2 counts (not enough signal) — deduct normally
+h2,Coriander (dhania),3,2,301,85,216,19.8,3.54,—,IGNORED · factor 3.54 too high (outlier/low sample) — deduct normally
+h2,Green beans,2,1,394,480,-86,23.2,0.82,—,IGNORED · <2 counts (not enough signal) — deduct normally
+h2,Dill,2,1,-60,0,-60,-6,,—,no meal-log to compare — deduct normally
+h2,Curry leaves,2,1,-1,14,-15,-0.1,-0.07,—,IGNORED · count rose w/o order (impossible) — deduct normally
+h3,Coriander (dhania),2,1,20,20,0,5,1,—,IGNORED · <2 counts (not enough signal) — deduct normally
+h4,Onion,3,2,1660,950,710,114.6,1.75,1.75,"APPLIED · sane, repeated signal"
+h4,Cucumber,3,2,500,350,150,33,1.43,1.43,"APPLIED · sane, repeated signal"
+h4,Tomato,3,2,680,550,130,43.2,1.24,1.24,"APPLIED · sane, repeated signal"
+h4,Ginger,3,2,165,100,65,11,1.65,1.65,"APPLIED · sane, repeated signal"
+h4,Coriander (dhania),3,2,105,90,15,6.9,1.17,1.17,"APPLIED · sane, repeated signal"
+h4,Green chilli,3,2,35,46,-11,2.2,0.76,0.76,"APPLIED · sane, repeated signal"
+h4,Mint,3,2,60,55,5,3.8,1.09,1.09,"APPLIED · sane, repeated signal"
+h4,Potato,3,2,100,350,-250,4,0.29,—,IGNORED · factor 0.29 too low (outlier) — deduct normally
+h4,Muskmelon (netted),2,1,0.2,200,-199.8,0,0,—,IGNORED · negative/zero factor (impossible) — deduct normally
+h4,Garlic,3,2,-35,80,-115,-3.2,-0.44,—,IGNORED · count rose w/o order (impossible) — deduct normally
+h4,Dry coconut,3,2,-70,30,-100,-5,-2.33,—,IGNORED · count rose w/o order (impossible) — deduct normally
+h4,Lemon,3,2,0.5,6.5,-6,0.1,0.08,—,IGNORED · factor 0.08 too low (outlier) — deduct normally
+h4,Eggs,2,1,7,6,1,1,1.17,—,IGNORED · <2 counts (not enough signal) — deduct normally
+h4,Beetroot,2,1,150,150,0,18.8,1,—,IGNORED · <2 counts (not enough signal) — deduct normally
+h4,Lettuce,2,1,100,100,0,6.7,1,—,IGNORED · <2 counts (not enough signal) — deduct normally
+h5,Onion,3,2,3080,490,2590,1129.2,6.29,—,IGNORED · factor 6.29 too high (outlier/low sample) — deduct normally
+h5,Watermelon,2,1,-2000,0,-2000,-1000,,—,no meal-log to compare — deduct normally
+h5,Chicken breast (boneless),4,3,1932,180,1752,435.1,10.73,—,IGNORED · factor 10.73 too high (outlier/low sample) — deduct normally
+h5,Potato,4,3,-1526,100,-1626,3.9,-15.26,—,IGNORED · count rose w/o order (impossible) — deduct normally
+h5,Tomato,4,3,2220,740,1480,363.4,3,—,IGNORED · factor 3.0 too high (outlier/low sample) — deduct normally
+h5,Cucumber,4,3,1720,580,1140,144.6,2.97,—,IGNORED · factor 2.97 too high (outlier/low sample) — deduct normally
+h5,Carrot,3,2,920,340,580,72.3,2.71,—,IGNORED · factor 2.71 too high (outlier/low sample) — deduct normally
+h5,Green capsicum,3,2,-300,40,-340,-150,-7.5,—,IGNORED · count rose w/o order (impossible) — deduct normally
+h5,Zucchini,2,1,-320,0,-320,-320,,—,no meal-log to compare — deduct normally
+h5,Lady's finger,2,1,500,200,300,500,2.5,—,IGNORED · factor 2.5 too high (outlier/low sample) — deduct normally
+h5,Spinach/Palak,2,1,280,0,280,280,,—,no meal-log to compare — deduct normally
+h5,Beetroot,4,3,570,300,270,63.4,1.9,—,IGNORED · factor 1.9 too high (outlier/low sample) — deduct normally
+h5,Garlic,4,3,280,25,255,38.8,11.2,—,IGNORED · factor 11.2 too high (outlier/low sample) — deduct normally
+h5,Coriander (dhania),3,2,200,0,200,100,,—,no meal-log to compare — deduct normally
+h5,Cabbage,3,2,230,420,-190,147.3,0.55,—,monitor · factor 0.55 borderline — deduct normally for now
+h5,Broccoli,2,1,190,0,190,190,,—,no meal-log to compare — deduct normally
+h5,Red capsicum,2,1,170,0,170,170,,—,no meal-log to compare — deduct normally
+h5,Lemon,4,3,151,1,150,6.3,151,—,IGNORED · factor 151.0 too high (outlier/low sample) — deduct normally
+h5,Lettuce,3,2,190,60,130,122.7,3.17,—,IGNORED · factor 3.17 too high (outlier/low sample) — deduct normally
+h5,Brinjal,3,2,120,0,120,60,,—,no meal-log to compare — deduct normally
+h5,Banana,4,3,17,132,-115,3.6,0.13,—,IGNORED · factor 0.13 too low (outlier) — deduct normally
+h5,Dill,2,1,100,0,100,100,,—,no meal-log to compare — deduct normally
+h5,Curry leaves,4,3,90,10,80,7.9,9,—,IGNORED · factor 9.0 too high (outlier/low sample) — deduct normally
+h5,Pumpkin,2,1,-50,0,-50,-50,,—,no meal-log to compare — deduct normally
+h5,Ginger,3,2,30,0,30,15,,—,no meal-log to compare — deduct normally
+h5,Mint,3,2,-15,0,-15,-7.5,,—,no meal-log to compare — deduct normally
+h5,Eggs (free-range brown),3,2,-6,0,-6,-3,,—,no meal-log to compare — deduct normally
+h5,Apple (Royal Gala),3,2,5,0,5,0.7,,—,no meal-log to compare — deduct normally
+h5,Pear (Sweet Beauty Red),2,1,2,0,2,2,,—,no meal-log to compare — deduct normally
+h5,Avocado,3,2,1,0,1,0.5,,—,no meal-log to compare — deduct normally
+h5,Yellow capsicum,2,1,0,0,0,0,,—,no meal-log to compare — deduct normally
+h5,Green beans,2,1,0,0,0,0,,—,no meal-log to compare — deduct normally
+h5,Kiwi,3,2,0,0,0,0,,—,no meal-log to compare — deduct normally
+h7,Onion,2,1,1140,200,940,228,5.7,—,IGNORED · factor 5.7 too high (outlier/low sample) — deduct normally
+h7,Tomato,2,1,360,120,240,72,3,—,IGNORED · factor 3.0 too high (outlier/low sample) — deduct normally
+h7,Green capsicum,2,1,300,90,210,60,3.33,—,IGNORED · factor 3.33 too high (outlier/low sample) — deduct normally
+h7,Spring onion,2,1,0,200,-200,0,,—,no meal-log to compare — deduct normally
+h7,Cucumber,2,1,-70,60,-130,-14,-1.17,—,IGNORED · count rose w/o order (impossible) — deduct normally
+h7,Cabbage,2,1,170,60,110,34,2.83,—,IGNORED · factor 2.83 too high (outlier/low sample) — deduct normally
+h7,Arbi (taro/colocasia),2,1,-100,0,-100,-20,,—,no meal-log to compare — deduct normally
+h7,Sweet corn,2,1,195,100,95,39,1.95,—,IGNORED · factor 1.95 too high (outlier/low sample) — deduct normally
+h7,Ginger,2,1,105,15,90,21,7,—,IGNORED · factor 7.0 too high (outlier/low sample) — deduct normally
+h7,Paneer,2,1,510,600,-90,102,0.85,—,IGNORED · <2 counts (not enough signal) — deduct normally
+h7,Carrot,2,1,145,90,55,29,1.61,—,IGNORED · <2 counts (not enough signal) — deduct normally
+h7,Green beans,2,1,50,0,50,10,,—,no meal-log to compare — deduct normally
+h7,Curry leaves,2,1,38,10,28,7.6,3.8,—,IGNORED · factor 3.8 too high (outlier/low sample) — deduct normally
+h7,Garlic,2,1,25,30,-5,5,0.83,—,IGNORED · <2 counts (not enough signal) — deduct normally
+h7,Sweet potato,2,1,0,0,0,0,,—,no meal-log to compare — deduct normally
+h8,Onion,3,2,4160,230,3930,-83.6,18.09,—,IGNORED · factor 18.09 too high (outlier/low sample) — deduct normally
+h8,Green capsicum,3,2,1210,80,1130,43.2,15.12,—,IGNORED · factor 15.12 too high (outlier/low sample) — deduct normally
+h8,Ginger,3,2,800,15,785,-41,53.33,—,IGNORED · factor 53.33 too high (outlier/low sample) — deduct normally
+h8,Tomato,3,2,-370,360,-730,207.3,-1.03,—,IGNORED · count rose w/o order (impossible) — deduct normally
+h8,Carrot,2,1,-600,0,-600,-600,,—,no meal-log to compare — deduct normally
+h8,Zucchini,3,2,500,0,500,133.9,,—,no meal-log to compare — deduct normally
+h8,Lettuce,3,2,300,0,300,80.3,,—,no meal-log to compare — deduct normally
+h8,Spinach/Palak,2,1,-250,0,-250,-16.7,,—,no meal-log to compare — deduct normally
+h8,Garlic,3,2,215,15,200,-154.8,14.33,—,IGNORED · factor 14.33 too high (outlier/low sample) — deduct normally
+h8,Green beans,3,2,200,0,200,-109,,—,no meal-log to compare — deduct normally
+h8,Cabbage,3,2,-200,0,-200,-7.2,,—,no meal-log to compare — deduct normally
+h8,Spring onion,2,1,100,230,-130,6.7,0.43,—,IGNORED · <2 counts (not enough signal) — deduct normally
+h8,Brinjal,3,2,-90,0,-90,-3.2,,—,no meal-log to compare — deduct normally
+h8,Lemon,3,2,-89,0,-89,-0.9,,—,no meal-log to compare — deduct normally
+h8,Green chilli,2,1,50,5,45,3.3,10,—,IGNORED · factor 10.0 too high (outlier/low sample) — deduct normally
+h8,Cucumber,2,1,0,0,0,0,,—,no meal-log to compare — deduct normally
+h8,Potato,3,2,0,0,0,-464.3,,—,no meal-log to compare — deduct normally
+h8,Broccoli,2,1,0,0,0,0,,—,no meal-log to compare — deduct normally
+h8,Red capsicum,2,1,0,0,0,0,,—,no meal-log to compare — deduct normally
+h8,Baby corn,2,1,0,0,0,0,,—,no meal-log to compare — deduct normally
+— APPLIED corrections per household (sane only) —,,,,,,,,,,
+h4,"Onion 1.75x, Ginger 1.65x, Cucumber 1.43x, Tomato 1.24x, Coriander (dhania) 1.17x, Mint 1.09x, Green chilli 0.76x",,,,,,,,,

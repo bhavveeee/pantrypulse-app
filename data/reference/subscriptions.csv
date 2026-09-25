@@ -1,0 +1,4 @@
+Household,id,Sub id,Label,Frequency,Day(0-6),Items,Last applied,Log only,Source,Skips
+Kartik & Dhara,h4,fc-weekly,FirstClub weekly produce,weekly,5,2026-07-24,2026-06-26,,FirstClub (Fri ~06:00),fc-weekly@2026-07-03
+Kartik & Dhara,h4,fc-coconut,FirstClub daily tender coconut,daily,,2026-07-24,2026-06-26,yes,FirstClub,
+Pratik & Sakshi,h8,Eggs,12 pc,every alternate day,instamart,2026-07-24 | PAUSED 8-Aug per Ammu akka (chat),,,,

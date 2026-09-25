@@ -1,0 +1,273 @@
+Category,Item,Quantity,Unit,Status,Est,Verify,Factor,Last checked,Last entered,Note
+Vegetable,Potatoes,5,pc,in,,,1,2026-09-24,2026-09-18,24-Sep: kept 5pc (same as before)
+Vegetable,Tomato,12,pc,in,,,1,2026-09-24,2026-09-18,24-Sep perishable overwrite
+Vegetable,Edamame,0,g,out,,,1,2026-09-16,2026-09-12,16-Sep: removed — not in perishable count
+Vegetable,Raw corn,0,g,out,,,1,2026-09-09,2026-09-09,9-Sep veg+fruit overwrite (operator): not in the count (was 450g)
+Condiment,Tomato ketchup,350,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Vegetable,Red radish,0,g,out,,,1,2026-09-09,2026-09-09,9-Sep veg+fruit overwrite (operator): not in the count (was 400g)
+Vegetable,Carrot,3,pc,in,,,1,2026-09-24,2026-09-18,24-Sep perishable overwrite
+Vegetable,Capsicum,8.5,pc,in,,,1,2026-09-24,2026-09-21,24-Sep perishable overwrite
+Vegetable,Cucumber,1,pc,in,,,1,2026-09-24,2026-09-18,24-Sep perishable overwrite
+Vegetable,Cherry tomato,0,g,out,,,1,2026-09-16,2026-09-12,16-Sep: removed — not in perishable count
+Vegetable,Sweet potatoes,0,pc,out,,,1,2026-09-24,2026-09-18,24-Sep: not in perishable overwrite
+Condiment,Red pepper chilli sauce,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Vegetable,Button mushroom,0,g,out,,,1,2026-09-09,2026-09-09,9-Sep veg+fruit overwrite (operator): not in the count (was 200g)
+Vegetable,Sweet corn,0,g,out,,,1,2026-09-09,2026-09-09,9-Sep veg+fruit overwrite (operator): not in the count (was 190g)
+Grains,Cornflour,200,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Condiment,Chilli oil,0,ml,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Spice,Dry red chilli,160,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Condiment,Ginger garlic paste,0,g,out,,,1,2026-09-12,2026-09-09,12-Sep: full pantry overwrite — not in the new count
+Vegetable,Garlic,0,pc,out,,,1,2026-09-23,2026-09-18,09-23: -6pc D garlic bread
+Vegetable,Asparagus,0,g,out,,,1,2026-09-12,2026-09-09,12-Sep: full pantry overwrite — not in the new count
+Vegetable,Green chilli,50,g,in,,,1,2026-09-24,2026-09-18,24-Sep perishable overwrite
+Vegetable,Beans,150,g,in,,,1,2026-09-24,2026-09-09,24-Sep perishable overwrite
+Vegetable,Coriander leaves,0,g,out,,,1,2026-09-24,2026-09-18,24-Sep: not in perishable overwrite
+Vegetable,Ginger,0,g,out,,,1,2026-09-24,2026-09-18,24-Sep perishable overwrite
+Vegetable,Mint leaves,0,g,out,,,1,2026-09-24,2026-09-18,24-Sep: not in perishable overwrite
+Condiment,Schezwan sauce (chilli garlic),0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Spice,Chilli flakes,30,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Vegetable,Onions,0,pc,out,,,1,2026-09-23,2026-09-18,09-23: -19pc L bhindi do pyaaza
+Vegetable,Beetroot,4,pc,in,,,1,2026-09-24,2026-09-18,24-Sep perishable overwrite
+Vegetable,Corn cob,0.5,pc,in,,,1,2026-09-24,2026-09-18,24-Sep perishable overwrite
+Fruit,Red grapes,0,g,out,,,1,2026-09-12,2026-09-09,12-Sep: full pantry overwrite — not in the new count
+Fruit,Banana,9,pc,in,,,1,2026-09-24,2026-09-12,24-Sep perishable overwrite
+Fruit,Blueberry,0,g,out,,,1,2026-09-16,2026-09-12,16-Sep: removed — not in perishable count
+Staple,Fig (dried),0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Fruit,Orange,5,pc,in,,,1,2026-09-24,2026-09-18,24-Sep perishable overwrite
+Staple,Banana millet pancake mix,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Staple,Blueberry jam,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Fruit,Apple,5,pc,in,,,1,2026-09-24,2026-09-18,24-Sep perishable overwrite
+Fruit,Pear,2,pc,in,,,1,2026-09-24,2026-09-18,24-Sep perishable overwrite
+Fruit,Dragonfruit,0,pc,out,,,1,2026-09-12,2026-09-09,12-Sep: full pantry overwrite — not in the new count
+Meat,Eggs,3,pc,in,,,1,2026-09-24,2026-09-09,24-Sep perishable overwrite
+Dairy,Low fat milk,0,ml,out,,,1,2026-09-09,2026-09-09,9-Sep: all milk removed
+Dairy,Malai,0,g,out,,,1,2026-09-24,2026-09-12,24-Sep perishable overwrite
+Dairy,Milk boiled,0,ml,out,,,1,2026-09-09,2026-09-09,9-Sep: all milk removed
+Condiment,Ghee,800,ml,in,,,1,2026-09-14,2026-09-14,14-Sep: ghee 800ml
+Dairy,Herbs and garlic cheese,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Dairy,Heritage curd,0,ml,out,,,1,2026-09-24,2026-09-18,24-Sep: not in perishable overwrite
+Dairy,Cheese,70,g,in,,,1,2026-09-24,2026-09-17,24-Sep perishable overwrite
+Dairy,Amul butter,0,g,out,,,1,2026-09-24,2026-09-18,24-Sep perishable overwrite
+Dairy,Oat milk,0,ml,out,,,1,2026-09-20,2026-09-09,20-Sep: merged duplicates -> single row (kept latest)
+Dairy,Ricotta cheese,0,g,out,,,1,2026-09-16,2026-09-12,16-Sep: removed — not in perishable count
+Dairy,Feta cheese,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Dairy,Unsalted milkymist butter,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Dairy,Greek yogurt blueberry,0,g,out,,,1,2026-09-09,2026-09-09,9-Sep: all yogurt removed
+Dairy,Greek yogurt natural,0,g,out,,,1,2026-09-09,2026-09-09,9-Sep: all yogurt removed
+Dairy,Peanut butter,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Bread & bakery,Whole wheat bread,0,g,out,,,1,2026-09-16,2026-09-15,16-Sep: removed — not in perishable count
+Grains,Rolled oats,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Grains,India gate basmati rice,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Grains,Rice,0,g,out,,,1,2026-09-24,2026-09-18,09-24: -20g L rice
+Grains,Rice flour,900,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Grains,Vermicelli,435,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Grains,Organic jowar powder,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Grains,Organic suji,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Condiment,Pizza pasta sauce,200,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Grains,Millet instant idli mix,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Grains,Rigatoni pasta,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Grains,Millet pancake chocolate,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Grains,Sooji,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Grains,Poha,170,g,in,,,1,2026-09-22,2026-09-18,09-22: -80g B kanda poha
+Grains,Macaroni pasta,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Spice,Pizza pasta seasoning,40,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Grains,Jeeravan masala,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Dals,Unpolished masoor dal,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Dals,Kala chana,50,g,in,,,1,2026-09-23,2026-09-18,09-23: -150g D kala chana kebab
+Dals,Urad dal,1100,g,in,,,1,2026-09-24,2026-09-12,09-24: -100g D dal makhani
+Dals,Moong split dal,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Dals,Rajma,500,g,in,,,1,2026-09-24,2026-09-16,24-Sep order
+Dals,Lobia,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Dals,Masoor dal sabut black,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Dals,Chole,200,g,in,,,1,2026-09-22,2026-09-18,09-22: -150g L chole masala
+Dals,Unpolished urad dal,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Dals,Moong dal,0,g,out,,,1,2026-09-19,2026-09-12,09-19: -20g L mughlai moong dal
+Dals,Green moong,250,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Dals,Mix dal,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Dals,Navrangi dal,250,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Dals,Roasted chana,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Dals,Besan,0,g,out,,,1,2026-09-18,2026-09-12,09-18: -100g B besan onion cheela
+Dals,Chana dal,500,g,in,,,1,2026-09-21,2026-09-21,21-Sep order
+Dals,Black urad dal,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Spice,Haldi powder,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Spice,Chat masala,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Spice,Coriander powder,530,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Spice,Fennel seeds,510,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Condiment,Jaggery powder,500,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Spice,Coffee powder,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Spice,Himalayan pink salt,25,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Spice,Mustard seed,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Spice,Himalayan rock salt,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Spice,Salt,100,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Spice,White pepper,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Spice,Black pepper (whole),265,g,in,,,1,2026-09-12,2026-09-12,12-Sep: merged duplicate rows into one (265g)
+Spice,Jeera,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Spice,Rasam powder,100,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Spice,Pav bhaji masala,70,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Spice,Peri peri powder,30,g,in,,,1,2026-09-19,2026-09-12,09-19: -10g D peri-peri spice
+Spice,Shahi garam masala,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Spice,Mustard seeds,100,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Spice,Clove,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Spice,Cumin powder,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Spice,Black pepper powder,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Spice,Cumin seeds,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Spice,Garam masala,120,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Spice,Ginger powder,50,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Spice,Cloves,74,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Spice,Cinnamon powder,20,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Spice,Fennelseed,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Spice,Saffron,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Spice,Big cardamom,0,pc,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Condiment,Safola gold oil,0,ml,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Condiment,Sugar organic,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Condiment,Honey,200,g,in,,,1,2026-09-21,2026-09-05,"21-Sep: restored 200g — honey is shelf-stable, wrongly zeroed by 12-Sep full overwrite"
+Condiment,Tamarind paste,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Condiment,Organic sugar,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Condiment,Jaggery,150,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Condiment,Eno,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Condiment,Vinegar,30,ml,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Spice,Baking soda,50,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Spice,Baking powder,50,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Bread & bakery,Soy sauce,0,g,out,,,1,2026-09-18,2026-09-18,22-Sep post-dinner count; honey+quinoa untouched
+Condiment,Mayonnaise,0,g,out,,,1,2026-09-24,2026-09-17,24-Sep perishable overwrite
+Condiment,Sliced jalapenos,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Condiment,Shriracha sauce,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Condiment,Extra virgin olive oil,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Beverage,Tea,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Staple,Atta,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Staple,Almonds,500,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Dals,White peas,450,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Staple,Plant protein,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Staple,Black olives,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Staple,Gochujang,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Staple,Kimchi,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Staple,Dark chocolate,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Staple,Nylon sev,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Staple,Makhana,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Staple,Prunes,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Staple,Wheat broken,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Staple,Chia seeds,110,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Staple,Cashew,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Staple,Walnut,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Staple,Whole pista,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Staple,Periperi seasoning,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Staple,Pancake mix,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Staple,Kokam,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Staple,Peanuts,500,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Condiment,Mexican salsa,50,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Staple,Pista,130,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Staple,Sunflower seeds,70,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite (operator)
+Staple,Pumpkin seeds,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Staple,Imli,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Staple,Murmura,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Staple,Pudinhara,0,ml,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Staple,Mixed herb,0,g,out,,,1,2026-09-12,2026-09-05,12-Sep: full pantry overwrite — not in the new count
+Vegetable,Lemon,3,pc,in,,,1,2026-09-18,2026-09-18,22-Sep post-dinner count; honey+quinoa untouched
+Dairy,Chilli cheddar cheese,0,g,out,,,1,2026-09-16,2026-09-12,16-Sep: removed — not in perishable count
+Fruit,Avocado,0.5,pc,in,,,1,2026-09-24,2026-09-21,24-Sep perishable overwrite
+Vegetable,Okra,0,g,out,,,1,2026-09-23,2026-09-18,09-23: -150g L bhindi do pyaaza
+Staple,Sesame seeds,0,g,out,,,1,2026-09-12,2026-09-07,12-Sep: full pantry overwrite — not in the new count
+Vegetable,Cauliflower,0,g,out,,,1,2026-09-24,2026-09-18,24-Sep perishable overwrite
+Grains,Quinoa,30,g,in,,,1,2026-09-24,2026-09-18,09-24: -60g L boiled quinoa
+Vegetable,Curry leaves,60,g,in,,,1,2026-09-18,2026-09-18,22-Sep post-dinner count; honey+quinoa untouched
+Vegetable,Broccoli,1,pc,in,,,1,2026-09-24,2026-09-18,24-Sep perishable overwrite
+Vegetable,Disco pumpkin,0,pc,out,,,1,2026-09-12,2026-09-09,12-Sep: full pantry overwrite — not in the new count
+Vegetable,Raw banana,0,pc,out,,,1,2026-09-12,2026-09-09,12-Sep: full pantry overwrite — not in the new count
+Vegetable,Yellow capsicum,0,pc,out,,,1,2026-09-24,2026-09-18,24-Sep: not in perishable overwrite
+Spice,Jeera (cumin seeds),700,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Spice,Methi seeds,10,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Spice,Haldi (turmeric powder),260,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Spice,Hing (asafoetida),50,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Spice,Chaat masala,10,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Spice,Black mustard seeds,70,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Spice,Ajwain seeds,70,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Condiment,Tamarind (imli),230,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Spice,Elaichi (cardamom),20,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Staple,White sesame seeds,50,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Spice,Jeera powder,100,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Spice,Black cardamom,10,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Spice,Jeera masala,60,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Spice,Chai masala,50,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Staple,Gond (edible gum),25,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Spice,Clove powder,70,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Spice,Table salt,50,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Spice,Dill seeds,100,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Spice,Black salt,50,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Spice,Black pepper,0,g,out,,,1,2026-09-12,2026-09-12,12-Sep: merged into Black pepper (whole)
+Spice,Whole black pepper,10,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Spice,Catch peri peri masala,40,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Condiment,Extra virgin olive oil (Del Monte),250,ml,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Condiment,Extra virgin olive oil (Figaro),250,ml,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Spice,Kasuri methi,50,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Grains,Rava (semolina),300,g,in,,,1,2026-09-16,2026-09-12,09-16: -100g B rava curd idli
+Dals,Masoor dal (whole),400,g,in,,,1,2026-09-23,2026-09-12,09-23: -150g L masoor dal
+Dals,Mixed dal,120,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Dals,Split green moong dal,300,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Dals,Lobia (black-eyed peas),250,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Grains,Broken wheat (dalia),0,g,out,,,1,2026-09-21,2026-09-12,09-21: -40g L paratha
+Dals,Black beans,70,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Grains,Idli rice,250,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Dals,Black urad (whole),100,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Dals,Black urad dal (split),100,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Grains,Oats,370,g,in,,,1,2026-09-19,2026-09-12,09-19: -80g B savoury oats bowl
+Beverage,Tea powder,150,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Beverage,Nescafe coffee,80,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Condiment,Sugar,300,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Grains,Ragi flour,350,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Grains,Pasta,250,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Grains,Millet pancake mix (chocolate),150,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Grains,Millet pancake mix (banana),100,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Grains,Millet idli mix,1,pack,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Grains,Millet pancake mix (vanilla),1,pack,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Condiment,Oil,1000,ml,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Grains,Basmati rice,470,g,in,,,1,2026-09-19,2026-09-12,09-19: -150g D herbed basmati
+Grains,Murmura (puffed rice),50,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Grains,Jowar flour,285,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Spice,Pink salt,300,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Grains,Atta (wheat flour),2540,g,in,,,1,2026-09-24,2026-09-12,09-24: -160g D roti
+Dals,Masoor dal,500,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Fruit,Kiwi,2,pc,in,,,1,2026-09-24,2026-09-18,24-Sep perishable overwrite
+Fruit,Guava,0,g,out,,,1,2026-09-24,2026-09-12,24-Sep perishable overwrite
+Fruit,Watermelon,0,g,out,,,1,2026-09-18,2026-09-18,21-Sep post-lunch count
+Vegetable,Pumpkin,1,pc,in,,,1,2026-09-24,2026-09-18,24-Sep perishable overwrite
+Vegetable,Bhindi (okra),0,g,out,,,1,2026-09-14,2026-09-12,09-14: -130g L bhindi do pyaza
+Fruit,Papaya,0,g,out,,,1,2026-09-24,2026-09-12,24-Sep perishable overwrite
+Condiment,Schezwan chilli sauce,50,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Dairy,Greek yogurt,0,g,out,,,1,2026-09-16,2026-09-12,16-Sep: removed — not in perishable count
+Staple,Organic kimchi,300,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Condiment,Tamarind chutney,50,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Staple,Vegan kimchi,100,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Condiment,Schezwan chilli oil,200,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Condiment,Sliced jalapeno peppers,30,g,in,,,1,2026-09-17,2026-09-12,09-17: -20g D mexican rice
+Spice,Mixed herbs,20,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Condiment,Dark soy sauce,60,ml,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Staple,Pecan nuts,15,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Staple,California prunes,170,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Staple,Butter chilli garlic cashew,40,g,in,,,1,2026-09-16,2026-09-12,09-16: -20g D gravy
+Staple,Watermelon seeds,0,g,out,,,1,2026-09-22,2026-09-12,09-22: -50g B fruit bowl
+Staple,Roasted pumpkin seeds,40,g,in,,,1,2026-09-12,2026-09-12,12-Sep: full pantry overwrite — NEW
+Meat,Paneer,0,g,out,,,1,2026-09-24,2026-09-18,24-Sep perishable overwrite
+Condiment,Mustard sauce,150,g,in,,,1,2026-09-17,2026-09-17,17-Sep: quantity update (operator)
+Spice,Bay leaf,50,g,in,,,1,2026-09-21,2026-09-21,21-Sep order
+Dairy,Heritage milk,0,ml,out,,,1,2026-09-24,2026-09-21,24-Sep perishable overwrite
+Vegetable,Spring onion,250,g,in,,,1,2026-09-24,2026-09-18,24-Sep perishable overwrite
+Vegetable,Cabbage,0.5,pc,in,,,1,2026-09-24,2026-09-18,24-Sep perishable overwrite
+Grains,Whole wheat noodles,150,g,in,,,1,2026-09-21,2026-09-21,21-Sep order
+Condiment,Zero maida bread,0,g,out,,,1,2026-09-24,2026-09-18,24-Sep perishable overwrite
+Fruit,Dragon fruit,1.25,pc,in,,,1,2026-09-24,2026-09-18,24-Sep perishable overwrite
+Fruit,Pomegranate,2,pc,in,,,1,2026-09-24,2026-09-18,24-Sep perishable overwrite
+Vegetable,Green capsicum,0,pc,out,,,1,2026-09-24,2026-09-18,24-Sep: not in perishable overwrite
+Vegetable,Bottle gourd,0,g,out,,,1,2026-09-24,2026-09-18,24-Sep perishable overwrite
+Vegetable,Red capsicum,0,pc,out,,,1,2026-09-24,2026-09-18,24-Sep: not in perishable overwrite
+Dairy,Low fat curd,0,g,out,,,1,2026-09-24,2026-09-18,24-Sep: not in perishable overwrite
+Vegetable,Spinach,0,g,out,,,1,2026-09-24,2026-09-18,24-Sep perishable overwrite
+Dals,Toor dal,400,g,in,,,1,2026-09-24,,09-24: -100g L dal fry
+Fruit,Chikoo,4,pc,in,,,1,2026-09-24,,24-Sep perishable overwrite
+Fruit,Mosambi,2,pc,in,,,1,2026-09-24,,24-Sep perishable overwrite
+Dairy,Curd,200,g,in,,,1,2026-09-24,,24-Sep perishable overwrite
+Vegetable,Methi,200,g,in,,,1,2026-09-24,,24-Sep perishable overwrite
+Vegetable,Coriander,100,g,in,,,1,2026-09-24,,24-Sep perishable overwrite
+Vegetable,Mint,50,g,in,,,1,2026-09-24,,24-Sep perishable overwrite
+Meat,Tofu,250,g,in,,,1,2026-09-24,,24-Sep perishable overwrite
+Dairy,Fresh cream,0,g,out,,,1,2026-09-24,,24-Sep perishable overwrite
+Vegetable,Sweet potato,0,g,out,,,1,2026-09-24,,24-Sep perishable overwrite

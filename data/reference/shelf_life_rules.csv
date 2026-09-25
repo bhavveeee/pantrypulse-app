@@ -1,0 +1,21 @@
+Rule,Applies to,Condition,Shelf-life (d),Default?,Notes
+LEAF-THICK,"Bok choy, all lettuces, kale, amaranth, beet greens, rocket, leek, banana leaf",Thick / sturdy leaf,6,yes,Holds structure; wilts slowly
+LEAF-NORMAL,"Coriander, mint, dill, parsley, basil, rosemary, thyme, methi, spinach/palak",Thin / tender leaf,4,yes,Wilts fast; bunch herbs
+ROOT-HARD,"Beetroot, Ooty beetroot, Carrot","Hardened skin, unpeeled",12,yes,Beetroot aligned to carrot; carrot lowered 18 -> 12
+GOURD-SEASON,"Bottle gourd, lauki, baby bottle gourd",Summer (Mar-Jun),8,no,Summer-season vegetable — peak condition
+GOURD-SEASON,"Bottle gourd, lauki, baby bottle gourd",Monsoon (Jul-Sep),6,yes,Current season on 31-Jul-2026
+GOURD-SEASON,"Bottle gourd, lauki, baby bottle gourd",Winter (Oct-Feb),4,no,Out of season — deteriorates faster
+CURRY-STORE,Curry leaves,"Cleaned, dried, airtight in fridge",12,no,Ask the household how it was stored
+CURRY-STORE,Curry leaves,Kept as bought (bag / loose),4,yes,Default assumption
+PASTE-MARKET,"Garlic paste (Mothers Recipe), Ginger garlic paste (Catch)",Market pack with preservatives,60,yes,Refrigerated after opening
+PASTE-HOME,"Garlic paste, Ginger garlic paste","Home-ground, no preservatives",18,yes,Stated range 15-20d; 18 used
+GARLIC-PEELED,"Peeled garlic (pack), Garlic peeled",Market-bought peeled cloves,4,yes,Whole unpeeled bulb stays 30d
+PEAS-FROZEN,"Frozen green peas, Safal matar, frozen peas (all)","Sealed, kept frozen",180,yes,Months — treat as staple
+PEAS-FRESH,"Green peas, green peas (unpeeled), Peas",Fresh pods / shelled,7,yes,
+PUMPKIN-CUT,Pumpkin (cut),"Cut, cling-wrapped, refrigerated",7,yes,
+PUMPKIN-CHUNK,Pumpkin (chunks),Diced into chunks,5,yes,More cut surface
+PUMPKIN-WHOLE,Pumpkin,"Whole, uncut",30,yes,Raised from 6d
+OPEN-AND-USE,"Coconut milk / cream, fresh cream, dairy & plant milk cartons, buttermilk, cream cheese",SEALED,180,yes,Runs to pack expiry
+OPEN-AND-USE,Same bucket,OPENED,4,yes,Countdown starts on the opening date; opening inferred from meal plan x order history
+DRY-GOODS DEFAULT,Any Staple/pantry SKU with no explicit shelf-life,"Shelf-stable, sealed",180,yes,Added 24-Aug-2026 after besan showed ~6d. A BLANK shelf-life was falling back to the fresh-perishable default. Class defaults now: spices/oils/sauces/dals/beverages/dried goods 365d; flours-grains-nuts-dried fruit 180d; salt/sugar/honey 730d; frozen 120d; sprouts 3d. Never leave shelf-life blank.
+SHELF-AUDIT-2026-09-05,"Master FnV shelf-life audit: 695 rows corrected to class values, 513 board SKUs added. Master FnV is now the single source of truth; SHELF is regenerated from it.",,,,

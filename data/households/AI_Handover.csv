@@ -1,0 +1,796 @@
+Household,Day,Meal,Dish,Ingredient,Concept,ReqQty,Unit,Class
+Shunyam & Ishan,Mon,Breakfast,Spring onion omelette (taken from Rasoi),Eggs,eggs,5,pc,h
+Shunyam & Ishan,Mon,Breakfast,Spring onion omelette (taken from Rasoi),Spring onion,springonion,40,g,s
+Shunyam & Ishan,Mon,Breakfast,Spring onion omelette (taken from Rasoi),Milk,milk,60,ml,g
+Shunyam & Ishan,Mon,Breakfast,Spring onion omelette (taken from Rasoi),Olive oil,oliveoil,15,ml,s
+Shunyam & Ishan,Mon,Breakfast,Spring onion omelette (taken from Rasoi),Salt,salt,4,g,g
+Shunyam & Ishan,Mon,Breakfast,Spring onion omelette (taken from Rasoi),Black pepper,blackpepper,2,g,g
+Shunyam & Ishan,Mon,Lunch,Air-fried chicken kofta (taken from Rasoi),Chicken,chicken,350,g,h
+Shunyam & Ishan,Mon,Lunch,Air-fried chicken kofta (taken from Rasoi),Onion,onion,1,pc,s
+Shunyam & Ishan,Mon,Lunch,Air-fried chicken kofta (taken from Rasoi),Garlic,garlic,15,g,s
+Shunyam & Ishan,Mon,Lunch,Air-fried chicken kofta (taken from Rasoi),Parsley,parsley,8,g,g
+Shunyam & Ishan,Mon,Lunch,Air-fried chicken kofta (taken from Rasoi),Jeera,jeera,4,g,g
+Shunyam & Ishan,Mon,Lunch,Air-fried chicken kofta (taken from Rasoi),Paprika/kashmiri chilli,chillipow,3,g,g
+Shunyam & Ishan,Mon,Lunch,Air-fried chicken kofta (taken from Rasoi),Salt,salt,4,g,g
+Shunyam & Ishan,Mon,Lunch,Air-fried chicken kofta (taken from Rasoi),Black pepper,blackpepper,3,g,g
+Shunyam & Ishan,Mon,Lunch,Air-fried chicken kofta (taken from Rasoi),Olive oil,oliveoil,15,ml,s
+Shunyam & Ishan,Mon,Lunch,Rotis (plan-direct),Atta,atta,240,g,h
+Shunyam & Ishan,Mon,Lunch,Rotis (plan-direct),Ghee,ghee,10,g,g
+Shunyam & Ishan,Mon,Dinner,Korean soupy noodles (taken from Rasoi),Noodles (whole wheat),noodles,160,g,h
+Shunyam & Ishan,Mon,Dinner,Korean soupy noodles (taken from Rasoi),Sesame oil,sesameoil,8,ml,g
+Shunyam & Ishan,Mon,Dinner,Korean soupy noodles (taken from Rasoi),Carrot,carrot,1,pc,s
+Shunyam & Ishan,Mon,Dinner,Korean soupy noodles (taken from Rasoi),Zucchini,zucchini,0.5,pc,s
+Shunyam & Ishan,Mon,Dinner,Korean soupy noodles (taken from Rasoi),Mushroom,mushroom,150,g,h
+Shunyam & Ishan,Mon,Dinner,Korean soupy noodles (taken from Rasoi),Veg stock (Knorr/broth),broth,1,cube,s
+Shunyam & Ishan,Mon,Dinner,Korean soupy noodles (taken from Rasoi),Soy sauce,soy,15,ml,s
+Shunyam & Ishan,Mon,Dinner,Korean soupy noodles (taken from Rasoi),Garlic,garlic,15,g,s
+Shunyam & Ishan,Mon,Dinner,Korean soupy noodles (taken from Rasoi),Spring onion,springonion,30,g,g
+Shunyam & Ishan,Mon,Dinner,Grilled tofu (side) (plan-direct),Tofu,tofu,200,g,h
+Shunyam & Ishan,Mon,Dinner,Grilled tofu (side) (plan-direct),Soy sauce,soy,10,ml,g
+Shunyam & Ishan,Tue,Breakfast,Oats chilla (taken from Rasoi),Oats,oats,70,g,h
+Shunyam & Ishan,Tue,Breakfast,Oats chilla (taken from Rasoi),Onion,onion,1,pc,s
+Shunyam & Ishan,Tue,Breakfast,Oats chilla (taken from Rasoi),Carrot,carrot,1,pc,s
+Shunyam & Ishan,Tue,Breakfast,Oats chilla (taken from Rasoi),Capsicum,capsicum,80,g,s
+Shunyam & Ishan,Tue,Breakfast,Oats chilla (taken from Rasoi),Jeera,jeera,4,g,g
+Shunyam & Ishan,Tue,Breakfast,Oats chilla (taken from Rasoi),Salt,salt,4,g,g
+Shunyam & Ishan,Tue,Breakfast,Oats chilla (taken from Rasoi),Cooking oil,oil,15,ml,g
+Shunyam & Ishan,Tue,Lunch,Egg tawa masala (taken from Rasoi),Eggs,eggs,5,pc,h
+Shunyam & Ishan,Tue,Lunch,Egg tawa masala (taken from Rasoi),Onion,onion,1,pc,s
+Shunyam & Ishan,Tue,Lunch,Egg tawa masala (taken from Rasoi),Tomato,tomato,2,pc,s
+Shunyam & Ishan,Tue,Lunch,Egg tawa masala (taken from Rasoi),Green chilli,greenchilli,8,g,g
+Shunyam & Ishan,Tue,Lunch,Egg tawa masala (taken from Rasoi),Ginger garlic paste,gingergarlic,20,g,s
+Shunyam & Ishan,Tue,Lunch,Egg tawa masala (taken from Rasoi),Red chilli powder,chillipow,4,g,g
+Shunyam & Ishan,Tue,Lunch,Egg tawa masala (taken from Rasoi),Haldi,haldi,3,g,g
+Shunyam & Ishan,Tue,Lunch,Egg tawa masala (taken from Rasoi),Garam masala,garam,4,g,g
+Shunyam & Ishan,Tue,Lunch,Egg tawa masala (taken from Rasoi),Cooking oil,oil,15,ml,g
+Shunyam & Ishan,Tue,Lunch,Egg tawa masala (taken from Rasoi),Salt,salt,4,g,g
+Shunyam & Ishan,Tue,Lunch,Egg tawa masala (taken from Rasoi),Coriander (fresh),corianderf,15,g,g
+Shunyam & Ishan,Tue,Lunch,Rotis (plan-direct),Atta,atta,240,g,h
+Shunyam & Ishan,Tue,Lunch,Prep — soak rajma,Rajma,rajma,180,g,p
+Shunyam & Ishan,Tue,Dinner,Air-fried broccoli honey-garlic chicken (taken from Rasoi),Chicken breast,chicken_breast,350,g,h
+Shunyam & Ishan,Tue,Dinner,Air-fried broccoli honey-garlic chicken (taken from Rasoi),Broccoli,broccoli,220,g,h
+Shunyam & Ishan,Tue,Dinner,Air-fried broccoli honey-garlic chicken (taken from Rasoi),Honey,honey,15,g,s
+Shunyam & Ishan,Tue,Dinner,Air-fried broccoli honey-garlic chicken (taken from Rasoi),Soy sauce,soy,15,ml,s
+Shunyam & Ishan,Tue,Dinner,Air-fried broccoli honey-garlic chicken (taken from Rasoi),Olive oil,oliveoil,15,ml,s
+Shunyam & Ishan,Tue,Dinner,Air-fried broccoli honey-garlic chicken (taken from Rasoi),Garlic,garlic,15,g,s
+Shunyam & Ishan,Tue,Dinner,Air-fried broccoli honey-garlic chicken (taken from Rasoi),Salt,salt,4,g,g
+Shunyam & Ishan,Tue,Dinner,Air-fried broccoli honey-garlic chicken (taken from Rasoi),Black pepper,blackpepper,2,g,g
+Shunyam & Ishan,Tue,Dinner,Korean lettuce salad (taken from Rasoi),Lettuce (romaine/iceberg),lettuce,120,g,h
+Shunyam & Ishan,Tue,Dinner,Korean lettuce salad (taken from Rasoi),Cucumber,cucumber,1,pc,s
+Shunyam & Ishan,Tue,Dinner,Korean lettuce salad (taken from Rasoi),Carrot,carrot,1,pc,s
+Shunyam & Ishan,Tue,Dinner,Korean lettuce salad (taken from Rasoi),Spring onion,springonion,30,g,g
+Shunyam & Ishan,Tue,Dinner,Korean lettuce salad (taken from Rasoi),Sesame oil,sesameoil,8,ml,g
+Shunyam & Ishan,Tue,Dinner,Korean lettuce salad (taken from Rasoi),Soy sauce,soy,15,ml,s
+Shunyam & Ishan,Tue,Dinner,Korean lettuce salad (taken from Rasoi),Rice vinegar,ricevinegar,10,ml,g
+Shunyam & Ishan,Tue,Dinner,Korean lettuce salad (taken from Rasoi),Sugar,jaggery,6,g,g
+Shunyam & Ishan,Tue,Dinner,Korean lettuce salad (taken from Rasoi),White sesame seeds,sesameseeds,6,g,g
+Shunyam & Ishan,Tue,Dinner,Korean lettuce salad (taken from Rasoi),Salt,salt,4,g,g
+Shunyam & Ishan,Wed,Breakfast,Egg avocado toast (plan-direct),Eggs,eggs,4,pc,h
+Shunyam & Ishan,Wed,Breakfast,Egg avocado toast (plan-direct),Avocado,avocado,1,pc,h
+Shunyam & Ishan,Wed,Breakfast,Egg avocado toast (plan-direct),Bread (sourdough),sourdough,3,slice,h
+Shunyam & Ishan,Wed,Breakfast,Egg avocado toast (plan-direct),Black pepper,blackpepper,2,g,g
+Shunyam & Ishan,Wed,Breakfast,Egg avocado toast (plan-direct),Salt,salt,3,g,g
+Shunyam & Ishan,Wed,Lunch,Garlic rice (taken from Rasoi),Rice,rice,160,g,h
+Shunyam & Ishan,Wed,Lunch,Garlic rice (taken from Rasoi),Butter,butter,15,g,s
+Shunyam & Ishan,Wed,Lunch,Garlic rice (taken from Rasoi),Garlic,garlic,15,g,s
+Shunyam & Ishan,Wed,Lunch,Garlic rice (taken from Rasoi),Salt,salt,4,g,g
+Shunyam & Ishan,Wed,Lunch,Garlic rice (taken from Rasoi),Black pepper,blackpepper,2,g,g
+Shunyam & Ishan,Wed,Lunch,Garlic rice (taken from Rasoi),Parsley,parsley,8,g,g
+Shunyam & Ishan,Wed,Lunch,White sauce chicken (taken from Rasoi),Chicken breast,chicken_breast,350,g,h
+Shunyam & Ishan,Wed,Lunch,White sauce chicken (taken from Rasoi),Fresh cream,cream,80,ml,s
+Shunyam & Ishan,Wed,Lunch,White sauce chicken (taken from Rasoi),Butter,butter,15,g,s
+Shunyam & Ishan,Wed,Lunch,White sauce chicken (taken from Rasoi),Flour (binder),maida,25,g,s
+Shunyam & Ishan,Wed,Lunch,White sauce chicken (taken from Rasoi),Garlic,garlic,15,g,s
+Shunyam & Ishan,Wed,Lunch,White sauce chicken (taken from Rasoi),Stock (Knorr/broth),broth,1,cube,h
+Shunyam & Ishan,Wed,Lunch,White sauce chicken (taken from Rasoi),Salt,salt,4,g,g
+Shunyam & Ishan,Wed,Lunch,White sauce chicken (taken from Rasoi),Black pepper,blackpepper,2,g,g
+Shunyam & Ishan,Wed,Lunch,White sauce chicken (taken from Rasoi),Parsley,parsley,8,g,g
+Shunyam & Ishan,Wed,Dinner,Kidney-bean tikki wrap (taken from Rasoi),Rajma,rajma,150,g,h
+Shunyam & Ishan,Wed,Dinner,Kidney-bean tikki wrap (taken from Rasoi),Onion,onion,1,pc,s
+Shunyam & Ishan,Wed,Dinner,Kidney-bean tikki wrap (taken from Rasoi),Green chilli,greenchilli,8,g,g
+Shunyam & Ishan,Wed,Dinner,Kidney-bean tikki wrap (taken from Rasoi),Ginger,ginger,12,g,s
+Shunyam & Ishan,Wed,Dinner,Kidney-bean tikki wrap (taken from Rasoi),Jeera powder,cuminpow,4,g,g
+Shunyam & Ishan,Wed,Dinner,Kidney-bean tikki wrap (taken from Rasoi),Garam masala,garam,4,g,g
+Shunyam & Ishan,Wed,Dinner,Kidney-bean tikki wrap (taken from Rasoi),Besan,besan,35,g,s
+Shunyam & Ishan,Wed,Dinner,Kidney-bean tikki wrap (taken from Rasoi),Salt,salt,4,g,g
+Shunyam & Ishan,Wed,Dinner,Kidney-bean tikki wrap (taken from Rasoi),Cooking oil,oil,15,ml,g
+Shunyam & Ishan,Wed,Dinner,Kidney-bean tikki wrap (taken from Rasoi),Atta (rolls/roti),atta,160,g,h
+Shunyam & Ishan,Wed,Dinner,Kidney-bean tikki wrap (taken from Rasoi),Lettuce leaves,lettuce,60,g,s
+Shunyam & Ishan,Wed,Dinner,Kidney-bean tikki wrap (taken from Rasoi),Yogurt/curd,greekyog,100,g,s
+Munz & Soozy,Mon,Breakfast,Oatmeal bowl + eggs (Munz 2+5w / Soozy 1+5w) (plan-direct),Almonds,almonds,6,g,s
+Munz & Soozy,Mon,Breakfast,Oatmeal bowl + eggs (Munz 2+5w / Soozy 1+5w) (plan-direct),Rolled oats,oats,30,g,h
+Munz & Soozy,Mon,Breakfast,Oatmeal bowl + eggs (Munz 2+5w / Soozy 1+5w) (plan-direct),Whey protein,whey,30,g,h
+Munz & Soozy,Mon,Breakfast,Oatmeal bowl + eggs (Munz 2+5w / Soozy 1+5w) (plan-direct),Eggs,eggs,13,pc,h
+Munz & Soozy,Mon,Lunch,Chilli chicken with basil (Rasoi · video),Capsicum,capsicum,80,g,s
+Munz & Soozy,Mon,Lunch,Chilli chicken with basil (Rasoi · video),Onion,onion,1,pc,s
+Munz & Soozy,Mon,Lunch,Chilli chicken with basil (Rasoi · video),Spring onion,springonion,40,g,s
+Munz & Soozy,Mon,Lunch,Chilli chicken with basil (Rasoi · video),Garlic,garlic,15,g,s
+Munz & Soozy,Mon,Lunch,Chilli chicken with basil (Rasoi · video),Ginger,ginger,12,g,s
+Munz & Soozy,Mon,Lunch,Chilli chicken with basil (Rasoi · video),Green chilli,greenchilli,8,g,g
+Munz & Soozy,Mon,Lunch,Chilli chicken with basil (Rasoi · video),Chicken breast,chicken_breast,350,g,h
+Munz & Soozy,Mon,Lunch,Chilli chicken with basil (Rasoi · video),Baking soda,bakingsoda,2,g,g
+Munz & Soozy,Mon,Lunch,Chilli chicken with basil (Rasoi · video),Soy sauce,soy,15,ml,s
+Munz & Soozy,Mon,Lunch,Chilli chicken with basil (Rasoi · video),White pepper,blackpepper,2,g,g
+Munz & Soozy,Mon,Lunch,Chilli chicken with basil (Rasoi · video),Cooking oil,oil,15,ml,g
+Munz & Soozy,Mon,Lunch,Chilli chicken with basil (Rasoi · video),Dark soy sauce,soy,8,ml,g
+Munz & Soozy,Mon,Lunch,Chilli chicken with basil (Rasoi · video),Vinegar,vinegar,8,ml,g
+Munz & Soozy,Mon,Lunch,Chilli chicken with basil (Rasoi · video),Sugar,jaggery,6,g,g
+Munz & Soozy,Mon,Lunch,Chilli chicken with basil (Rasoi · video),Corn starch,cornstarch,15,g,s
+Munz & Soozy,Mon,Lunch,Quinoa (plan-direct),Quinoa,quinoa,120,g,h
+Munz & Soozy,Mon,Lunch,Crunchy salad (plan-direct),Cucumber,cucumber,200,g,s
+Munz & Soozy,Mon,Lunch,Crunchy salad (plan-direct),Carrot,carrot,100,g,s
+Munz & Soozy,Mon,Lunch,Crunchy salad (plan-direct),Red cabbage,redcabbage,100,g,s
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Chicken,chicken,350,g,h
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Curd/yogurt (marinade),greekyog,100,g,s
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Ginger garlic paste,gingergarlic,20,g,s
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Lemon,lemon,0.5,pc,g
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Dhaniya powder,dhaniapow,5,g,g
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Red chilli powder,chillipow,4,g,g
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Haldi,haldi,3,g,g
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Black pepper,blackpepper,3,g,g
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Chilli flakes,chilliflakes,3,g,g
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Olive oil,oliveoil,15,ml,s
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Kashmiri red chilli,chillipow,3,g,g
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Salt,salt,4,g,g
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Cabbage,cabbage,100,g,h
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Cucumber,cucumber,1,pc,s
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Tomato,tomato,2,pc,s
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Capsicum,capsicum,80,g,s
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Onion,onion,1,pc,s
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Ginger,ginger,12,g,s
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Green chilli,greenchilli,8,g,g
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Hung curd,greekyog,80,g,s
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Garlic,garlic,15,g,s
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),White sesame seeds,sesameseeds,6,g,g
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Oregano,oregano,3,g,g
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Cooking oil,oil,15,ml,g
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Black salt,blacksalt,2,g,g
+Munz & Soozy,Mon,Dinner,Shawarma chicken salad (Rasoi · video),Chaat masala,chaat,3,g,g
+Munz & Soozy,Mon,Dinner,Prep — soak white chickpeas,White chickpeas (chole),chickpeas,180,g,p
+Munz & Soozy,Tue,Breakfast,Oatmeal bowl + eggs (Munz 2+5w / Soozy 1+5w) (plan-direct),Almonds,almonds,6,g,s
+Munz & Soozy,Tue,Breakfast,Oatmeal bowl + eggs (Munz 2+5w / Soozy 1+5w) (plan-direct),Rolled oats,oats,30,g,h
+Munz & Soozy,Tue,Breakfast,Oatmeal bowl + eggs (Munz 2+5w / Soozy 1+5w) (plan-direct),Whey protein,whey,30,g,h
+Munz & Soozy,Tue,Breakfast,Oatmeal bowl + eggs (Munz 2+5w / Soozy 1+5w) (plan-direct),Eggs,eggs,13,pc,h
+Munz & Soozy,Tue,Lunch,Thai basil chicken (taken from Rasoi),Chicken breast,chicken_breast,350,g,h
+Munz & Soozy,Tue,Lunch,Thai basil chicken (taken from Rasoi),Basil (thai/regular),basil,20,g,h
+Munz & Soozy,Tue,Lunch,Thai basil chicken (taken from Rasoi),Capsicum,capsicum,80,g,s
+Munz & Soozy,Tue,Lunch,Thai basil chicken (taken from Rasoi),Garlic,garlic,15,g,s
+Munz & Soozy,Tue,Lunch,Thai basil chicken (taken from Rasoi),Soy sauce,soy,15,ml,s
+Munz & Soozy,Tue,Lunch,Thai basil chicken (taken from Rasoi),Oyster sauce,oystersauce,12,ml,s
+Munz & Soozy,Tue,Lunch,Thai basil chicken (taken from Rasoi),Cooking oil,oil,15,ml,g
+Munz & Soozy,Tue,Lunch,Thai basil chicken (taken from Rasoi),Sugar,jaggery,6,g,g
+Munz & Soozy,Tue,Lunch,Thai basil chicken (taken from Rasoi),Green/red chilli,greenchilli,8,g,g
+Munz & Soozy,Tue,Lunch,Thai basil chicken (taken from Rasoi),Rice,rice,160,g,h
+Munz & Soozy,Tue,Lunch,Quinoa (plan-direct),Quinoa,quinoa,120,g,h
+Munz & Soozy,Tue,Lunch,Vegetable stir fry (plan-direct),Carrot,carrot,100,g,s
+Munz & Soozy,Tue,Lunch,Vegetable stir fry (plan-direct),French beans,frenchbeans,100,g,s
+Munz & Soozy,Tue,Lunch,Vegetable stir fry (plan-direct),Green peas,peas,80,g,s
+Munz & Soozy,Tue,Dinner,Indian chicken salad + garlic yoghurt (Rasoi · video),Tej patta,tejpatta,2,pc,g
+Munz & Soozy,Tue,Dinner,Indian chicken salad + garlic yoghurt (Rasoi · video),Black pepper,blackpepper,3,g,g
+Munz & Soozy,Tue,Dinner,Indian chicken salad + garlic yoghurt (Rasoi · video),Coriander (fresh),corianderf,15,g,g
+Munz & Soozy,Tue,Dinner,Indian chicken salad + garlic yoghurt (Rasoi · video),Salt,salt,4,g,g
+Munz & Soozy,Tue,Dinner,Indian chicken salad + garlic yoghurt (Rasoi · video),Chicken breast,chicken_breast,350,g,h
+Munz & Soozy,Tue,Dinner,Indian chicken salad + garlic yoghurt (Rasoi · video),Onion,onion,1,pc,s
+Munz & Soozy,Tue,Dinner,Indian chicken salad + garlic yoghurt (Rasoi · video),Cucumber,cucumber,1,pc,s
+Munz & Soozy,Tue,Dinner,Indian chicken salad + garlic yoghurt (Rasoi · video),Carrot,carrot,1,pc,s
+Munz & Soozy,Tue,Dinner,Indian chicken salad + garlic yoghurt (Rasoi · video),Lettuce,lettuce,120,g,s
+Munz & Soozy,Tue,Dinner,Indian chicken salad + garlic yoghurt (Rasoi · video),Cherry tomato,cherrytomato,80,g,s
+Munz & Soozy,Tue,Dinner,Indian chicken salad + garlic yoghurt (Rasoi · video),Olive oil,oliveoil,15,ml,s
+Munz & Soozy,Tue,Dinner,Indian chicken salad + garlic yoghurt (Rasoi · video),Oregano,oregano,3,g,g
+Munz & Soozy,Tue,Dinner,Indian chicken salad + garlic yoghurt (Rasoi · video),Kashmiri red chilli,chillipow,3,g,g
+Munz & Soozy,Tue,Dinner,Indian chicken salad + garlic yoghurt (Rasoi · video),Peanuts,peanuts,20,g,g
+Munz & Soozy,Tue,Dinner,Indian chicken salad + garlic yoghurt (Rasoi · video),Kala chana,kalachana,60,g,s
+Munz & Soozy,Tue,Dinner,Indian chicken salad + garlic yoghurt (Rasoi · video),Black salt,blacksalt,2,g,g
+Munz & Soozy,Tue,Dinner,Indian chicken salad + garlic yoghurt (Rasoi · video),Lemon,lemon,0.5,pc,g
+Munz & Soozy,Wed,Breakfast,Oatmeal bowl + eggs (Munz 2+5w / Soozy 1+5w) (plan-direct),Almonds,almonds,6,g,s
+Munz & Soozy,Wed,Breakfast,Oatmeal bowl + eggs (Munz 2+5w / Soozy 1+5w) (plan-direct),Rolled oats,oats,30,g,h
+Munz & Soozy,Wed,Breakfast,Oatmeal bowl + eggs (Munz 2+5w / Soozy 1+5w) (plan-direct),Whey protein,whey,30,g,h
+Munz & Soozy,Wed,Breakfast,Oatmeal bowl + eggs (Munz 2+5w / Soozy 1+5w) (plan-direct),Eggs,eggs,13,pc,h
+Munz & Soozy,Wed,Lunch,Mediterranean shrimp salad + rice bowl (Rasoi · video),Prawns/shrimp,prawns,300,g,h
+Munz & Soozy,Wed,Lunch,Mediterranean shrimp salad + rice bowl (Rasoi · video),Olive oil,oliveoil,15,ml,s
+Munz & Soozy,Wed,Lunch,Mediterranean shrimp salad + rice bowl (Rasoi · video),Lemon,lemon,0.5,pc,g
+Munz & Soozy,Wed,Lunch,Mediterranean shrimp salad + rice bowl (Rasoi · video),Garlic,garlic,15,g,s
+Munz & Soozy,Wed,Lunch,Mediterranean shrimp salad + rice bowl (Rasoi · video),Oregano,oregano,3,g,g
+Munz & Soozy,Wed,Lunch,Mediterranean shrimp salad + rice bowl (Rasoi · video),Paprika/kashmiri chilli,chillipow,3,g,g
+Munz & Soozy,Wed,Lunch,Mediterranean shrimp salad + rice bowl (Rasoi · video),Salt,salt,4,g,g
+Munz & Soozy,Wed,Lunch,Mediterranean shrimp salad + rice bowl (Rasoi · video),Black pepper,blackpepper,2,g,g
+Munz & Soozy,Wed,Lunch,Mediterranean shrimp salad + rice bowl (Rasoi · video),Cucumber,cucumber,1,pc,s
+Munz & Soozy,Wed,Lunch,Mediterranean shrimp salad + rice bowl (Rasoi · video),Cherry tomato,cherrytomato,80,g,s
+Munz & Soozy,Wed,Lunch,Mediterranean shrimp salad + rice bowl (Rasoi · video),Capsicum (red),capsicum,60,g,s
+Munz & Soozy,Wed,Lunch,Mediterranean shrimp salad + rice bowl (Rasoi · video),Onion (red),onion,0.5,pc,s
+Munz & Soozy,Wed,Lunch,Mediterranean shrimp salad + rice bowl (Rasoi · video),Parsley,parsley,8,g,g
+Munz & Soozy,Wed,Lunch,Mediterranean shrimp salad + rice bowl (Rasoi · video),Mint,mint,10,g,g
+Munz & Soozy,Wed,Lunch,Mediterranean shrimp salad + rice bowl (Rasoi · video),Feta,feta,30,g,g
+Munz & Soozy,Wed,Lunch,Mediterranean shrimp salad + rice bowl (Rasoi · video),Quinoa,quinoa,110,g,h
+Munz & Soozy,Wed,Lunch,Mediterranean shrimp salad + rice bowl (Rasoi · video),Lettuce,lettuce,120,g,s
+Munz & Soozy,Wed,Lunch,Mediterranean shrimp salad + rice bowl (Rasoi · video),Tzatziki,tzatziki,30,g,g
+Munz & Soozy,Wed,Lunch,Mediterranean shrimp salad + rice bowl (Rasoi · video),Hummus,hummus,30,g,g
+Munz & Soozy,Wed,Lunch,Yoghurt dill dressing (Rasoi · video),Greek yogurt/skyr,greekyog,100,g,s
+Munz & Soozy,Wed,Lunch,Yoghurt dill dressing (Rasoi · video),Dill,dill,12,g,s
+Munz & Soozy,Wed,Lunch,Yoghurt dill dressing (Rasoi · video),Mixed spices,garam,3,g,g
+Munz & Soozy,Wed,Dinner,Chicken breast curry (Munz) + rotis (taken from Rasoi),Eggs,eggs,5,pc,h
+Munz & Soozy,Wed,Dinner,Chicken breast curry (Munz) + rotis (taken from Rasoi),Onion,onion,1,pc,s
+Munz & Soozy,Wed,Dinner,Chicken breast curry (Munz) + rotis (taken from Rasoi),Tomato,tomato,2,pc,s
+Munz & Soozy,Wed,Dinner,Chicken breast curry (Munz) + rotis (taken from Rasoi),Ginger garlic paste,gingergarlic,20,g,s
+Munz & Soozy,Wed,Dinner,Chicken breast curry (Munz) + rotis (taken from Rasoi),Cooking oil,oil,15,ml,g
+Munz & Soozy,Wed,Dinner,Chicken breast curry (Munz) + rotis (taken from Rasoi),Mustard seeds,mustardseeds,4,g,g
+Munz & Soozy,Wed,Dinner,Chicken breast curry (Munz) + rotis (taken from Rasoi),Jeera,jeera,4,g,g
+Munz & Soozy,Wed,Dinner,Chicken breast curry (Munz) + rotis (taken from Rasoi),Haldi,haldi,3,g,g
+Munz & Soozy,Wed,Dinner,Chicken breast curry (Munz) + rotis (taken from Rasoi),Red chilli powder,chillipow,4,g,g
+Munz & Soozy,Wed,Dinner,Chicken breast curry (Munz) + rotis (taken from Rasoi),Garam masala,garam,4,g,g
+Munz & Soozy,Wed,Dinner,Chicken breast curry (Munz) + rotis (taken from Rasoi),Salt,salt,4,g,g
+Munz & Soozy,Wed,Dinner,Chicken breast curry (Munz) + rotis (taken from Rasoi),Coriander (fresh),corianderf,15,g,g
+Munz & Soozy,Wed,Dinner,Chicken breast curry (Munz) + rotis (taken from Rasoi),Chicken breast,chicken_breast,200,g,h
+Munz & Soozy,Wed,Dinner,Chicken breast curry (Munz) + rotis (taken from Rasoi),Atta,atta,180,g,h
+Munz & Soozy,Wed,Dinner,Air-fried chicken + dill dip (Soozy) (plan-direct),Chicken breast,chicken_breast,150,g,h
+Munz & Soozy,Wed,Dinner,Air-fried chicken + dill dip (Soozy) (plan-direct),Greek yogurt,greekyog,80,g,s
+Munz & Soozy,Wed,Dinner,Air-fried chicken + dill dip (Soozy) (plan-direct),Dill,dill,10,g,s
+Munz & Soozy,Wed,Dinner,Rainbow vegetable salad (plan-direct),Cucumber,cucumber,100,g,s
+Munz & Soozy,Wed,Dinner,Rainbow vegetable salad (plan-direct),Carrot,carrot,1,pc,s
+Munz & Soozy,Wed,Dinner,Rainbow vegetable salad (plan-direct),Red cabbage,redcabbage,80,g,s
+Munz & Soozy,Wed,Dinner,Rainbow vegetable salad (plan-direct),Capsicum,capsicum,60,g,s
+Disha & Anirudh,Mon,Breakfast,Egg bhurji (taken from Rasoi),Eggs,eggs,5,pc,h
+Disha & Anirudh,Mon,Breakfast,Egg bhurji (taken from Rasoi),Onion,onion,1,pc,s
+Disha & Anirudh,Mon,Breakfast,Egg bhurji (taken from Rasoi),Green chilli,greenchilli,8,g,g
+Disha & Anirudh,Mon,Breakfast,Egg bhurji (taken from Rasoi),Tomato,tomato,2,pc,s
+Disha & Anirudh,Mon,Breakfast,Egg bhurji (taken from Rasoi),Capsicum,capsicum,80,g,s
+Disha & Anirudh,Mon,Breakfast,Egg bhurji (taken from Rasoi),Haldi,haldi,3,g,g
+Disha & Anirudh,Mon,Breakfast,Egg bhurji (taken from Rasoi),Garam masala,garam,4,g,g
+Disha & Anirudh,Mon,Breakfast,Egg bhurji (taken from Rasoi),Salt,salt,4,g,g
+Disha & Anirudh,Mon,Breakfast,Egg bhurji (taken from Rasoi),Cooking oil,oil,15,ml,g
+Disha & Anirudh,Mon,Breakfast,Egg bhurji (taken from Rasoi),Coriander (fresh),corianderf,15,g,g
+Disha & Anirudh,Mon,Breakfast,Sourdough toast + skyr (plan-direct),Sourdough,sourdough,2,slice,h
+Disha & Anirudh,Mon,Breakfast,Sourdough toast + skyr (plan-direct),Milky Mist skyr,skyr,1,pc,h
+Disha & Anirudh,Mon,Lunch,Creamy garlic chicken (taken from Rasoi),Chicken breast,chicken_breast,350,g,h
+Disha & Anirudh,Mon,Lunch,Creamy garlic chicken (taken from Rasoi),Garlic,garlic,15,g,s
+Disha & Anirudh,Mon,Lunch,Creamy garlic chicken (taken from Rasoi),Fresh cream,cream,80,ml,s
+Disha & Anirudh,Mon,Lunch,Creamy garlic chicken (taken from Rasoi),Olive oil,oliveoil,15,ml,s
+Disha & Anirudh,Mon,Lunch,Creamy garlic chicken (taken from Rasoi),Salt,salt,4,g,g
+Disha & Anirudh,Mon,Lunch,Creamy garlic chicken (taken from Rasoi),Black pepper,blackpepper,2,g,g
+Disha & Anirudh,Mon,Lunch,Creamy garlic chicken (taken from Rasoi),Parmesan,parmesan,15,g,g
+Disha & Anirudh,Mon,Lunch,Creamy garlic chicken (taken from Rasoi),Parsley,parsley,8,g,g
+Disha & Anirudh,Mon,Lunch,Mushroom spinach pasta (taken from Rasoi),Pasta,pasta,180,g,h
+Disha & Anirudh,Mon,Lunch,Mushroom spinach pasta (taken from Rasoi),Mushroom,mushroom,150,g,h
+Disha & Anirudh,Mon,Lunch,Mushroom spinach pasta (taken from Rasoi),Spinach,spinach,120,g,s
+Disha & Anirudh,Mon,Lunch,Mushroom spinach pasta (taken from Rasoi),Garlic,garlic,15,g,s
+Disha & Anirudh,Mon,Lunch,Mushroom spinach pasta (taken from Rasoi),Olive oil,oliveoil,15,ml,s
+Disha & Anirudh,Mon,Lunch,Mushroom spinach pasta (taken from Rasoi),Parmesan,parmesan,15,g,g
+Disha & Anirudh,Mon,Lunch,Mushroom spinach pasta (taken from Rasoi),Salt,salt,4,g,g
+Disha & Anirudh,Mon,Lunch,Mushroom spinach pasta (taken from Rasoi),Black pepper,blackpepper,2,g,g
+Disha & Anirudh,Mon,Lunch,Pack — whey + banana (plan-direct),Whey protein,whey,30,g,s
+Disha & Anirudh,Mon,Lunch,Pack — whey + banana (plan-direct),Banana,banana,1,pc,s
+Disha & Anirudh,Mon,Dinner,Protein psyllium shakes (plan-direct),Protein powder,proteinpow,90,g,h
+Disha & Anirudh,Mon,Dinner,Protein psyllium shakes (plan-direct),Psyllium husk,psyllium,10,g,s
+Disha & Anirudh,Mon,Dinner,Protein psyllium shakes (plan-direct),Milk (lactose-free),lfmilk,0.5,pack,s
+Disha & Anirudh,Mon,Dinner,Protein psyllium shakes (plan-direct),Banana,banana,1,pc,h
+Disha & Anirudh,Mon,Dinner,Protein psyllium shakes (plan-direct),Blueberries,blueberry,60,g,h
+Disha & Anirudh,Tue,Breakfast,Veg-loaded upma (taken from Rasoi),Rava/sooji,rava,120,g,h
+Disha & Anirudh,Tue,Breakfast,Veg-loaded upma (taken from Rasoi),Carrot,carrot,1,pc,s
+Disha & Anirudh,Tue,Breakfast,Veg-loaded upma (taken from Rasoi),Green peas,peas,60,g,s
+Disha & Anirudh,Tue,Breakfast,Veg-loaded upma (taken from Rasoi),Beans,frenchbeans,60,g,s
+Disha & Anirudh,Tue,Breakfast,Veg-loaded upma (taken from Rasoi),Onion,onion,1,pc,s
+Disha & Anirudh,Tue,Breakfast,Veg-loaded upma (taken from Rasoi),Green chilli,greenchilli,8,g,g
+Disha & Anirudh,Tue,Breakfast,Veg-loaded upma (taken from Rasoi),Mustard seeds,mustardseeds,4,g,g
+Disha & Anirudh,Tue,Breakfast,Veg-loaded upma (taken from Rasoi),Urad dal (tadka),uraddal,8,g,g
+Disha & Anirudh,Tue,Breakfast,Veg-loaded upma (taken from Rasoi),Cooking oil,oil,15,ml,g
+Disha & Anirudh,Tue,Breakfast,Veg-loaded upma (taken from Rasoi),Salt,salt,4,g,g
+Disha & Anirudh,Tue,Breakfast,Veg-loaded upma (taken from Rasoi),Coriander (fresh),corianderf,12,g,g
+Disha & Anirudh,Tue,Breakfast,Coconut chutney (taken from Rasoi),Coconut (chutney),coconut,40,g,s
+Disha & Anirudh,Tue,Breakfast,Coconut chutney (taken from Rasoi),Chana dal (chutney),chanadal,15,g,g
+Disha & Anirudh,Tue,Breakfast,Coconut chutney (taken from Rasoi),Green chilli,greenchilli,8,g,g
+Disha & Anirudh,Tue,Breakfast,Coconut chutney (taken from Rasoi),Mustard seeds,mustardseeds,4,g,g
+Disha & Anirudh,Tue,Breakfast,Coconut chutney (taken from Rasoi),Cooking oil,oil,15,ml,g
+Disha & Anirudh,Tue,Breakfast,Coconut chutney (taken from Rasoi),Salt,salt,4,g,g
+Disha & Anirudh,Tue,Breakfast,Coconut chutney (taken from Rasoi),Coriander (fresh),corianderf,12,g,g
+Disha & Anirudh,Tue,Breakfast,Skyr (Disha) (plan-direct),Milky Mist skyr,skyr,1,pc,h
+Disha & Anirudh,Tue,Lunch,Bang bang chicken (taken from Rasoi),Chicken breast,chicken_breast,350,g,h
+Disha & Anirudh,Tue,Lunch,Bang bang chicken (taken from Rasoi),Flour (binder),maida,25,g,s
+Disha & Anirudh,Tue,Lunch,Bang bang chicken (taken from Rasoi),Breadcrumbs,breadcrumbs,30,g,s
+Disha & Anirudh,Tue,Lunch,Bang bang chicken (taken from Rasoi),Egg (binder),eggs,1,pc,s
+Disha & Anirudh,Tue,Lunch,Bang bang chicken (taken from Rasoi),Mayonnaise,mayo,25,g,s
+Disha & Anirudh,Tue,Lunch,Bang bang chicken (taken from Rasoi),Sweet chilli sauce,chillisauce,15,g,s
+Disha & Anirudh,Tue,Lunch,Bang bang chicken (taken from Rasoi),Sriracha,sriracha,10,g,g
+Disha & Anirudh,Tue,Lunch,Bang bang chicken (taken from Rasoi),Soy sauce,soy,15,ml,s
+Disha & Anirudh,Tue,Lunch,Bang bang chicken (taken from Rasoi),Salt,salt,4,g,g
+Disha & Anirudh,Tue,Lunch,Bang bang chicken (taken from Rasoi),Black pepper,blackpepper,2,g,g
+Disha & Anirudh,Tue,Lunch,Bang bang chicken (taken from Rasoi),Cooking oil,oil,15,ml,g
+Disha & Anirudh,Tue,Lunch,Asian cucumber salad (taken from Rasoi),Cucumber,cucumber,1,pc,h
+Disha & Anirudh,Tue,Lunch,Asian cucumber salad (taken from Rasoi),Rice vinegar,ricevinegar,10,ml,g
+Disha & Anirudh,Tue,Lunch,Asian cucumber salad (taken from Rasoi),Soy sauce,soy,15,ml,s
+Disha & Anirudh,Tue,Lunch,Asian cucumber salad (taken from Rasoi),Sesame oil,sesameoil,8,ml,g
+Disha & Anirudh,Tue,Lunch,Asian cucumber salad (taken from Rasoi),Sugar,jaggery,6,g,g
+Disha & Anirudh,Tue,Lunch,Asian cucumber salad (taken from Rasoi),Spring onion,springonion,30,g,g
+Disha & Anirudh,Tue,Lunch,Asian cucumber salad (taken from Rasoi),White sesame seeds,sesameseeds,6,g,g
+Disha & Anirudh,Tue,Dinner,Protein psyllium shakes (plan-direct),Protein powder,proteinpow,90,g,h
+Disha & Anirudh,Tue,Dinner,Protein psyllium shakes (plan-direct),Psyllium husk,psyllium,10,g,s
+Disha & Anirudh,Tue,Dinner,Protein psyllium shakes (plan-direct),Milk (lactose-free),lfmilk,0.5,pack,s
+Disha & Anirudh,Tue,Dinner,Protein psyllium shakes (plan-direct),Apple,apple,1,pc,h
+Disha & Anirudh,Tue,Dinner,Protein psyllium shakes (plan-direct),Cherries,cherry,60,g,h
+Disha & Anirudh,Wed,Breakfast,Masala omelette with veggies (taken from Rasoi),Eggs,eggs,5,pc,h
+Disha & Anirudh,Wed,Breakfast,Masala omelette with veggies (taken from Rasoi),Onion,onion,1,pc,s
+Disha & Anirudh,Wed,Breakfast,Masala omelette with veggies (taken from Rasoi),Tomato,tomato,2,pc,s
+Disha & Anirudh,Wed,Breakfast,Masala omelette with veggies (taken from Rasoi),Green chilli,greenchilli,8,g,g
+Disha & Anirudh,Wed,Breakfast,Masala omelette with veggies (taken from Rasoi),Coriander (fresh),corianderf,12,g,g
+Disha & Anirudh,Wed,Breakfast,Masala omelette with veggies (taken from Rasoi),Jeera powder,cuminpow,4,g,g
+Disha & Anirudh,Wed,Breakfast,Masala omelette with veggies (taken from Rasoi),Haldi,haldi,3,g,g
+Disha & Anirudh,Wed,Breakfast,Masala omelette with veggies (taken from Rasoi),Salt,salt,4,g,g
+Disha & Anirudh,Wed,Breakfast,Masala omelette with veggies (taken from Rasoi),Cooking oil,oil,15,ml,g
+Disha & Anirudh,Wed,Breakfast,Skyr (Disha) (plan-direct),Milky Mist skyr,skyr,1,pc,h
+Disha & Anirudh,Wed,Lunch,Rainbow meal (taken from Rasoi),Quinoa,quinoa,110,g,h
+Disha & Anirudh,Wed,Lunch,Rainbow meal (taken from Rasoi),Broccoli,broccoli,220,g,h
+Disha & Anirudh,Wed,Lunch,Rainbow meal (taken from Rasoi),Capsicum,capsicum,100,g,s
+Disha & Anirudh,Wed,Lunch,Rainbow meal (taken from Rasoi),Carrot,carrot,1.5,pc,s
+Disha & Anirudh,Wed,Lunch,Rainbow meal (taken from Rasoi),Chickpeas (chole/kabuli),chickpeas,150,g,h
+Disha & Anirudh,Wed,Lunch,Rainbow meal (taken from Rasoi),Olive oil,oliveoil,15,ml,s
+Disha & Anirudh,Wed,Lunch,Rainbow meal (taken from Rasoi),Lemon,lemon,0.5,pc,g
+Disha & Anirudh,Wed,Lunch,Rainbow meal (taken from Rasoi),Salt,salt,4,g,g
+Disha & Anirudh,Wed,Lunch,Rainbow meal (taken from Rasoi),Black pepper,blackpepper,2,g,g
+Disha & Anirudh,Wed,Lunch,Rainbow meal (taken from Rasoi),Chicken,chicken,250,g,h
+Disha & Anirudh,Wed,Dinner,Protein psyllium shakes (plan-direct),Protein powder,proteinpow,90,g,h
+Disha & Anirudh,Wed,Dinner,Protein psyllium shakes (plan-direct),Psyllium husk,psyllium,10,g,s
+Disha & Anirudh,Wed,Dinner,Protein psyllium shakes (plan-direct),Milk (lactose-free),lfmilk,0.5,pack,s
+Disha & Anirudh,Wed,Dinner,Protein psyllium shakes (plan-direct),Kiwi,kiwi,1,pc,h
+Disha & Anirudh,Wed,Dinner,Protein psyllium shakes (plan-direct),Pear,pear,1,pc,h
+Kartik & Dhara,Mon,Breakfast,Avocado chilli-oil toast (plan-direct),Avocado,avocado,1,pc,h
+Kartik & Dhara,Mon,Breakfast,Avocado chilli-oil toast (plan-direct),Bread (sourdough),sourdough,2,slice,h
+Kartik & Dhara,Mon,Breakfast,Avocado chilli-oil toast (plan-direct),Chilli oil,chillioil,10,g,s
+Kartik & Dhara,Mon,Breakfast,Avocado chilli-oil toast (plan-direct),Salt,salt,2,g,g
+Kartik & Dhara,Mon,Breakfast,Prep — soak for idli,Toor dal,toordal,80,g,p
+Kartik & Dhara,Mon,Breakfast,Prep — soak for idli,Chana dal,chanadal,80,g,p
+Kartik & Dhara,Mon,Breakfast,Prep — soak for idli,Urad dal,uraddal,80,g,p
+Kartik & Dhara,Mon,Breakfast,Prep — soak for idli,Idli rice,idlirice,300,g,p
+Kartik & Dhara,Mon,Lunch,Veg jalfrezi (taken from Rasoi),Capsicum,capsicum,50,g,h
+Kartik & Dhara,Mon,Lunch,Veg jalfrezi (taken from Rasoi),Onion,onion,0.5,pc,s
+Kartik & Dhara,Mon,Lunch,Veg jalfrezi (taken from Rasoi),Tomato,tomato,1,pc,s
+Kartik & Dhara,Mon,Lunch,Veg jalfrezi (taken from Rasoi),Cauliflower,cauliflower,50,g,s
+Kartik & Dhara,Mon,Lunch,Veg jalfrezi (taken from Rasoi),Carrot,carrot,0.5,pc,s
+Kartik & Dhara,Mon,Lunch,Veg jalfrezi (taken from Rasoi),Cooking oil,oil,8,ml,g
+Kartik & Dhara,Mon,Lunch,Veg jalfrezi (taken from Rasoi),Jeera,jeera,2,g,g
+Kartik & Dhara,Mon,Lunch,Veg jalfrezi (taken from Rasoi),Ginger garlic paste,gingergarlic,10,g,s
+Kartik & Dhara,Mon,Lunch,Veg jalfrezi (taken from Rasoi),Garam masala,garam,2,g,g
+Kartik & Dhara,Mon,Lunch,Veg jalfrezi (taken from Rasoi),Red chilli powder,chillipow,2,g,g
+Kartik & Dhara,Mon,Lunch,Veg jalfrezi (taken from Rasoi),Salt,salt,2,g,g
+Kartik & Dhara,Mon,Lunch,Egg parantha (taken from Rasoi),Atta,atta,90,g,h
+Kartik & Dhara,Mon,Lunch,Egg parantha (taken from Rasoi),Salt,salt,2,g,g
+Kartik & Dhara,Mon,Lunch,Egg parantha (taken from Rasoi),Eggs,eggs,2.5,pc,h
+Kartik & Dhara,Mon,Lunch,Egg parantha (taken from Rasoi),Onion,onion,0.5,pc,s
+Kartik & Dhara,Mon,Lunch,Egg parantha (taken from Rasoi),Green chilli,greenchilli,4,g,g
+Kartik & Dhara,Mon,Lunch,Egg parantha (taken from Rasoi),Jeera powder,cuminpow,2,g,g
+Kartik & Dhara,Mon,Lunch,Egg parantha (taken from Rasoi),Cooking oil,oil,8,ml,g
+Kartik & Dhara,Mon,Lunch,Muskmelon juice (plan-direct),Muskmelon,muskmelon,1,pc,h
+Kartik & Dhara,Mon,Lunch,Prep — thaw prawns,Prawns,prawns,250,g,p
+Kartik & Dhara,Mon,Dinner,Korean noodles with prawns & veg (taken from Rasoi),Noodles (Korean-style),noodles,75,g,h
+Kartik & Dhara,Mon,Dinner,Korean noodles with prawns & veg (taken from Rasoi),Prawns,prawns,150,g,h
+Kartik & Dhara,Mon,Dinner,Korean noodles with prawns & veg (taken from Rasoi),Capsicum,capsicum,40,g,s
+Kartik & Dhara,Mon,Dinner,Korean noodles with prawns & veg (taken from Rasoi),Zucchini,zucchini,0.25,pc,s
+Kartik & Dhara,Mon,Dinner,Korean noodles with prawns & veg (taken from Rasoi),Carrot,carrot,0.5,pc,s
+Kartik & Dhara,Mon,Dinner,Korean noodles with prawns & veg (taken from Rasoi),Garlic,garlic,8,g,s
+Kartik & Dhara,Mon,Dinner,Korean noodles with prawns & veg (taken from Rasoi),Soy sauce,soy,8,ml,s
+Kartik & Dhara,Mon,Dinner,Korean noodles with prawns & veg (taken from Rasoi),Sesame oil,sesameoil,4,ml,g
+Kartik & Dhara,Mon,Dinner,Korean noodles with prawns & veg (taken from Rasoi),Sugar,jaggery,3,g,g
+Kartik & Dhara,Mon,Dinner,Korean noodles with prawns & veg (taken from Rasoi),Spring onion,springonion,15,g,g
+Kartik & Dhara,Mon,Dinner,Korean noodles with prawns & veg (taken from Rasoi),White sesame seeds,sesameseeds,3,g,g
+Kartik & Dhara,Mon,Dinner,Korean noodles with prawns & veg (taken from Rasoi),Chilli paste (gochujang/thai),gochujang,8,g,s
+Kartik & Dhara,Mon,Dinner,Prep — thaw chicken,Chicken breast,chicken_breast,250,g,p
+Kartik & Dhara,Tue,Breakfast,Chocolate muesli + fruits + 2 boiled eggs (plan-direct),Muesli,muesli,60,g,h
+Kartik & Dhara,Tue,Breakfast,Chocolate muesli + fruits + 2 boiled eggs (plan-direct),Milk,milk,150,ml,s
+Kartik & Dhara,Tue,Breakfast,Chocolate muesli + fruits + 2 boiled eggs (plan-direct),Banana/fruit,banana,1,pc,s
+Kartik & Dhara,Tue,Breakfast,Chocolate muesli + fruits + 2 boiled eggs (plan-direct),Eggs,eggs,2,pc,h
+Kartik & Dhara,Tue,Breakfast,Prep — grind & ferment idli batter,Soaked dals + idli rice,idlirice,0,g,p
+Kartik & Dhara,Tue,Lunch,Creamy malai chicken (taken from Rasoi),Chicken,chicken,175,g,h
+Kartik & Dhara,Tue,Lunch,Creamy malai chicken (taken from Rasoi),Fresh cream,cream,40,ml,s
+Kartik & Dhara,Tue,Lunch,Creamy malai chicken (taken from Rasoi),Ghee,ghee,5,g,g
+Kartik & Dhara,Tue,Lunch,Creamy malai chicken (taken from Rasoi),Onion,onion,0.5,pc,s
+Kartik & Dhara,Tue,Lunch,Creamy malai chicken (taken from Rasoi),Garlic,garlic,8,g,s
+Kartik & Dhara,Tue,Lunch,Creamy malai chicken (taken from Rasoi),Ginger,ginger,6,g,s
+Kartik & Dhara,Tue,Lunch,Creamy malai chicken (taken from Rasoi),Garam masala,garam,2,g,g
+Kartik & Dhara,Tue,Lunch,Creamy malai chicken (taken from Rasoi),Jeera powder,cuminpow,2,g,g
+Kartik & Dhara,Tue,Lunch,Creamy malai chicken (taken from Rasoi),Salt,salt,2,g,g
+Kartik & Dhara,Tue,Lunch,Creamy malai chicken (taken from Rasoi),Coriander (fresh),corianderf,8,g,g
+Kartik & Dhara,Tue,Lunch,Carrot buttons + quinoa (Rasoi · video: carrot button noodles) (plan-direct),Carrot,carrot,2,pc,h
+Kartik & Dhara,Tue,Lunch,Carrot buttons + quinoa (Rasoi · video: carrot button noodles) (plan-direct),Quinoa,quinoa,100,g,h
+Kartik & Dhara,Tue,Dinner,Curry leaves stew (taken from Rasoi),Mixed vegetables (carrot/potato/beans),carrot,125,g,h
+Kartik & Dhara,Tue,Dinner,Curry leaves stew (taken from Rasoi),Coconut milk,coconutmilk,75,ml,h
+Kartik & Dhara,Tue,Dinner,Curry leaves stew (taken from Rasoi),Onion,onion,0.5,pc,s
+Kartik & Dhara,Tue,Dinner,Curry leaves stew (taken from Rasoi),Cooking oil,oil,8,ml,g
+Kartik & Dhara,Tue,Dinner,Curry leaves stew (taken from Rasoi),Mustard seeds,mustardseeds,2,g,g
+Kartik & Dhara,Tue,Dinner,Curry leaves stew (taken from Rasoi),Curry leaves,curryleaves,3,g,g
+Kartik & Dhara,Tue,Dinner,Curry leaves stew (taken from Rasoi),Haldi,haldi,2,g,g
+Kartik & Dhara,Tue,Dinner,Curry leaves stew (taken from Rasoi),Salt,salt,2,g,g
+Kartik & Dhara,Tue,Dinner,Rotis x3 (plan-direct),Atta,atta,180,g,h
+Kartik & Dhara,Tue,Dinner,Prep — soak kokum,Kokum,kokum,20,g,p
+Kartik & Dhara,Wed,Breakfast,Savory ragi ganji + 2 boiled eggs (taken from Rasoi),Ragi flour,ragi,60,g,h
+Kartik & Dhara,Wed,Breakfast,Savory ragi ganji + 2 boiled eggs (taken from Rasoi),Salt,salt,2,g,g
+Kartik & Dhara,Wed,Breakfast,Savory ragi ganji + 2 boiled eggs (taken from Rasoi),Jeera powder,cuminpow,2,g,g
+Kartik & Dhara,Wed,Breakfast,Savory ragi ganji + 2 boiled eggs (taken from Rasoi),Buttermilk,buttermilk,100,ml,h
+Kartik & Dhara,Wed,Breakfast,Savory ragi ganji + 2 boiled eggs (taken from Rasoi),Ghee,ghee,5,g,g
+Kartik & Dhara,Wed,Breakfast,Savory ragi ganji + 2 boiled eggs (taken from Rasoi),Green chilli,greenchilli,4,g,g
+Kartik & Dhara,Wed,Breakfast,Savory ragi ganji + 2 boiled eggs (taken from Rasoi),Coriander (fresh),corianderf,8,g,g
+Kartik & Dhara,Wed,Breakfast,Savory ragi ganji + 2 boiled eggs (taken from Rasoi),Eggs,eggs,2,pc,h
+Kartik & Dhara,Wed,Lunch,One-pot hariyali paneer (taken from Rasoi),Paneer,paneer,100,g,h
+Kartik & Dhara,Wed,Lunch,One-pot hariyali paneer (taken from Rasoi),Spinach,spinach,60,g,h
+Kartik & Dhara,Wed,Lunch,One-pot hariyali paneer (taken from Rasoi),Coriander (fresh),corianderf,8,g,g
+Kartik & Dhara,Wed,Lunch,One-pot hariyali paneer (taken from Rasoi),Green chilli,greenchilli,4,g,g
+Kartik & Dhara,Wed,Lunch,One-pot hariyali paneer (taken from Rasoi),Onion,onion,0.5,pc,s
+Kartik & Dhara,Wed,Lunch,One-pot hariyali paneer (taken from Rasoi),Tomato,tomato,1,pc,s
+Kartik & Dhara,Wed,Lunch,One-pot hariyali paneer (taken from Rasoi),Ginger garlic paste,gingergarlic,10,g,s
+Kartik & Dhara,Wed,Lunch,One-pot hariyali paneer (taken from Rasoi),Cooking oil,oil,8,ml,g
+Kartik & Dhara,Wed,Lunch,One-pot hariyali paneer (taken from Rasoi),Jeera,jeera,2,g,g
+Kartik & Dhara,Wed,Lunch,One-pot hariyali paneer (taken from Rasoi),Salt,salt,2,g,g
+Kartik & Dhara,Wed,Lunch,One-pot hariyali paneer (taken from Rasoi),Garam masala,garam,2,g,g
+Kartik & Dhara,Wed,Lunch,Tomato poda + rice (plan-direct),Tomato,tomato,2,pc,h
+Kartik & Dhara,Wed,Lunch,Tomato poda + rice (plan-direct),Rice,rice,150,g,h
+Kartik & Dhara,Wed,Lunch,Kokum sharbat (plan-direct),Kokum (soaked Tue),kokum,20,g,s
+Kartik & Dhara,Wed,Lunch,Kokum sharbat (plan-direct),Jaggery/sugar,jaggery,15,g,g
+Kartik & Dhara,Wed,Dinner,Rainbow meal with tempeh (taken from Rasoi),Tempeh,tempeh,50,g,h
+Kartik & Dhara,Wed,Dinner,Rainbow meal with tempeh (taken from Rasoi),Capsicum,capsicum,50,g,s
+Kartik & Dhara,Wed,Dinner,Rainbow meal with tempeh (taken from Rasoi),Broccoli,broccoli,110,g,h
+Kartik & Dhara,Wed,Dinner,Rainbow meal with tempeh (taken from Rasoi),Carrot,carrot,0.75,pc,s
+Kartik & Dhara,Wed,Dinner,Rainbow meal with tempeh (taken from Rasoi),Soy sauce,soy,8,ml,s
+Kartik & Dhara,Wed,Dinner,Rainbow meal with tempeh (taken from Rasoi),Olive oil,oliveoil,8,ml,s
+Kartik & Dhara,Wed,Dinner,Rainbow meal with tempeh (taken from Rasoi),Garlic,garlic,8,g,s
+Kartik & Dhara,Wed,Dinner,Rainbow meal with tempeh (taken from Rasoi),Ginger,ginger,6,g,s
+Kartik & Dhara,Wed,Dinner,Rainbow meal with tempeh (taken from Rasoi),Salt,salt,2,g,g
+Kartik & Dhara,Wed,Dinner,Rainbow meal with tempeh (taken from Rasoi),Black pepper,blackpepper,1,g,g
+Kartik & Dhara,Wed,Dinner,Prep — soak moong dal + thaw chicken,Moong dal,moongdal,120,g,p
+Kartik & Dhara,Wed,Dinner,Prep — soak moong dal + thaw chicken,Chicken breast,chicken_breast,250,g,p
+Rahul & Radhika,Mon,Breakfast,Mushroom-spinach omelettes (taken from Rasoi),Eggs,eggs,7.5,pc,h
+Rahul & Radhika,Mon,Breakfast,Mushroom-spinach omelettes (taken from Rasoi),Spinach,spinach,180,g,h
+Rahul & Radhika,Mon,Breakfast,Mushroom-spinach omelettes (taken from Rasoi),Mushroom,mushroom,225,g,h
+Rahul & Radhika,Mon,Breakfast,Mushroom-spinach omelettes (taken from Rasoi),Cheese,cheeseslices,45,g,s
+Rahul & Radhika,Mon,Breakfast,Mushroom-spinach omelettes (taken from Rasoi),Milk,milk,90,ml,g
+Rahul & Radhika,Mon,Breakfast,Mushroom-spinach omelettes (taken from Rasoi),Olive oil,oliveoil,22,ml,s
+Rahul & Radhika,Mon,Breakfast,Mushroom-spinach omelettes (taken from Rasoi),Salt,salt,6,g,g
+Rahul & Radhika,Mon,Breakfast,Mushroom-spinach omelettes (taken from Rasoi),Black pepper,blackpepper,3,g,g
+Rahul & Radhika,Mon,Breakfast,Sourdough + coffee + Skye oats (plan-direct),Sourdough,sourdough,1.5,slice,s
+Rahul & Radhika,Mon,Breakfast,Sourdough + coffee + Skye oats (plan-direct),Coffee,coffee,20,g,g
+Rahul & Radhika,Mon,Breakfast,Sourdough + coffee + Skye oats (plan-direct),Oats,oats,40,g,s
+Rahul & Radhika,Mon,Breakfast,Sourdough + coffee + Skye oats (plan-direct),Almond milk,almondmilk,150,ml,s
+Rahul & Radhika,Mon,Breakfast,Sourdough + coffee + Skye oats (plan-direct),Chia,chia,8,g,g
+Rahul & Radhika,Mon,Lunch,Almond wrap + omelette (Radhika) (plan-direct),Almond wrap,almondwrap,1,pc,h
+Rahul & Radhika,Mon,Lunch,Almond wrap + omelette (Radhika) (plan-direct),Eggs,eggs,4,pc,h
+Rahul & Radhika,Mon,Lunch,Dahi pudina chutney (taken from Rasoi),Yogurt/curd,greekyog,50,g,s
+Rahul & Radhika,Mon,Lunch,Dahi pudina chutney (taken from Rasoi),Mint,mint,6,g,g
+Rahul & Radhika,Mon,Lunch,Dahi pudina chutney (taken from Rasoi),Coriander (fresh),corianderf,6,g,g
+Rahul & Radhika,Mon,Lunch,Dahi pudina chutney (taken from Rasoi),Green chilli,greenchilli,4,g,g
+Rahul & Radhika,Mon,Lunch,Dahi pudina chutney (taken from Rasoi),Jeera powder,cuminpow,2,g,g
+Rahul & Radhika,Mon,Lunch,Dahi pudina chutney (taken from Rasoi),Salt,salt,2,g,g
+Rahul & Radhika,Mon,Lunch,Cucumber & cherry tomatoes (plan-direct),Cucumber,cucumber,1,pc,s
+Rahul & Radhika,Mon,Lunch,Cucumber & cherry tomatoes (plan-direct),Cherry tomato,cherrytomato,100,g,s
+Rahul & Radhika,Mon,Lunch,Snack — fruit + brazil nut (plan-direct),Brazil nuts,brazilnuts,5,g,g
+Rahul & Radhika,Mon,Lunch,Snack — fruit + brazil nut (plan-direct),Fruit (any),apple,1,pc,g
+Rahul & Radhika,Mon,Dinner,One-pan lemon pepper chicken — THIGHS (recipe bank) (plan-direct),Chicken thigh,chicken_thigh,450,g,h
+Rahul & Radhika,Mon,Dinner,One-pan lemon pepper chicken — THIGHS (recipe bank) (plan-direct),Lemon,lemon,1,pc,s
+Rahul & Radhika,Mon,Dinner,One-pan lemon pepper chicken — THIGHS (recipe bank) (plan-direct),Black pepper,blackpepper,6,g,s
+Rahul & Radhika,Mon,Dinner,One-pan lemon pepper chicken — THIGHS (recipe bank) (plan-direct),Olive oil,oliveoil,20,ml,s
+Rahul & Radhika,Mon,Dinner,One-pan lemon pepper chicken — THIGHS (recipe bank) (plan-direct),Garlic,garlic,15,g,s
+Rahul & Radhika,Mon,Dinner,Coriander-lime yoghurt sauce (plan-direct),Coriander (fresh),corianderf,25,g,s
+Rahul & Radhika,Mon,Dinner,Coriander-lime yoghurt sauce (plan-direct),Skyr/greek yogurt,skyr,100,g,s
+Rahul & Radhika,Mon,Dinner,Coriander-lime yoghurt sauce (plan-direct),Lemon,lemon,0.5,pc,g
+Rahul & Radhika,Mon,Dinner,Italian roasted vegetables (plan-direct),Zucchini,zucchini,1,pc,s
+Rahul & Radhika,Mon,Dinner,Italian roasted vegetables (plan-direct),Beetroot,beetroot,1,pc,s
+Rahul & Radhika,Mon,Dinner,Italian roasted vegetables (plan-direct),Capsicum,capsicum,100,g,s
+Rahul & Radhika,Mon,Dinner,Italian roasted vegetables (plan-direct),Carrot,carrot,150,g,s
+Rahul & Radhika,Mon,Dinner,Italian roasted vegetables (plan-direct),Oregano,oregano,3,g,g
+Rahul & Radhika,Mon,Dinner,Italian roasted vegetables (plan-direct),Chilli flakes,chilliflakes,3,g,g
+Rahul & Radhika,Mon,Dinner,Italian roasted vegetables (plan-direct),Olive oil,oliveoil,15,ml,g
+Rahul & Radhika,Mon,Dinner,Skye — herbed butter (plan-direct),Butter,butter,15,g,g
+Rahul & Radhika,Tue,Breakfast,Bell pepper onion egg bhurji + cucumber (plan-direct),Eggs,eggs,7,pc,h
+Rahul & Radhika,Tue,Breakfast,Bell pepper onion egg bhurji + cucumber (plan-direct),Capsicum,capsicum,80,g,s
+Rahul & Radhika,Tue,Breakfast,Bell pepper onion egg bhurji + cucumber (plan-direct),Onion,onion,0.5,pc,s
+Rahul & Radhika,Tue,Breakfast,Bell pepper onion egg bhurji + cucumber (plan-direct),Cucumber,cucumber,0.5,pc,s
+Rahul & Radhika,Tue,Breakfast,Bell pepper onion egg bhurji + cucumber (plan-direct),Salt,salt,4,g,g
+Rahul & Radhika,Tue,Breakfast,Bell pepper onion egg bhurji + cucumber (plan-direct),Oil,oil,12,ml,g
+Rahul & Radhika,Tue,Breakfast,Radhika — oats + dates (plan-direct),Oats,oats,25,g,s
+Rahul & Radhika,Tue,Breakfast,Radhika — oats + dates (plan-direct),Medjool dates,dates,20,g,s
+Rahul & Radhika,Tue,Breakfast,Radhika — oats + dates (plan-direct),Almond milk,almondmilk,150,ml,s
+Rahul & Radhika,Tue,Lunch,Quinoa tofu rajma salad (taken from Rasoi),Quinoa,quinoa,55,g,h
+Rahul & Radhika,Tue,Lunch,Quinoa tofu rajma salad (taken from Rasoi),Tofu,tofu,90,g,h
+Rahul & Radhika,Tue,Lunch,Quinoa tofu rajma salad (taken from Rasoi),Rajma,rajma,75,g,h
+Rahul & Radhika,Tue,Lunch,Quinoa tofu rajma salad (taken from Rasoi),Cucumber,cucumber,0.5,pc,s
+Rahul & Radhika,Tue,Lunch,Quinoa tofu rajma salad (taken from Rasoi),Tomato,tomato,1,pc,s
+Rahul & Radhika,Tue,Lunch,Quinoa tofu rajma salad (taken from Rasoi),Olive oil,oliveoil,8,ml,s
+Rahul & Radhika,Tue,Lunch,Quinoa tofu rajma salad (taken from Rasoi),Lemon,lemon,0.25,pc,g
+Rahul & Radhika,Tue,Lunch,Quinoa tofu rajma salad (taken from Rasoi),Salt,salt,2,g,g
+Rahul & Radhika,Tue,Lunch,Quinoa tofu rajma salad (taken from Rasoi),Black pepper,blackpepper,1,g,g
+Rahul & Radhika,Tue,Lunch,Quinoa tofu rajma salad (taken from Rasoi),Coriander (fresh),corianderf,8,g,g
+Rahul & Radhika,Tue,Lunch,Snack — fruit + brazil nut (plan-direct),Brazil nuts,brazilnuts,5,g,g
+Rahul & Radhika,Tue,Dinner,Low-fat palak paneer (taken from Rasoi),Spinach,spinach,180,g,h
+Rahul & Radhika,Tue,Dinner,Low-fat palak paneer (taken from Rasoi),Paneer,paneer,300,g,h
+Rahul & Radhika,Tue,Dinner,Low-fat palak paneer (taken from Rasoi),Onion,onion,1.5,pc,s
+Rahul & Radhika,Tue,Dinner,Low-fat palak paneer (taken from Rasoi),Tomato,tomato,3,pc,s
+Rahul & Radhika,Tue,Dinner,Low-fat palak paneer (taken from Rasoi),Green chilli,greenchilli,12,g,g
+Rahul & Radhika,Tue,Dinner,Low-fat palak paneer (taken from Rasoi),Ginger garlic paste,gingergarlic,30,g,s
+Rahul & Radhika,Tue,Dinner,Low-fat palak paneer (taken from Rasoi),Jeera,jeera,6,g,g
+Rahul & Radhika,Tue,Dinner,Low-fat palak paneer (taken from Rasoi),Haldi,haldi,4,g,g
+Rahul & Radhika,Tue,Dinner,Low-fat palak paneer (taken from Rasoi),Garam masala,garam,6,g,g
+Rahul & Radhika,Tue,Dinner,Low-fat palak paneer (taken from Rasoi),Salt,salt,6,g,g
+Rahul & Radhika,Tue,Dinner,Low-fat palak paneer (taken from Rasoi),Olive oil,oliveoil,22,ml,s
+Rahul & Radhika,Tue,Dinner,Chaat masala vegetables (plan-direct),Carrot,carrot,100,g,s
+Rahul & Radhika,Tue,Dinner,Chaat masala vegetables (plan-direct),Cucumber,cucumber,0.5,pc,s
+Rahul & Radhika,Tue,Dinner,Chaat masala vegetables (plan-direct),Beetroot,beetroot,0.5,pc,s
+Rahul & Radhika,Tue,Dinner,Chaat masala vegetables (plan-direct),Chaat masala,chaat,4,g,g
+Rahul & Radhika,Tue,Dinner,Khapli + quinoa flour rotis (plan-direct),Khapli/wheat atta,atta,80,g,h
+Rahul & Radhika,Tue,Dinner,Khapli + quinoa flour rotis (plan-direct),Quinoa flour,quinoaflour,40,g,s
+Rahul & Radhika,Tue,Dinner,Skye — beetroot sticks (plan-direct),Beetroot,beetroot,0.5,pc,g
+Rahul & Radhika,Wed,Breakfast,Bell pepper onion egg bhurji (repeat) (plan-direct),Eggs,eggs,7,pc,h
+Rahul & Radhika,Wed,Breakfast,Bell pepper onion egg bhurji (repeat) (plan-direct),Capsicum,capsicum,80,g,s
+Rahul & Radhika,Wed,Breakfast,Bell pepper onion egg bhurji (repeat) (plan-direct),Onion,onion,0.5,pc,s
+Rahul & Radhika,Wed,Breakfast,Bell pepper onion egg bhurji (repeat) (plan-direct),Cucumber,cucumber,0.5,pc,s
+Rahul & Radhika,Wed,Breakfast,Bell pepper onion egg bhurji (repeat) (plan-direct),Salt,salt,4,g,g
+Rahul & Radhika,Wed,Breakfast,Bell pepper onion egg bhurji (repeat) (plan-direct),Oil,oil,12,ml,g
+Rahul & Radhika,Wed,Lunch,Egg curry (1 whole + 3 whites) (taken from Rasoi),Eggs,eggs,2.5,pc,h
+Rahul & Radhika,Wed,Lunch,Egg curry (1 whole + 3 whites) (taken from Rasoi),Onion,onion,0.5,pc,s
+Rahul & Radhika,Wed,Lunch,Egg curry (1 whole + 3 whites) (taken from Rasoi),Tomato,tomato,1,pc,s
+Rahul & Radhika,Wed,Lunch,Egg curry (1 whole + 3 whites) (taken from Rasoi),Ginger garlic paste,gingergarlic,10,g,s
+Rahul & Radhika,Wed,Lunch,Egg curry (1 whole + 3 whites) (taken from Rasoi),Cooking oil,oil,8,ml,g
+Rahul & Radhika,Wed,Lunch,Egg curry (1 whole + 3 whites) (taken from Rasoi),Mustard seeds,mustardseeds,2,g,g
+Rahul & Radhika,Wed,Lunch,Egg curry (1 whole + 3 whites) (taken from Rasoi),Jeera,jeera,2,g,g
+Rahul & Radhika,Wed,Lunch,Egg curry (1 whole + 3 whites) (taken from Rasoi),Haldi,haldi,2,g,g
+Rahul & Radhika,Wed,Lunch,Egg curry (1 whole + 3 whites) (taken from Rasoi),Red chilli powder,chillipow,2,g,g
+Rahul & Radhika,Wed,Lunch,Egg curry (1 whole + 3 whites) (taken from Rasoi),Garam masala,garam,2,g,g
+Rahul & Radhika,Wed,Lunch,Egg curry (1 whole + 3 whites) (taken from Rasoi),Salt,salt,2,g,g
+Rahul & Radhika,Wed,Lunch,Egg curry (1 whole + 3 whites) (taken from Rasoi),Coriander (fresh),corianderf,8,g,g
+Rahul & Radhika,Wed,Lunch,Beetroot & green bean sabzi + matta rice (taken from Rasoi),Beetroot,beetroot,0.5,pc,h
+Rahul & Radhika,Wed,Lunch,Beetroot & green bean sabzi + matta rice (taken from Rasoi),Green beans,frenchbeans,60,g,h
+Rahul & Radhika,Wed,Lunch,Beetroot & green bean sabzi + matta rice (taken from Rasoi),Onion,onion,0.5,pc,s
+Rahul & Radhika,Wed,Lunch,Beetroot & green bean sabzi + matta rice (taken from Rasoi),Green chilli,greenchilli,4,g,g
+Rahul & Radhika,Wed,Lunch,Beetroot & green bean sabzi + matta rice (taken from Rasoi),Ginger,ginger,6,g,s
+Rahul & Radhika,Wed,Lunch,Beetroot & green bean sabzi + matta rice (taken from Rasoi),Mustard seeds,mustardseeds,2,g,g
+Rahul & Radhika,Wed,Lunch,Beetroot & green bean sabzi + matta rice (taken from Rasoi),Jeera,jeera,2,g,g
+Rahul & Radhika,Wed,Lunch,Beetroot & green bean sabzi + matta rice (taken from Rasoi),Cooking oil,oil,8,ml,g
+Rahul & Radhika,Wed,Lunch,Beetroot & green bean sabzi + matta rice (taken from Rasoi),Salt,salt,2,g,g
+Rahul & Radhika,Wed,Lunch,Beetroot & green bean sabzi + matta rice (taken from Rasoi),Haldi,haldi,2,g,g
+Rahul & Radhika,Wed,Lunch,Beetroot & green bean sabzi + matta rice (taken from Rasoi),Red chilli powder,chillipow,2,g,g
+Rahul & Radhika,Wed,Lunch,Beetroot & green bean sabzi + matta rice (taken from Rasoi),Coriander (fresh),corianderf,8,g,g
+Rahul & Radhika,Wed,Lunch,Beetroot & green bean sabzi + matta rice (taken from Rasoi),Matta/red rice,matta,100,g,h
+Rahul & Radhika,Wed,Dinner,Asian broccoli tofu bowl + peanut sauce (taken from Rasoi),Tofu,tofu,270,g,h
+Rahul & Radhika,Wed,Dinner,Asian broccoli tofu bowl + peanut sauce (taken from Rasoi),Broccoli,broccoli,330,g,h
+Rahul & Radhika,Wed,Dinner,Asian broccoli tofu bowl + peanut sauce (taken from Rasoi),Rice,rice,240,g,h
+Rahul & Radhika,Wed,Dinner,Asian broccoli tofu bowl + peanut sauce (taken from Rasoi),Peanut butter,peanutbutter,45,g,s
+Rahul & Radhika,Wed,Dinner,Asian broccoli tofu bowl + peanut sauce (taken from Rasoi),Soy sauce,soy,22,ml,s
+Rahul & Radhika,Wed,Dinner,Asian broccoli tofu bowl + peanut sauce (taken from Rasoi),Honey,honey,22,g,s
+Rahul & Radhika,Wed,Dinner,Asian broccoli tofu bowl + peanut sauce (taken from Rasoi),Lemon/lime,lemon,0.75,pc,g
+Rahul & Radhika,Wed,Dinner,Asian broccoli tofu bowl + peanut sauce (taken from Rasoi),Olive oil,oliveoil,22,ml,s
+Rahul & Radhika,Wed,Dinner,Asian broccoli tofu bowl + peanut sauce (taken from Rasoi),Garlic,garlic,22,g,s
+Rahul & Radhika,Wed,Dinner,Asian broccoli tofu bowl + peanut sauce (taken from Rasoi),Ginger,ginger,18,g,s
+Rahul & Radhika,Wed,Dinner,Asian broccoli tofu bowl + peanut sauce (taken from Rasoi),Salt,salt,6,g,g
+Rahul & Radhika,Wed,Dinner,Asian broccoli tofu bowl + peanut sauce (taken from Rasoi),Black pepper,blackpepper,3,g,g
+Rahul & Radhika,Wed,Dinner,Vegetable clear soup (taken from Rasoi),Olive oil,oliveoil,22,ml,s
+Rahul & Radhika,Wed,Dinner,Vegetable clear soup (taken from Rasoi),Onion,onion,1.5,pc,s
+Rahul & Radhika,Wed,Dinner,Vegetable clear soup (taken from Rasoi),Carrot,carrot,1.5,pc,s
+Rahul & Radhika,Wed,Dinner,Vegetable clear soup (taken from Rasoi),Capsicum,capsicum,120,g,s
+Rahul & Radhika,Wed,Dinner,Vegetable clear soup (taken from Rasoi),Spinach,spinach,90,g,s
+Rahul & Radhika,Wed,Dinner,Vegetable clear soup (taken from Rasoi),Veg stock (Knorr/broth),broth,2,cube,s
+Rahul & Radhika,Wed,Dinner,Vegetable clear soup (taken from Rasoi),Salt,salt,6,g,g
+Rahul & Radhika,Wed,Dinner,Vegetable clear soup (taken from Rasoi),Black pepper,blackpepper,3,g,g
+Rahul & Radhika,Wed,Dinner,Vegetable clear soup (taken from Rasoi),Soy sauce,soy,22,ml,s
+Rahul & Radhika,Wed,Dinner,Vegetable clear soup (taken from Rasoi),Coriander (fresh),corianderf,22,g,g
+Rahul & Radhika,Wed,Dinner,Skye — carrot sticks (plan-direct),Carrot,carrot,0.5,pc,g
+Paxal & Sana,Mon,Dinner,Cheese paneer wrap (taken from Rasoi),Wrap base (atta/roti),atta,120,g,h
+Paxal & Sana,Mon,Dinner,Cheese paneer wrap (taken from Rasoi),Paneer,paneer,200,g,h
+Paxal & Sana,Mon,Dinner,Cheese paneer wrap (taken from Rasoi),Cheese,cheeseslices,30,g,h
+Paxal & Sana,Mon,Dinner,Cheese paneer wrap (taken from Rasoi),Onion,onion,1,pc,s
+Paxal & Sana,Mon,Dinner,Cheese paneer wrap (taken from Rasoi),Capsicum,capsicum,80,g,s
+Paxal & Sana,Mon,Dinner,Cheese paneer wrap (taken from Rasoi),Olive oil,oliveoil,15,ml,s
+Paxal & Sana,Mon,Dinner,Cheese paneer wrap (taken from Rasoi),Jeera,jeera,4,g,g
+Paxal & Sana,Mon,Dinner,Cheese paneer wrap (taken from Rasoi),Salt,salt,4,g,g
+Paxal & Sana,Mon,Dinner,Cheese paneer wrap (taken from Rasoi),Black pepper,blackpepper,3,g,g
+Paxal & Sana,Mon,Dinner,Cheese paneer wrap (taken from Rasoi),Coriander (fresh),corianderf,15,g,g
+Paxal & Sana,Mon,Dinner,Prep — soak urad for idli,Urad dal,uraddal,150,g,p
+Paxal & Sana,Tue,Breakfast,Ragi idli + coconut chutney (taken from Rasoi),Ragi flour,ragi,120,g,h
+Paxal & Sana,Tue,Breakfast,Ragi idli + coconut chutney (taken from Rasoi),Rice flour,riceflour,35,g,s
+Paxal & Sana,Tue,Breakfast,Ragi idli + coconut chutney (taken from Rasoi),Yogurt/curd,greekyog,100,g,s
+Paxal & Sana,Tue,Breakfast,Ragi idli + coconut chutney (taken from Rasoi),Salt,salt,4,g,g
+Paxal & Sana,Tue,Breakfast,Ragi idli + coconut chutney (taken from Rasoi),Baking soda,bakingsoda,2,g,g
+Paxal & Sana,Tue,Breakfast,Ragi idli + coconut chutney (taken from Rasoi),Cooking oil,oil,15,ml,g
+Paxal & Sana,Tue,Breakfast,Ragi idli + coconut chutney (taken from Rasoi),Urad dal (soaked Mon),uraddal,150,g,h
+Paxal & Sana,Tue,Breakfast,Coconut chutney (taken from Rasoi),Coconut (chutney),coconut,40,g,s
+Paxal & Sana,Tue,Breakfast,Coconut chutney (taken from Rasoi),Chana dal (chutney),chanadal,15,g,g
+Paxal & Sana,Tue,Breakfast,Coconut chutney (taken from Rasoi),Green chilli,greenchilli,8,g,g
+Paxal & Sana,Tue,Breakfast,Coconut chutney (taken from Rasoi),Mustard seeds,mustardseeds,4,g,g
+Paxal & Sana,Tue,Breakfast,Coconut chutney (taken from Rasoi),Cooking oil,oil,15,ml,g
+Paxal & Sana,Tue,Breakfast,Coconut chutney (taken from Rasoi),Salt,salt,4,g,g
+Paxal & Sana,Tue,Breakfast,Coconut chutney (taken from Rasoi),Coriander (fresh),corianderf,12,g,g
+Paxal & Sana,Tue,Lunch,Paneer pepper fry (taken from Rasoi),Paneer,paneer,200,g,h
+Paxal & Sana,Tue,Lunch,Paneer pepper fry (taken from Rasoi),Capsicum,capsicum,80,g,s
+Paxal & Sana,Tue,Lunch,Paneer pepper fry (taken from Rasoi),Onion,onion,1,pc,s
+Paxal & Sana,Tue,Lunch,Paneer pepper fry (taken from Rasoi),Green chilli,greenchilli,8,g,g
+Paxal & Sana,Tue,Lunch,Paneer pepper fry (taken from Rasoi),Ginger garlic paste,gingergarlic,20,g,s
+Paxal & Sana,Tue,Lunch,Paneer pepper fry (taken from Rasoi),Cooking oil,oil,15,ml,g
+Paxal & Sana,Tue,Lunch,Paneer pepper fry (taken from Rasoi),Jeera,jeera,4,g,g
+Paxal & Sana,Tue,Lunch,Paneer pepper fry (taken from Rasoi),Haldi,haldi,3,g,g
+Paxal & Sana,Tue,Lunch,Paneer pepper fry (taken from Rasoi),Red chilli powder,chillipow,4,g,g
+Paxal & Sana,Tue,Lunch,Paneer pepper fry (taken from Rasoi),Salt,salt,4,g,g
+Paxal & Sana,Tue,Lunch,Paneer pepper fry (taken from Rasoi),Coriander (fresh),corianderf,15,g,g
+Paxal & Sana,Tue,Lunch,Rotis (plan-direct),Atta,atta,180,g,h
+Paxal & Sana,Tue,Lunch,Carrot tomato salad + sprouts + pineapple (plan-direct),Carrot,carrot,1,pc,s
+Paxal & Sana,Tue,Lunch,Carrot tomato salad + sprouts + pineapple (plan-direct),Tomato,tomato,1,pc,s
+Paxal & Sana,Tue,Lunch,Carrot tomato salad + sprouts + pineapple (plan-direct),Green moong (sprouted),greenmoong,60,g,s
+Paxal & Sana,Tue,Lunch,Carrot tomato salad + sprouts + pineapple (plan-direct),Pineapple,pineapple,0.5,pc,s
+Paxal & Sana,Tue,Dinner,Paneer chilli with hakka noodles (taken from Rasoi),Paneer,paneer,200,g,h
+Paxal & Sana,Tue,Dinner,Paneer chilli with hakka noodles (taken from Rasoi),Hakka noodles,noodles,150,g,h
+Paxal & Sana,Tue,Dinner,Paneer chilli with hakka noodles (taken from Rasoi),Capsicum,capsicum,80,g,s
+Paxal & Sana,Tue,Dinner,Paneer chilli with hakka noodles (taken from Rasoi),Onion,onion,1,pc,s
+Paxal & Sana,Tue,Dinner,Paneer chilli with hakka noodles (taken from Rasoi),Green chilli,greenchilli,8,g,g
+Paxal & Sana,Tue,Dinner,Paneer chilli with hakka noodles (taken from Rasoi),Soy sauce,soy,15,ml,s
+Paxal & Sana,Tue,Dinner,Paneer chilli with hakka noodles (taken from Rasoi),Vinegar,vinegar,8,ml,g
+Paxal & Sana,Tue,Dinner,Paneer chilli with hakka noodles (taken from Rasoi),Chilli sauce,chillisauce,15,g,s
+Paxal & Sana,Tue,Dinner,Paneer chilli with hakka noodles (taken from Rasoi),Cooking oil,oil,15,ml,g
+Paxal & Sana,Tue,Dinner,Paneer chilli with hakka noodles (taken from Rasoi),Salt,salt,4,g,g
+Paxal & Sana,Tue,Dinner,Paneer chilli with hakka noodles (taken from Rasoi),Spring onion,springonion,40,g,s
+Paxal & Sana,Tue,Dinner,Prep — soak kabuli chana + rajma,Kabuli chana,chickpeas,150,g,p
+Paxal & Sana,Tue,Dinner,Prep — soak kabuli chana + rajma,Rajma,rajma,120,g,p
+Paxal & Sana,Wed,Breakfast,Thaalipeeth (taken from Rasoi),Jowar flour,jowar,100,g,h
+Paxal & Sana,Wed,Breakfast,Thaalipeeth (taken from Rasoi),Besan,besan,35,g,s
+Paxal & Sana,Wed,Breakfast,Thaalipeeth (taken from Rasoi),Rice flour,riceflour,35,g,s
+Paxal & Sana,Wed,Breakfast,Thaalipeeth (taken from Rasoi),Onion,onion,1,pc,s
+Paxal & Sana,Wed,Breakfast,Thaalipeeth (taken from Rasoi),Carrot,carrot,1,pc,s
+Paxal & Sana,Wed,Breakfast,Thaalipeeth (taken from Rasoi),Coriander (fresh),corianderf,15,g,g
+Paxal & Sana,Wed,Breakfast,Thaalipeeth (taken from Rasoi),Jeera,jeera,4,g,g
+Paxal & Sana,Wed,Breakfast,Thaalipeeth (taken from Rasoi),Salt,salt,4,g,g
+Paxal & Sana,Wed,Breakfast,Thaalipeeth (taken from Rasoi),Cooking oil,oil,15,ml,g
+Paxal & Sana,Wed,Lunch,Punjabi chole masala (taken from Rasoi),Chickpeas (chole/kabuli),chickpeas,150,g,h
+Paxal & Sana,Wed,Lunch,Punjabi chole masala (taken from Rasoi),Cooking oil,oil,15,ml,g
+Paxal & Sana,Wed,Lunch,Punjabi chole masala (taken from Rasoi),Onion,onion,1,pc,s
+Paxal & Sana,Wed,Lunch,Punjabi chole masala (taken from Rasoi),Tomato,tomato,2,pc,s
+Paxal & Sana,Wed,Lunch,Punjabi chole masala (taken from Rasoi),Ginger garlic paste,gingergarlic,20,g,s
+Paxal & Sana,Wed,Lunch,Punjabi chole masala (taken from Rasoi),Jeera,jeera,4,g,g
+Paxal & Sana,Wed,Lunch,Punjabi chole masala (taken from Rasoi),Dhaniya powder,dhaniapow,5,g,g
+Paxal & Sana,Wed,Lunch,Punjabi chole masala (taken from Rasoi),Garam masala,garam,4,g,g
+Paxal & Sana,Wed,Lunch,Punjabi chole masala (taken from Rasoi),Red chilli powder,chillipow,4,g,g
+Paxal & Sana,Wed,Lunch,Punjabi chole masala (taken from Rasoi),Salt,salt,4,g,g
+Paxal & Sana,Wed,Lunch,Punjabi chole masala (taken from Rasoi),Coriander (fresh),corianderf,15,g,g
+Paxal & Sana,Wed,Lunch,Paratha (plan-direct),Atta,atta,200,g,h
+Paxal & Sana,Wed,Lunch,Paratha (plan-direct),Ghee,ghee,12,g,g
+Paxal & Sana,Wed,Lunch,Cucumber raita + sprouts + apple (plan-direct),Curd/yogurt,greekyog,120,g,s
+Paxal & Sana,Wed,Lunch,Cucumber raita + sprouts + apple (plan-direct),Cucumber,cucumber,0.5,pc,s
+Paxal & Sana,Wed,Lunch,Cucumber raita + sprouts + apple (plan-direct),Green moong (sprouted),greenmoong,60,g,s
+Paxal & Sana,Wed,Lunch,Cucumber raita + sprouts + apple (plan-direct),Apple,apple,1,pc,s
+Paxal & Sana,Wed,Dinner,Paneer burrito bowl (taken from Rasoi),Rice,rice,160,g,h
+Paxal & Sana,Wed,Dinner,Paneer burrito bowl (taken from Rasoi),Paneer,paneer,200,g,h
+Paxal & Sana,Wed,Dinner,Paneer burrito bowl (taken from Rasoi),Capsicum,capsicum,80,g,s
+Paxal & Sana,Wed,Dinner,Paneer burrito bowl (taken from Rasoi),Sweet corn,sweetcorn,60,g,s
+Paxal & Sana,Wed,Dinner,Paneer burrito bowl (taken from Rasoi),Onion,onion,1,pc,s
+Paxal & Sana,Wed,Dinner,Paneer burrito bowl (taken from Rasoi),Jeera powder,cuminpow,4,g,g
+Paxal & Sana,Wed,Dinner,Paneer burrito bowl (taken from Rasoi),Red chilli powder,chillipow,4,g,g
+Paxal & Sana,Wed,Dinner,Paneer burrito bowl (taken from Rasoi),Olive oil,oliveoil,15,ml,s
+Paxal & Sana,Wed,Dinner,Paneer burrito bowl (taken from Rasoi),Salt,salt,4,g,g
+Paxal & Sana,Wed,Dinner,Paneer burrito bowl (taken from Rasoi),Coriander (fresh),corianderf,12,g,g
+Paxal & Sana,Wed,Dinner,Paneer burrito bowl (taken from Rasoi),Lemon/lime,lemon,0.5,pc,g
+Paxal & Sana,Wed,Dinner,Prep — soak masoor dal,Masoor dal,masoordal,120,g,p
+Sakshi & Pratik,Mon,Breakfast,Pesarattu dosa + 2 egg whites (taken from Rasoi),Green moong dal,greenmoong,140,g,h
+Sakshi & Pratik,Mon,Breakfast,Pesarattu dosa + 2 egg whites (taken from Rasoi),Rice,rice,160,g,h
+Sakshi & Pratik,Mon,Breakfast,Pesarattu dosa + 2 egg whites (taken from Rasoi),Green chilli,greenchilli,8,g,g
+Sakshi & Pratik,Mon,Breakfast,Pesarattu dosa + 2 egg whites (taken from Rasoi),Ginger,ginger,12,g,s
+Sakshi & Pratik,Mon,Breakfast,Pesarattu dosa + 2 egg whites (taken from Rasoi),Salt,salt,4,g,g
+Sakshi & Pratik,Mon,Breakfast,Pesarattu dosa + 2 egg whites (taken from Rasoi),Cooking oil,oil,15,ml,g
+Sakshi & Pratik,Mon,Breakfast,Pesarattu dosa + 2 egg whites (taken from Rasoi),Coriander (fresh),corianderf,15,g,g
+Sakshi & Pratik,Mon,Breakfast,Pesarattu dosa + 2 egg whites (taken from Rasoi),Eggs,eggs,4,pc,h
+Sakshi & Pratik,Mon,Breakfast,Coconut chutney (taken from Rasoi),Coconut (chutney),coconut,40,g,s
+Sakshi & Pratik,Mon,Breakfast,Coconut chutney (taken from Rasoi),Chana dal (chutney),chanadal,15,g,g
+Sakshi & Pratik,Mon,Breakfast,Coconut chutney (taken from Rasoi),Green chilli,greenchilli,8,g,g
+Sakshi & Pratik,Mon,Breakfast,Coconut chutney (taken from Rasoi),Mustard seeds,mustardseeds,4,g,g
+Sakshi & Pratik,Mon,Breakfast,Coconut chutney (taken from Rasoi),Cooking oil,oil,15,ml,g
+Sakshi & Pratik,Mon,Breakfast,Coconut chutney (taken from Rasoi),Salt,salt,4,g,g
+Sakshi & Pratik,Mon,Breakfast,Coconut chutney (taken from Rasoi),Coriander (fresh),corianderf,12,g,g
+Sakshi & Pratik,Mon,Breakfast,Sattu chaas (plan-direct),Sattu,sattu,30,g,s
+Sakshi & Pratik,Mon,Breakfast,Sattu chaas (plan-direct),Greek yogurt,greekyog,0.25,tub,s
+Sakshi & Pratik,Mon,Breakfast,Sattu chaas (plan-direct),Jeera powder,cuminpow,2,g,g
+Sakshi & Pratik,Mon,Breakfast,Sattu chaas (plan-direct),Black salt,blacksalt,2,g,g
+Sakshi & Pratik,Mon,Lunch,Baked paneer kofta in tomato gravy (taken from Rasoi),Paneer,paneer,200,g,h
+Sakshi & Pratik,Mon,Lunch,Baked paneer kofta in tomato gravy (taken from Rasoi),Potato,potato,1,pc,s
+Sakshi & Pratik,Mon,Lunch,Baked paneer kofta in tomato gravy (taken from Rasoi),Corn starch,cornstarch,15,g,s
+Sakshi & Pratik,Mon,Lunch,Baked paneer kofta in tomato gravy (taken from Rasoi),Garam masala,garam,4,g,g
+Sakshi & Pratik,Mon,Lunch,Baked paneer kofta in tomato gravy (taken from Rasoi),Salt,salt,4,g,g
+Sakshi & Pratik,Mon,Lunch,Baked paneer kofta in tomato gravy (taken from Rasoi),Tomato,tomato,2,pc,s
+Sakshi & Pratik,Mon,Lunch,Baked paneer kofta in tomato gravy (taken from Rasoi),Onion,onion,1,pc,s
+Sakshi & Pratik,Mon,Lunch,Baked paneer kofta in tomato gravy (taken from Rasoi),Ginger garlic paste,gingergarlic,20,g,s
+Sakshi & Pratik,Mon,Lunch,Baked paneer kofta in tomato gravy (taken from Rasoi),Red chilli powder,chillipow,4,g,g
+Sakshi & Pratik,Mon,Lunch,Baked paneer kofta in tomato gravy (taken from Rasoi),Cooking oil,oil,15,ml,g
+Sakshi & Pratik,Mon,Lunch,Baked paneer kofta in tomato gravy (taken from Rasoi),Jeera,jeera,4,g,g
+Sakshi & Pratik,Mon,Lunch,Baked paneer kofta in tomato gravy (taken from Rasoi),Coriander (fresh),corianderf,15,g,g
+Sakshi & Pratik,Mon,Lunch,Matta rice (little) (plan-direct),Matta rice,matta,120,g,h
+Sakshi & Pratik,Mon,Lunch,Chaat masala veggies (plan-direct),Carrot,carrot,1,pc,s
+Sakshi & Pratik,Mon,Lunch,Chaat masala veggies (plan-direct),Cucumber,cucumber,0.5,pc,s
+Sakshi & Pratik,Mon,Lunch,Chaat masala veggies (plan-direct),Chaat masala,chaat,5,g,g
+Sakshi & Pratik,Mon,Lunch,Snack — ladoo + mandarin (plan-direct),Nut & seed ladoo,ladoo,20,g,s
+Sakshi & Pratik,Mon,Lunch,Snack — ladoo + mandarin (plan-direct),Orange,orange,1,pc,s
+Sakshi & Pratik,Mon,Dinner,Mangodi sabzi (taken from Rasoi),Mangodi (moong badi),mangodi,120,g,h
+Sakshi & Pratik,Mon,Dinner,Mangodi sabzi (taken from Rasoi),Cooking oil,oil,15,ml,g
+Sakshi & Pratik,Mon,Dinner,Mangodi sabzi (taken from Rasoi),Jeera,jeera,4,g,g
+Sakshi & Pratik,Mon,Dinner,Mangodi sabzi (taken from Rasoi),Onion,onion,1,pc,s
+Sakshi & Pratik,Mon,Dinner,Mangodi sabzi (taken from Rasoi),Tomato,tomato,2,pc,s
+Sakshi & Pratik,Mon,Dinner,Mangodi sabzi (taken from Rasoi),Ginger garlic paste,gingergarlic,20,g,s
+Sakshi & Pratik,Mon,Dinner,Mangodi sabzi (taken from Rasoi),Red chilli powder,chillipow,4,g,g
+Sakshi & Pratik,Mon,Dinner,Mangodi sabzi (taken from Rasoi),Dhaniya powder,dhaniapow,5,g,g
+Sakshi & Pratik,Mon,Dinner,Mangodi sabzi (taken from Rasoi),Haldi,haldi,3,g,g
+Sakshi & Pratik,Mon,Dinner,Mangodi sabzi (taken from Rasoi),Salt,salt,4,g,g
+Sakshi & Pratik,Mon,Dinner,Mangodi sabzi (taken from Rasoi),Coriander (fresh),corianderf,15,g,g
+Sakshi & Pratik,Mon,Dinner,Skyr mixed-veg raita (plan-direct),Greek yogurt,greekyog,1,tub,s
+Sakshi & Pratik,Mon,Dinner,Skyr mixed-veg raita (plan-direct),Cucumber,cucumber,0.5,pc,s
+Sakshi & Pratik,Mon,Dinner,Skyr mixed-veg raita (plan-direct),Carrot,carrot,0.5,pc,g
+Sakshi & Pratik,Mon,Dinner,Skyr mixed-veg raita (plan-direct),Jeera powder,cuminpow,2,g,g
+Sakshi & Pratik,Mon,Dinner,Jowar-quinoa roti (plan-direct),Jowar atta,jowar,120,g,h
+Sakshi & Pratik,Mon,Dinner,Jowar-quinoa roti (plan-direct),Quinoa (flour/grain),quinoa,60,g,s
+Sakshi & Pratik,Tue,Breakfast,Sourdough + omelette + protein (plan-direct),Sourdough,sourdough,1,slice,h
+Sakshi & Pratik,Tue,Breakfast,Sourdough + omelette + protein (plan-direct),Eggs,eggs,4,pc,h
+Sakshi & Pratik,Tue,Breakfast,Sourdough + omelette + protein (plan-direct),Protein powder,proteinpow,30,g,s
+Sakshi & Pratik,Tue,Breakfast,Sourdough + omelette + protein (plan-direct),Coconut water,coconutwater,200,ml,s
+Sakshi & Pratik,Tue,Breakfast,Sourdough + omelette + protein (plan-direct),Blueberries,blueberry,40,g,s
+Sakshi & Pratik,Tue,Lunch,Quinoa chickpea veggie salad + chimichurri tofu (taken from Rasoi),Quinoa,quinoa,110,g,h
+Sakshi & Pratik,Tue,Lunch,Quinoa chickpea veggie salad + chimichurri tofu (taken from Rasoi),Chickpeas (chole/kabuli),chickpeas,150,g,h
+Sakshi & Pratik,Tue,Lunch,Quinoa chickpea veggie salad + chimichurri tofu (taken from Rasoi),Capsicum,capsicum,80,g,s
+Sakshi & Pratik,Tue,Lunch,Quinoa chickpea veggie salad + chimichurri tofu (taken from Rasoi),Cucumber,cucumber,1,pc,s
+Sakshi & Pratik,Tue,Lunch,Quinoa chickpea veggie salad + chimichurri tofu (taken from Rasoi),Tofu,tofu,180,g,h
+Sakshi & Pratik,Tue,Lunch,Quinoa chickpea veggie salad + chimichurri tofu (taken from Rasoi),Chimichurri (parsley-garlic sauce),parsley,25,g,s
+Sakshi & Pratik,Tue,Lunch,Quinoa chickpea veggie salad + chimichurri tofu (taken from Rasoi),Olive oil,oliveoil,15,ml,s
+Sakshi & Pratik,Tue,Lunch,Quinoa chickpea veggie salad + chimichurri tofu (taken from Rasoi),Salt,salt,4,g,g
+Sakshi & Pratik,Tue,Lunch,Quinoa chickpea veggie salad + chimichurri tofu (taken from Rasoi),Black pepper,blackpepper,2,g,g
+Sakshi & Pratik,Tue,Lunch,Snack — crunchy edamame + kiwi (plan-direct),Edamame,edamame,60,g,s
+Sakshi & Pratik,Tue,Lunch,Snack — crunchy edamame + kiwi (plan-direct),Kiwi,kiwi,1,pc,s
+Sakshi & Pratik,Tue,Dinner,Green moong & oats chilla + shredded paneer (taken from Rasoi),Green moong dal,greenmoong,140,g,h
+Sakshi & Pratik,Tue,Dinner,Green moong & oats chilla + shredded paneer (taken from Rasoi),Oats,oats,70,g,h
+Sakshi & Pratik,Tue,Dinner,Green moong & oats chilla + shredded paneer (taken from Rasoi),Onion,onion,1,pc,s
+Sakshi & Pratik,Tue,Dinner,Green moong & oats chilla + shredded paneer (taken from Rasoi),Green chilli,greenchilli,8,g,g
+Sakshi & Pratik,Tue,Dinner,Green moong & oats chilla + shredded paneer (taken from Rasoi),Spinach,spinach,120,g,s
+Sakshi & Pratik,Tue,Dinner,Green moong & oats chilla + shredded paneer (taken from Rasoi),Jeera,jeera,4,g,g
+Sakshi & Pratik,Tue,Dinner,Green moong & oats chilla + shredded paneer (taken from Rasoi),Salt,salt,4,g,g
+Sakshi & Pratik,Tue,Dinner,Green moong & oats chilla + shredded paneer (taken from Rasoi),Cooking oil,oil,15,ml,g
+Sakshi & Pratik,Tue,Dinner,Green moong & oats chilla + shredded paneer (taken from Rasoi),Paneer (low-fat),paneer,80,g,s
+Sakshi & Pratik,Tue,Dinner,Dahi pudina chutney (taken from Rasoi),Yogurt/curd,greekyog,100,g,s
+Sakshi & Pratik,Tue,Dinner,Dahi pudina chutney (taken from Rasoi),Mint,mint,12,g,g
+Sakshi & Pratik,Tue,Dinner,Dahi pudina chutney (taken from Rasoi),Coriander (fresh),corianderf,12,g,g
+Sakshi & Pratik,Tue,Dinner,Dahi pudina chutney (taken from Rasoi),Green chilli,greenchilli,8,g,g
+Sakshi & Pratik,Tue,Dinner,Dahi pudina chutney (taken from Rasoi),Jeera powder,cuminpow,4,g,g
+Sakshi & Pratik,Tue,Dinner,Dahi pudina chutney (taken from Rasoi),Salt,salt,4,g,g
+Sakshi & Pratik,Tue,Dinner,Green beans poriyal (taken from Rasoi),Green beans,frenchbeans,120,g,h
+Sakshi & Pratik,Tue,Dinner,Green beans poriyal (taken from Rasoi),Coconut (chutney),coconut,40,g,s
+Sakshi & Pratik,Tue,Dinner,Green beans poriyal (taken from Rasoi),Cooking oil,oil,15,ml,g
+Sakshi & Pratik,Tue,Dinner,Green beans poriyal (taken from Rasoi),Mustard seeds,mustardseeds,4,g,g
+Sakshi & Pratik,Tue,Dinner,Green beans poriyal (taken from Rasoi),Urad dal (tadka),uraddal,8,g,g
+Sakshi & Pratik,Tue,Dinner,Green beans poriyal (taken from Rasoi),Haldi,haldi,3,g,g
+Sakshi & Pratik,Tue,Dinner,Green beans poriyal (taken from Rasoi),Salt,salt,4,g,g
+Sakshi & Pratik,Tue,Dinner,Green beans poriyal (taken from Rasoi),Green chilli,greenchilli,8,g,g
+Sakshi & Pratik,Wed,Breakfast,Stuffed moong dal chilla + chutney (taken from Rasoi),Moong dal,moongdal,120,g,h
+Sakshi & Pratik,Wed,Breakfast,Stuffed moong dal chilla + chutney (taken from Rasoi),Spinach,spinach,120,g,s
+Sakshi & Pratik,Wed,Breakfast,Stuffed moong dal chilla + chutney (taken from Rasoi),Carrot,carrot,1,pc,s
+Sakshi & Pratik,Wed,Breakfast,Stuffed moong dal chilla + chutney (taken from Rasoi),Onion,onion,1,pc,s
+Sakshi & Pratik,Wed,Breakfast,Stuffed moong dal chilla + chutney (taken from Rasoi),Haldi,haldi,3,g,g
+Sakshi & Pratik,Wed,Breakfast,Stuffed moong dal chilla + chutney (taken from Rasoi),Jeera,jeera,4,g,g
+Sakshi & Pratik,Wed,Breakfast,Stuffed moong dal chilla + chutney (taken from Rasoi),Salt,salt,4,g,g
+Sakshi & Pratik,Wed,Breakfast,Stuffed moong dal chilla + chutney (taken from Rasoi),Olive oil,oliveoil,15,ml,s
+Sakshi & Pratik,Wed,Breakfast,Yoghurt protein smoothie (plan-direct),Greek yogurt,greekyog,0.5,tub,s
+Sakshi & Pratik,Wed,Breakfast,Yoghurt protein smoothie (plan-direct),Protein powder,proteinpow,15,g,s
+Sakshi & Pratik,Wed,Breakfast,Yoghurt protein smoothie (plan-direct),Banana,banana,0.5,pc,s
+Sakshi & Pratik,Wed,Lunch,Korean pan-fried tofu wrap (in GobbleRight almond wrap) (taken from Rasoi),Tofu,tofu,180,g,h
+Sakshi & Pratik,Wed,Lunch,Korean pan-fried tofu wrap (in GobbleRight almond wrap) (taken from Rasoi),Capsicum,capsicum,80,g,s
+Sakshi & Pratik,Wed,Lunch,Korean pan-fried tofu wrap (in GobbleRight almond wrap) (taken from Rasoi),Zucchini,zucchini,0.5,pc,s
+Sakshi & Pratik,Wed,Lunch,Korean pan-fried tofu wrap (in GobbleRight almond wrap) (taken from Rasoi),Spinach,spinach,120,g,s
+Sakshi & Pratik,Wed,Lunch,Korean pan-fried tofu wrap (in GobbleRight almond wrap) (taken from Rasoi),Soy sauce,soy,15,ml,s
+Sakshi & Pratik,Wed,Lunch,Korean pan-fried tofu wrap (in GobbleRight almond wrap) (taken from Rasoi),Sesame oil,sesameoil,8,ml,g
+Sakshi & Pratik,Wed,Lunch,Korean pan-fried tofu wrap (in GobbleRight almond wrap) (taken from Rasoi),Gochujang,gochujang,20,g,s
+Sakshi & Pratik,Wed,Lunch,Korean pan-fried tofu wrap (in GobbleRight almond wrap) (taken from Rasoi),Lettuce leaves,lettuce,60,g,s
+Sakshi & Pratik,Wed,Lunch,Korean pan-fried tofu wrap (in GobbleRight almond wrap) (taken from Rasoi),Cooking oil,oil,12,ml,g
+Sakshi & Pratik,Wed,Lunch,Korean pan-fried tofu wrap (in GobbleRight almond wrap) (taken from Rasoi),White sesame seeds,sesameseeds,6,g,g
+Sakshi & Pratik,Wed,Lunch,Korean pan-fried tofu wrap (in GobbleRight almond wrap) (taken from Rasoi),Almond wrap (GobbleRight),almondwrap,1,pc,h
+Sakshi & Pratik,Wed,Lunch,Snack — berries (plan-direct),Blueberries,blueberry,80,g,s
+Sakshi & Pratik,Wed,Dinner,Dhaba no-oil palak paneer (taken from Rasoi),Spinach,spinach,120,g,h
+Sakshi & Pratik,Wed,Dinner,Dhaba no-oil palak paneer (taken from Rasoi),Paneer,paneer,200,g,h
+Sakshi & Pratik,Wed,Dinner,Dhaba no-oil palak paneer (taken from Rasoi),Onion,onion,1,pc,s
+Sakshi & Pratik,Wed,Dinner,Dhaba no-oil palak paneer (taken from Rasoi),Tomato,tomato,2,pc,s
+Sakshi & Pratik,Wed,Dinner,Dhaba no-oil palak paneer (taken from Rasoi),Green chilli,greenchilli,8,g,g
+Sakshi & Pratik,Wed,Dinner,Dhaba no-oil palak paneer (taken from Rasoi),Ginger garlic paste,gingergarlic,20,g,s
+Sakshi & Pratik,Wed,Dinner,Dhaba no-oil palak paneer (taken from Rasoi),Jeera,jeera,4,g,g
+Sakshi & Pratik,Wed,Dinner,Dhaba no-oil palak paneer (taken from Rasoi),Haldi,haldi,3,g,g
+Sakshi & Pratik,Wed,Dinner,Dhaba no-oil palak paneer (taken from Rasoi),Garam masala,garam,4,g,g
+Sakshi & Pratik,Wed,Dinner,Dhaba no-oil palak paneer (taken from Rasoi),Salt,salt,4,g,g
+Sakshi & Pratik,Wed,Dinner,Dhaba no-oil palak paneer (taken from Rasoi),Olive oil,oliveoil,15,ml,s
+Sakshi & Pratik,Wed,Dinner,Quinoa-jowar roti (plan-direct),Jowar atta,jowar,100,g,h
+Sakshi & Pratik,Wed,Dinner,Quinoa-jowar roti (plan-direct),Quinoa flour,quinoaflour,40,g,s
+Sakshi & Pratik,Wed,Dinner,Kachumbar + masala zucchini (plan-direct),Cucumber,cucumber,0.5,pc,s
+Sakshi & Pratik,Wed,Dinner,Kachumbar + masala zucchini (plan-direct),Onion,onion,0.5,pc,g
+Sakshi & Pratik,Wed,Dinner,Kachumbar + masala zucchini (plan-direct),Tomato,tomato,1,pc,s
+Sakshi & Pratik,Wed,Dinner,Kachumbar + masala zucchini (plan-direct),Zucchini,zucchini,1,pc,h
+Sakshi & Pratik,Wed,Dinner,Kachumbar + masala zucchini (plan-direct),Chaat masala,chaat,4,g,g
+Sakshi & Pratik,Wed,Dinner,Kachumbar + masala zucchini (plan-direct),Lemon,lemon,0.5,pc,g

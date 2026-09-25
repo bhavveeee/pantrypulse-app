@@ -1,0 +1,86 @@
+Category,Item,Quantity,Unit,Status,Est,Verify,Factor,Last checked,Last entered,Note
+Vegetable,Cucumber,1,pc,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Onion,1000,g,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Tomato,6,pc,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Potato,900,g,in,,,1,2026-09-24,2026-09-21,24-Sep update
+Vegetable,Carrot,499,g,in,,,1,2026-09-24,2026-09-18,09-24: -1g D carrot sticks (re-deduct from count)
+Vegetable,Coriander,100,g,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Garlic,3,pc,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Green chilli,30,g,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Ginger,200,g,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Beetroot,0,pc,out,,,1,2026-09-22,2026-09-18,09-22: -1pc L beetroot raita
+Vegetable,Capsicum,150,g,in,,,1,2026-09-24,2026-09-18,09-24: -100g D capsicum besan sabzi (re-deduct from count)
+Dairy,Butter,100,g,in,,,1,2026-09-18,2026-09-18,22-Sep count (post-lunch)
+Grains,Rice,1220,g,in,,,1,2026-09-22,2026-09-14,09-22: -80g L jeera rice
+Grains,Whole wheat flour,520,g,in,,,1,2026-09-24,2026-09-18,09-24: -120g D roti (re-deduct from count)
+Dals,Masoor dal,300,g,in,,,1,2026-09-14,2026-09-14,Onboarded 14-Sep from mega inventory (names cleaned)
+Dals,Kala chana,28,g,in,,,1,2026-09-16,2026-09-14,09-16: -100g L kala chana masala
+Dals,Green moong,120,g,in,,,1,2026-09-14,2026-09-14,Onboarded 14-Sep from mega inventory (names cleaned)
+Dals,Moong dal,435,g,in,,,1,2026-09-21,2026-09-21,09-21: -80g L yellow moong dal
+Dals,Green moong dal (split),50,g,in,,,1,2026-09-14,2026-09-14,Onboarded 14-Sep from mega inventory (names cleaned)
+Spice,Salt,1000,g,in,,,1,2026-09-14,2026-09-14,Onboarded 14-Sep from mega inventory (names cleaned)
+Spice,Garam masala,100,g,in,,,1,2026-09-14,2026-09-14,Onboarded 14-Sep from mega inventory (names cleaned)
+Spice,Jeera (cumin seeds),97,g,in,,,1,2026-09-19,2026-09-14,09-19: -3g D cumin
+Spice,Coriander powder,100,g,in,,,1,2026-09-14,2026-09-14,Onboarded 14-Sep from mega inventory (names cleaned)
+Spice,Kashmiri chilli powder,100,g,in,,,1,2026-09-14,2026-09-14,Onboarded 14-Sep from mega inventory (names cleaned)
+Spice,Haldi (turmeric powder),100,g,in,,,1,2026-09-14,2026-09-14,Onboarded 14-Sep from mega inventory (names cleaned)
+Spice,Black pepper powder,50,g,in,,,1,2026-09-14,2026-09-14,Onboarded 14-Sep from mega inventory (names cleaned)
+Condiment,Refined oil,400,g,in,,,1,2026-09-14,2026-09-14,Onboarded 14-Sep from mega inventory (names cleaned)
+Condiment,Tomato ketchup,50,g,in,,,1,2026-09-14,2026-09-14,Onboarded 14-Sep from mega inventory (names cleaned)
+Spice,Black mustard seeds,200,g,in,,,1,2026-09-15,2026-09-15,15-Sep order (pre-breakfast)
+Frozen,Frozen peas,420,g,in,,,1,2026-09-19,2026-09-18,09-19: -80g D sauteed peas
+Fruit,Pomegranate,6,pc,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Spice,Clove (whole),50,g,in,,,1,2026-09-15,2026-09-15,15-Sep order (pre-breakfast)
+Spice,Cinnamon (whole),50,g,in,,,1,2026-09-15,2026-09-15,15-Sep order (pre-breakfast)
+Spice,Red chilli (whole),100,g,in,,,1,2026-09-15,2026-09-15,15-Sep order (pre-breakfast)
+Spice,Green cardamom (whole),25,g,in,,,1,2026-09-15,2026-09-15,15-Sep order (pre-breakfast)
+Staple,Cashew,100,g,in,,,1,2026-09-15,2026-09-15,15-Sep order (pre-breakfast)
+Spice,Fenugreek (methi),170,g,in,,,1,2026-09-16,2026-09-15,09-16: -80g D methi matar malai
+Dairy,Fresh cream,100,ml,in,,,1,2026-09-18,2026-09-18,19-Sep post-lunch count
+Vegetable,Cauliflower,1,pc,in,,,1,2026-09-24,2026-09-21,24-Sep update
+Vegetable,Green cucumber,380,g,in,,,1,2026-09-17,2026-09-15,09-17: -60g L kachumbar
+Vegetable,Curry leaves,50,g,in,,,1,2026-09-18,2026-09-18,19-Sep post-lunch count
+Fruit,Guava cut,0,g,out,,,1,2026-09-24,2026-09-18,24-Sep update
+Spice,Amchur powder,100,g,in,,,1,2026-09-15,2026-09-15,15-Sep order (pre-breakfast)
+Spice,Chaat masala,100,g,in,,,1,2026-09-15,2026-09-15,15-Sep order (pre-breakfast)
+Vegetable,Lemon,3,pc,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Dairy,Curd,420,ml,in,,,1,2026-09-24,2026-09-18,09-24: -80ml D kadhi pakoda (re-deduct from count)
+Meat,Egg,10,pc,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Mint leaves,50,g,in,,,1,2026-09-18,2026-09-18,19-Sep post-lunch count
+Vegetable,Desi tomato,320,g,in,,,1,2026-09-17,2026-09-15,09-17: -100g D kadai curry
+Fruit,Apple,1,pc,in,,,1,2026-09-18,2026-09-18,22-Sep count (post-lunch)
+Grains,Poha,340,g,in,,,1,2026-09-21,2026-09-15,09-21: -80g B peanut poha
+Staple,Peanuts (raw),480,g,in,,,1,2026-09-21,2026-09-15,09-21: -20g B peanut poha
+Grains,Corn starch,80,g,in,,,1,2026-09-18,2026-09-18,22-Sep count (post-lunch)
+Vegetable,Beans,200,g,in,,,1,2026-09-18,2026-09-18,19-Sep post-lunch count
+Vegetable,Spring onion,200,g,in,,,1,2026-09-18,2026-09-18,19-Sep post-lunch count
+Vegetable,Cabbage,1,pc,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Dals,Roasted chana dal,500,g,in,,,1,2026-09-17,2026-09-17,17-Sep: quantity update (operator)
+Vegetable,Coconut,0.5,pc,in,,,1,2026-09-18,2026-09-18,19-Sep post-lunch count
+Dals,Kashmiri rajma,500,g,in,,,1,2026-09-19,2026-09-17,09-19: -0g L rajma
+Dals,Besan,820,g,in,,,1,2026-09-24,2026-09-17,09-24: -40g D kadhi pakoda (re-deduct from count)
+Spice,Methi seeds,100,g,in,,,1,2026-09-17,2026-09-17,17-Sep order
+Spice,Coriander seeds,100,g,in,,,1,2026-09-17,2026-09-17,17-Sep order
+Bread & bakery,Soya sauce,100,g,in,,,1,2026-09-18,2026-09-18,22-Sep count (post-lunch)
+Bread & bakery,Red chilli sauce,90,g,in,,,1,2026-09-18,2026-09-18,22-Sep count (post-lunch)
+Condiment,Vinegar,500,ml,in,,,1,2026-09-17,2026-09-17,17-Sep order
+Grains,Maida,500,g,in,,,1,2026-09-17,2026-09-17,17-Sep: quantity update (operator)
+Condiment,Schezwan chutney,250,g,in,,,1,2026-09-17,2026-09-17,17-Sep order
+Grains,Rawa (suji),440,g,in,,,1,2026-09-19,2026-09-18,09-19: -60g B vegetable upma
+Spice,Hing powder,50,g,in,,,1,2026-09-17,2026-09-17,17-Sep order
+Spice,Jeera powder,200,g,in,,,1,2026-09-18,2026-09-18,18-Sep order
+Spice,Fennel seeds,100,g,in,,,1,2026-09-17,2026-09-17,17-Sep order
+Grains,Hakka noodles,400,g,in,,,1,2026-09-18,2026-09-17,09-18: -100g D veg hakka noodles
+Condiment,Mustard oil,910,ml,in,,,1,2026-09-18,2026-09-18,18-Sep order
+Dairy,Ghee,300,ml,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Dairy,Milk,0,g,out,,,1,2026-09-18,2026-09-18,19-Sep post-lunch count
+Spice,Kasuri methi,50,g,in,,,1,2026-09-14,2026-09-14,"14-Sep order (missed, backdated)"
+Spice,Bay leaf,50,g,in,,,1,2026-09-14,2026-09-14,"14-Sep order (missed, backdated)"
+Condiment,Ginger garlic paste,200,g,in,,,1,2026-09-14,2026-09-14,"14-Sep order (missed, backdated)"
+Spice,Red chilli flakes,40,g,in,,,1,2026-09-21,2026-09-21,21-Sep order
+Vegetable,Button mushroom,180,g,in,,,1,2026-09-24,,24-Sep order
+Vegetable,Sweet corn,200,g,in,,,1,2026-09-24,,24-Sep update
+Vegetable,Broccoli,200,g,in,,,1,2026-09-24,,24-Sep update
+Meat,Soya chunks,200,g,in,,,1,2026-09-24,,24-Sep update
+Vegetable,Mushroom,200,g,in,,,1,2026-09-24,,24-Sep update
+Dairy,Amul butter,70,g,in,,,1,2026-09-24,,24-Sep update

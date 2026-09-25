@@ -1,0 +1,199 @@
+Category,Item,Quantity,Unit,Status,Est,Verify,Factor,Last checked,Last entered,Note
+Vegetable,Potato,11,pc,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Vegetable,Onion,0,pc,out,,,1,2026-09-24,2026-09-18,09-24: -12pc L salad
+Vegetable,Bhindi,0,g,out,,,1,2026-09-23,2026-09-15,23-Sep: not in perishable overwrite
+Vegetable,Cucumber,3,pc,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Beans,100,g,in,,,1,2026-09-24,2026-09-18,09-24: -150g L french beans sabzi
+Vegetable,Carrot,1,pc,in,,,1,2026-09-23,2026-09-23,23-Sep perishable overwrite
+Vegetable,Beetroot,6,pc,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Vegetable,Spinach,0,g,out,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Vegetable,Tomatoes,0,g,out,,,1,2026-09-23,2026-09-18,23-Sep: not in perishable overwrite
+Vegetable,Sweet Potato,0,g,out,,,1,2026-09-16,2026-09-15,16-Sep: removed — not in perishable count
+Vegetable,Ginger,80,g,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Vegetable,Brinjal,0,g,out,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Vegetable,Coriander leaves,50,g,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Fruit,Banana,0,pc,out,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Fruit,Apple,7,pc,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Fruit,pears,0,pc,out,,,1,2026-09-16,2026-09-15,16-Sep: removed — not in perishable count
+Fruit,papaya,0,pc,out,,,1,2026-09-16,2026-09-15,09-16: -1pc L cut papaya
+Fruit,Dragon fruit,0,pc,out,,,1,2026-09-16,2026-09-15,16-Sep: removed — not in perishable count
+Dairy,Butter,250,g,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Dairy,Boiled milk,0,ml,out,,,1,2026-09-23,2026-09-18,23-Sep: not in perishable overwrite
+Dairy,Cow milk,0,ml,out,,,1,2026-09-16,2026-09-15,16-Sep: removed — not in perishable count
+Dairy,Milk,200,ml,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Dairy,Fresh cream,100,g,in,,,1,2026-09-18,2026-09-18,19-Sep post-lunch count
+Condiment,Bread,480,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Grains,Rice,0,g,out,,,1,2026-09-18,2026-09-15,09-18: -150g L rice
+Grains,Suji (rava),650,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Grains,Poha,1300,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Grains,Wheat flour (atta),0,g,out,,,1,2026-09-17,2026-09-15,09-17: -220g L roti
+Grains,Sabudana,320,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Grains,Whole wheat noodles,200,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Grains,Rajgira,200,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Staple,Coconut powder,70,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Grains,Besan,300,g,in,,,1,2026-09-24,2026-09-18,09-24: -100g D kadhi (re-deduct from count)
+Dals,Chole (kabuli),550,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Dals,Moong dal,0,g,out,,,1,2026-09-24,2026-09-15,09-24: -50g D khichdi
+Dals,Kabuli chana,1000,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Dals,Toor dal,1320,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Dals,Masoor whole,150,g,in,,,1,2026-09-18,2026-09-15,09-18: -150g L masoor dal
+Dals,Masoor dal,100,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Dals,Moong dal whole,100,g,in,,,1,2026-09-24,2026-09-18,09-24: -150g D khichdi (re-deduct from count)
+Dals,White Matar,200,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Dals,Rajma,150,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Dals,Chilka urad dal,100,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Dals,Kala chana,200,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Dals,Moong dal Split,80,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Spice,Rajma masala,150,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Chole masala,80,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Salt,1200,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Vegetable,Methi,0,g,out,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Spice,Kitchen king masala,100,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Mustard small whole,200,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Spice,Cumin Whole,200,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Spice,Methi seeds,375,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Dhaniya seeds,165,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Ajwain,140,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Kashmiri red chilli powder,50,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Garam masala,160,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Sesame seeds,65,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Methi leaves,78,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Spice,Turmeric,115,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Biryani mix masala powder,60,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Spice,Black pepper whole,65,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Chicken masala,90,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Amchur,50,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Sambar masala,50,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Spice,Pav Bhaji masala,90,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Custard powder,80,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Chaat masala,100,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Jeera Powder,50,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Spice,Black salt,50,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Spice,Baking soda,50,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Spice,Jeera,150,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Clove,35,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Spice,Oregano,30,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Spice,Cardamom,25,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Spice,Kasuri methi,55,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Fennel seeds,20,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Kashmiri Chili powder,20,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Spice,Black Mustard,20,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Spice,Dhaniya powder,220,g,in,,,1,2026-09-22,2026-09-15,22-Sep: dhaniya powder 220g
+Spice,Moti elaichi,20,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Star anise,20,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Mustard seeds,20,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Nutmeg whole,15,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Spice,Bay leaves,15,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Cinnamon sticks,80,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Bread & bakery,Fortune sunflower oil,4500,ml,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Staple,Sugar,200,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Bread & bakery,Extra virgin olive oil,900,ml,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Staple,Jaggery powder,1000,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Condiment,American Mustard Sauce,280,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Bread & bakery,Mayonnaise,200,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Bread & bakery,Chilli oil,200,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Grains,Pasta,190,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Vegetable,Mint leaves,150,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Condiment,Veeba Thousand Island dressing,100,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Condiment,Herssheys syrup Chocholate,100,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Condiment,Kokam,100,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Condiment,Pickled sushi ginger,50,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Bread & bakery,Tomato ketchup,200,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Condiment,Til oil,30,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Condiment,Chow mein sauce,20,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Staple,Tea,200,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Beverage,Wagh Bakri Masala Chai,100,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Beverage,Nescafe Gold Coffee,50,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Staple,Cashews,192,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Staple,papad,398,g,in,,,1,2026-09-17,2026-09-15,09-17: -2g D roasted papad
+Staple,Pista,650,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Staple,Puffed rice,200,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Staple,Namkeen,200,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Staple,Nylon Sev,170,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Staple,Boondi,150,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Staple,Walnuts,70,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Staple,Raisins,100,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Staple,Dates,100,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Staple,Sunflower seeds,120,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Staple,Chia seeds,20,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Staple,Almonds,35,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Staple,Masala Peanut,20,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Staple,Rose petals,5,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Staple,Dates (Sufyan),1,g,in,,,1,2026-09-15,2026-09-15,"Onboarded 15-Sep from mega inventory (12-Sep dated; names cleaned, dups merged)"
+Vegetable,Capsicum,0,g,out,,,1,2026-09-23,2026-09-18,23-Sep: not in perishable overwrite
+Vegetable,Broccoli,90,g,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Fruit,Chickoo,0,pc,out,,,1,2026-09-23,2026-09-18,23-Sep: not in perishable overwrite
+Fruit,Pomegranate,1,pc,in,,,1,2026-09-18,2026-09-18,19-Sep post-lunch count
+Bread & bakery,Whole wheat bread,0,g,out,,,1,2026-09-23,2026-09-16,23-Sep: not in perishable overwrite
+Dairy,Milkymist curd,0,g,out,,,1,2026-09-23,2026-09-23,23-Sep: not in perishable overwrite
+Meat,Paneer,0,g,out,,,1,2026-09-23,2026-09-23,23-Sep: not in perishable overwrite
+Vegetable,Cauliflower,2,pc,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Frozen,Frozen peas,0,g,out,,,1,2026-09-23,2026-09-18,23-Sep: not in perishable overwrite
+Vegetable,Garlic peeled,150,g,in,,,1,2026-09-17,2026-09-17,17-Sep: quantity update (operator)
+Dairy,Cheese,120,g,in,,,1,2026-09-18,2026-09-18,19-Sep post-lunch count
+Spice,Asafoetida powder,50,g,in,,,1,2026-09-17,2026-09-17,17-Sep: quantity update (operator)
+Vegetable,Curry leaves,50,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Vegetable,Green chilli,40,g,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Lemon,80,g,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Vegetable,Bottle gourd,0,pc,out,,,1,2026-09-18,2026-09-17,09-18: -1pc L aloo lauki
+Vegetable,Red bell pepper,0,g,out,,,1,2026-09-23,2026-09-18,23-Sep: not in perishable overwrite
+Grains,Maida,300,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Vegetable,Sweet corn,0,pc,out,,,1,2026-09-22,2026-09-18,09-22: -1pc D corn palak (5)
+Fruit,Mausambi,0,pc,out,,,1,2026-09-23,2026-09-18,23-Sep: not in perishable overwrite
+Dairy,Yogurt,0,g,out,,,1,2026-09-18,2026-09-18,19-Sep post-lunch count
+Bread & bakery,Honey,250,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Elaichi,10,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Cloves,5,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Herb,Dried rosemary,0,g,out,,,1,2026-09-23,2026-09-18,23-Sep: not in perishable overwrite
+Spice,Pepper powder,10,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Grains,Basmati rice,25,g,in,,,1,2026-09-24,2026-09-18,09-24: -300g D khichdi (re-deduct from count)
+Grains,Atta,4580,g,in,,,1,2026-09-24,2026-09-18,09-24: -320g L roti (4p)
+Grains,Basmati rozana rice,2800,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Dals,Yellow moong dal,1200,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Dals,Dried white peas,50,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Dals,Green moong dal,50,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Grains,Sooji,250,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Dals,Whole masoor,250,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Dals,White urad dal,250,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Kokom,200,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Staple,Peanuts,150,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Fruit,Berry mix,0,g,out,,,1,2026-09-23,2026-09-18,23-Sep: not in perishable overwrite
+Staple,Coffee,50,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Grains,Fusilli pasta,140,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Staple,Pumpkin seeds,80,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Grains,Rava idli,500,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Dals,Chana dal,150,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Grains,Chiroti rava,110,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Vegetable,Cabbage,2,pc,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Vegetable,Spring onion,50,g,in,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Bread & bakery,Green chilli sauce,150,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Bread & bakery,Red chilli sauce,150,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Bread & bakery,Soya sauce,150,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Bread & bakery,Chilli vinegar,150,ml,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Bread & bakery,Schezwan chutney,100,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Bread & bakery,Tamarind date chutney,330,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Bread & bakery,Tamarind paste,200,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Vegetable,Less spicy green chilli,0,g,out,,,1,2026-09-23,2026-09-18,23-Sep: not in perishable overwrite
+Vegetable,More spicy green chilli,0,g,out,,,1,2026-09-23,2026-09-18,23-Sep: not in perishable overwrite
+Vegetable,Peeled garlic,0,g,out,,,1,2026-09-23,2026-09-18,23-Sep: not in perishable overwrite
+Dairy,Cheese cubes,0,g,out,,,1,2026-09-23,2026-09-18,23-Sep perishable overwrite
+Dairy,Cheese slices,240,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Spice,Cardamom powder,30,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Fruit,Mosambi,0,pc,out,,,1,2026-09-23,2026-09-18,23-Sep: not in perishable overwrite
+Dairy,Ghee,900,ml,in,,,1,2026-09-24,2026-09-18,24-Sep update
+Vegetable,Garlic,50,g,in,,,1,2026-09-18,2026-09-18,22-Sep mega inventory (post-dinner)
+Dairy,Curd,0,g,out,,,1,2026-09-24,,09-24: -25g D kadhi (5p)
+Fruit,Sweet lime,1,pc,in,,,1,2026-09-23,,23-Sep perishable overwrite
+Vegetable,Red capsicum,1,pc,in,,,1,2026-09-23,,23-Sep perishable overwrite
+Vegetable,Green capsicum,4,pc,in,,,1,2026-09-23,,23-Sep perishable overwrite
+Vegetable,Tomato,1000,g,in,,,1,2026-09-23,,23-Sep perishable overwrite
+Fruit,Orange,8,pc,in,,,1,2026-09-23,,23-Sep perishable overwrite
+Grains,Brittannia bread,8,slice,in,,,1,2026-09-23,,23-Sep perishable overwrite
+Meat,Noice malai paneer,200,g,in,,,1,2026-09-23,,23-Sep perishable overwrite
+Fruit,Chiku,0,g,out,,,1,2026-09-23,,23-Sep perishable overwrite
+Vegetable,Okra,0,g,out,,,1,2026-09-23,,23-Sep perishable overwrite
+Fruit,Mix berries,0,g,out,,,1,2026-09-23,,23-Sep perishable overwrite
+Frozen,Green peas,1025,g,in,,,1,2026-09-24,,24-Sep update
+Spice,Coriander powder,200,g,in,,,1,2026-09-24,,24-Sep update
+Grains,Corn starch,0,g,out,,,1,2026-09-24,,24-Sep update
+Vegetable,Lady's finger,0,g,out,,,1,2026-09-24,,24-Sep update
