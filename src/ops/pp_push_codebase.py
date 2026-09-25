@@ -35,6 +35,15 @@ if os.path.isdir(IGHO_DIR):
     for f in os.listdir(IGHO_DIR):
         if f.endswith('.js') or f.endswith('.json'): SRC[os.path.join(IGHO_DIR,f)]=f"src/engine/needs/{f}"
 
+
+# spec pack (product/feature specs) -> docs/specs/
+import glob as _glob
+for _f in _glob.glob('/mnt/user-data/outputs/pp_spec/*.md'):
+    SRC[_f]=f"docs/specs/{os.path.basename(_f)}"
+# the live deployed app (single self-contained file) -> app/pantrypulse.html
+if os.path.exists('/mnt/user-data/outputs/pantry-pulse_2026-08-17_EOD.html'):
+    SRC['/mnt/user-data/outputs/pantry-pulse_2026-08-17_EOD.html']='app/pantrypulse.html'
+
 def _get_json(url):
     return json.load(urllib.request.urlopen(urllib.request.Request(url,headers=HDR),timeout=120))
 def _post(url,body):
@@ -60,6 +69,15 @@ This mirror is updated on every production push so the tech team always sees cur
 - **menuplan / recipes** — read-only, credentialed pulls from the meal planner and the live recipe sheet (keys held server-side).
 - **pp_git_push / push_asset** — versioned publish: build-id stamp, board snapshot, boot test, atomic upload.
 
+## Full model contents
+- `app/pantrypulse.html`  the deployed application (dataset embedded, auth-gated)
+- `src/`   all source (engine, api, ops, server)
+- `data/ledgers/`   orders, deductions, meals, history, change_log, inventory_checks (full audit trail)
+- `data/reference/`   index, master_fnv (2,022-SKU catalogue), sku_knowledge, dishes_library, shelf_life_rules, conversions, ingredient_map, deduction_method, subscriptions
+- `data/households/`   every household board (current stock)
+- `data/snapshots/`   board_snapshots (immutable historical boards)
+- `docs/specs/`   product & feature specs (deduction logic, portion calibration, PP Ask, Master FnV, snapshots, freshness, use-priority, handover, recipe fetching)
+
 _Last synced: %s_
 """ % time.strftime("%Y-%m-%d %H:%M IST", time.gmtime(time.time()+19800))
 
@@ -76,6 +94,20 @@ def push_codebase(extra_msg=""):
         raw=open(local,'rb').read()
         blob=_post(f"{API}/git/blobs",{"content":base64.b64encode(raw).decode(),"encoding":"base64"})
         tree.append({"path":repo,"mode":"100644","type":"blob","sha":blob["sha"]})
+    # exported data (ledgers, reference incl Master FnV, per-household boards, snapshots)
+    try:
+        import subprocess as _sp2
+        _sp2.run(["python3","/home/claude/pp_export_data.py"],capture_output=True,timeout=300)
+    except Exception as _e:
+        print("data export skipped:",_e)
+    _DATA="/tmp/pp_data"
+    if os.path.isdir(_DATA):
+        for _root,_dirs,_fs in os.walk(_DATA):
+            for _fn in _fs:
+                _lp=os.path.join(_root,_fn); _rp="data/"+os.path.relpath(_lp,_DATA)
+                _raw=open(_lp,"rb").read()
+                _bl=_post(f"{API}/git/blobs",{"content":base64.b64encode(_raw).decode(),"encoding":"base64"})
+                tree.append({"path":_rp,"mode":"100644","type":"blob","sha":_bl["sha"]})
     # README
     rb=_post(f"{API}/git/blobs",{"content":base64.b64encode(README.encode()).decode(),"encoding":"base64"})
     tree.append({"path":"src/README.md","mode":"100644","type":"blob","sha":rb["sha"]})
