@@ -682,7 +682,7 @@ function ppDeductionAudit(wb){
 }
 window.ppDeductionAudit=ppDeductionAudit;
 
-const BUILD='v21_783';const BUILD_TS='2026-09-26T16:53'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
+const BUILD='v21_784';const BUILD_TS='2026-09-26T19:06'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
 const SEED={date:'2026-07-12',currentHouse:null,dishes:[],__build:BUILD,houses:[]};function __reseedFromEmbed(){try{if(!window.__EMBEDDED_WB_B64__)return false;var bs=atob(window.__EMBEDDED_WB_B64__);var ua=new Uint8Array(bs.length);for(var i=0;i<bs.length;i++)ua[i]=bs.charCodeAt(i);var st=parseWorkbookToApp(ua);if(st&&st.houses&&st.houses.length){S=st;try{rollDate();}catch(e){}try{applyAllSubs();}catch(e){}try{save();}catch(e){}return true;}}catch(e){}return false;}
 /* ===== household data is loaded at runtime from PantryPulse-MASTER.xlsx (thin app, no baked data) ===== */
 function _wb_num(v){var n=parseFloat(v);return isNaN(n)?0:n;}
@@ -786,7 +786,7 @@ function ppPurgeStaleSaves(){try{for(var i=localStorage.length-1;i>=0;i--){var k
   try{ppPurgeStaleSaves();}catch(e){}
   /* v21_730: HOV_NAME corrected (Akshita Prerik->Prerit etc). Drop every cached planner pull ONCE per client so the
      new names are re-fetched instead of a stale 404/empty week being shown. Guarded by a marker so it runs only once. */
-  try{ if(localStorage.getItem('pp_planpurge')!=='v21_783'){ for(var i=localStorage.length-1;i>=0;i--){ var k=localStorage.key(i); if(k&&(k.indexOf('igho_plan_')===0||k.indexOf('pplw_')===0)) localStorage.removeItem(k); } localStorage.setItem('pp_planpurge','v21_783'); } }catch(e){}
+  try{ if(localStorage.getItem('pp_planpurge')!=='v21_784'){ for(var i=localStorage.length-1;i>=0;i--){ var k=localStorage.key(i); if(k&&(k.indexOf('igho_plan_')===0||k.indexOf('pplw_')===0)) localStorage.removeItem(k); } localStorage.setItem('pp_planpurge','v21_784'); } }catch(e){}
   try{if(hasCloud){var _try=function(keys){if(!keys.length)return;var k=keys[0];Promise.race([window.storage.get(k,false),new Promise(r=>setTimeout(()=>r(null),2500))]).then(function(r){var ok=false;if(r&&r.value){try{ok=_useState(JSON.parse(r.value));}catch(e){}}if(!ok)_try(keys.slice(1));}).catch(function(){_try(keys.slice(1));});};_try([KEY].concat(PRIORKEYS_CLOUD));return;}}catch(e){}
   try{var keys=[KEY].concat(PRIORKEYS_CLOUD);for(var i=0;i<keys.length;i++){var raw=localStorage.getItem(keys[i]);if(raw){try{if(_useState(JSON.parse(raw)))return;}catch(e){}}}}catch(e){}
 }
@@ -2306,14 +2306,18 @@ function ighoBuildDay(h,iso,sim){
 
 /* ---- recipe video: the API's own link first (Rule 6: guard every recipe field), else the pack's table by dish name */
 function ighoVideo(dishName,meta){
-  try{ var M=window.IGHOENG&&window.IGHOENG.PP_RECIPE_META; if(M){ var k=String(dishName||'').toLowerCase().trim(); if(M[k]&&M[k].yt) return M[k].yt; } }catch(e){}
+  /* STRICT (v21_784, Bhavya): a video link comes ONLY from the recipe MASTER SHEET (PP_RECIPE_META[dish].yt).
+     If the sheet has no video for this dish (NA / blank), return null so IGHO shows NO video — NEVER pull a
+     link from the planner object, a cache, or anywhere else. */
   try{
-    var dn=String(dishName||'').toLowerCase();
-    if(meta&&meta.dishes){ for(var i=0;i<meta.dishes.length;i++){ var d=meta.dishes[i]; if(d&&d.recipe&&d.recipe.video_url&&String(d.name||'').toLowerCase().indexOf(dn)>=0) return d.recipe.video_url; } }
-    var v=IGHO.videos||{}; if(v[dn]) return v[dn]; if(v[dishName]) return v[dishName];
-    for(var k in v){ if(k.toLowerCase()===dn) return v[k]; }
+    var M=window.IGHOENG&&window.IGHOENG.PP_RECIPE_META;
+    if(M){
+      var k=String(dishName||'').toLowerCase().trim();
+      var rec=M[k];
+      if(rec && rec.yt && /^https?:\/\//i.test(String(rec.yt)) && !/^\s*(na|n\/a|none|-|nil)\s*$/i.test(String(rec.yt))) return rec.yt;
+    }
   }catch(e){}
-  return null;
+  return null;   /* not on the master sheet -> no video, full stop */
 }
 
 /* ---- HANDOVER_TAB_SPEC conformance (19-Sep): five states, RANK, q(), combined card, per-day cards */
@@ -3919,7 +3923,7 @@ function _boot(){
   // paint FIRST so the UI always comes up, even if a later step misbehaves
   try{paint();}catch(e){try{var v=document.getElementById('view');if(v)v.innerHTML='<div class="card"><div class="eyebrow">Notice</div><h2>Couldn\u2019t render this view</h2><div class="note">'+(e&&e.message||'error')+'</div></div>';}catch(_){}}
   try{applyAllSubs();paint();}catch(e){}
-  try{var __eid='PP_EMBED::MASTER_1077::v21_783';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{var _su2=_sheetUrl();if(_su2){loadFromUrl(_su2);}else{hydrate();}}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{var _su=_sheetUrl();if(_su){loadFromUrl(_su);}else{hydrate();}}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
+  try{var __eid='PP_EMBED::MASTER_1078::v21_784';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{var _su2=_sheetUrl();if(_su2){loadFromUrl(_su2);}else{hydrate();}}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{var _su=_sheetUrl();if(_su){loadFromUrl(_su);}else{hydrate();}}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
   try{armMidnightRoll();}catch(e){}
 }
 // Fire boot as soon as the DOM is usable, with multiple safety nets. _boot is idempotent.
