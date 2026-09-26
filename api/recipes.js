@@ -23,7 +23,9 @@ function unit(u){ u=String(u||"g").trim().toLowerCase(); return u==="pcs"||u==="
 async function build(){
   const [ov,bd,pp]=await Promise.all([fetch(PUB+GID_OVERVIEW).then(r=>r.text()), fetch(PUB+GID_BREAKDOWN).then(r=>r.text()), fetch(PUB+GID_PERPAX).then(r=>r.text()).catch(()=>"")]);
   const O=parseCsv(ov), B=parseCsv(bd);
-  const video={}; for(const r of O.slice(1)){ if(r[0]&&r[1]){ const d=r[0].trim().toLowerCase(); video[d]=r[1].trim(); video[d.replace(/\(.*?\)/g," ").replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim()]=r[1].trim(); video[norm(r[0])]=r[1].trim(); } }
+  /* a video cell is only real if it is an http(s) link; NA / blank / dash / n\/a / none / nil mean NO video (Bhavya: NA is intentional, do not backfill) */
+  const ytClean=(v)=>{ const t=String(v==null?"":v).trim(); if(!t) return ""; if(/^(na|n\/a|none|nil|-|--|n\.a\.?)$/i.test(t)) return ""; return /^https?:\/\//i.test(t)?t:""; };
+  const video={}; for(const r of O.slice(1)){ if(r[0]){ const d=r[0].trim().toLowerCase(); const vv=ytClean(r[1]); if(vv){ video[d]=vv; video[d.replace(/\(.*?\)/g," ").replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim()]=vv; video[norm(r[0])]=vv; } } }
   const hdr=B[0].map(x=>String(x).trim().toLowerCase()); const col=n=>hdr.indexOf(n);
   const cD=col("dish"), cI=col("ingredient"), cQ=col("per adult"), cU=col("unit"), cC=col("class"), cY=col("youtube video link"), cS=col("soaking"), cM=col("marination"), cR=col("resting"), cSrc=col("source of breakdown");
   const needs={}, meta={}, uom={}; let rows=0;
@@ -40,14 +42,14 @@ async function build(){
       if(!needs[key]) needs[key]={lines:[],q:[],units:[],_per:[]};
       needs[key].lines.push([ing, keywords(ing), role(cls), isOpt(cls)?"opt":null, false]);
       needs[key].units.push(u); needs[key]._per.push(q);
-      if(!meta[key]) meta[key]={yt:(r[cY]||video[dks[0]]||"").trim(), soak:[], marinate:[], rest:[], src:String(r[cSrc]||"").trim()};
+      if(!meta[key]) meta[key]={yt:ytClean(r[cY]), ytSet:(cY>=0 && String(r[cY]==null?"":r[cY]).trim()!==""), soak:[], marinate:[], rest:[], src:String(r[cSrc]||"").trim()};
       if(/^yes/i.test(r[cS]||"")) meta[key].soak.push(ing); if(/^yes/i.test(r[cM]||"")) meta[key].marinate.push(ing); if(/^yes/i.test(r[cR]||"")) meta[key].rest.push(ing);
     }
     if(u==="pcs") uom[ing.toLowerCase()]="pcs";
     rows++;
   }
   for(const k in needs){ const n=needs[k]; n.q=[]; for(let p=1;p<=PAX_MAX;p++) n.q.push(n._per.map(v=>Math.round(v*p*100)/100)); delete n._per; }
-  for(const k in video){ if(!meta[k]) meta[k]={yt:video[k],soak:[],marinate:[],rest:[],src:""}; else if(!meta[k].yt) meta[k].yt=video[k]; }
+  for(const k in video){ if(!meta[k]) meta[k]={yt:video[k],ytSet:true,soak:[],marinate:[],rest:[],src:""}; else if(!meta[k].yt && !meta[k].ytSet) meta[k].yt=video[k]; }
   // Per-pax subsheet (FETCHING_RECIPES §2/§3): authoritative bracket quantities. Keyed by canonical ingredient AND
   // every alias in "Names this sheet uses", so a bracket word like "carrots" resolves to Carrot 50 g.
   const perpax = {};
