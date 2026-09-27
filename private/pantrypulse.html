@@ -682,7 +682,7 @@ function ppDeductionAudit(wb){
 }
 window.ppDeductionAudit=ppDeductionAudit;
 
-const BUILD='v21_792';const BUILD_TS='2026-09-27T18:55'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
+const BUILD='v21_793';const BUILD_TS='2026-09-27T19:03'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
 const SEED={date:'2026-07-12',currentHouse:null,dishes:[],__build:BUILD,houses:[]};function __reseedFromEmbed(){try{if(!window.__EMBEDDED_WB_B64__)return false;var bs=atob(window.__EMBEDDED_WB_B64__);var ua=new Uint8Array(bs.length);for(var i=0;i<bs.length;i++)ua[i]=bs.charCodeAt(i);var st=parseWorkbookToApp(ua);if(st&&st.houses&&st.houses.length){S=st;try{rollDate();}catch(e){}try{applyAllSubs();}catch(e){}try{save();}catch(e){}return true;}}catch(e){}return false;}
 /* ===== household data is loaded at runtime from PantryPulse-MASTER.xlsx (thin app, no baked data) ===== */
 function _wb_num(v){var n=parseFloat(v);return isNaN(n)?0:n;}
@@ -2328,6 +2328,23 @@ function ighoBuildDay(h,iso,sim){
     var nm=String(en.dish||'').toLowerCase().replace(/\(.*?\)/g,' ').trim();
     if(CONTAINER.test(nm)){ en.gap=false; en.container=true; }             /* empty-bracket container -> benign, no amber flag */
   }); });
+  /* FORCE-RECIPE (Bhavya, URGENT): hardcode specific dishes straight into IGHO so they ALWAYS render their
+     full breakdown, regardless of any recipe-sheet name-match issue. Per-adult grams are copied verbatim
+     from the recipe master; each ingredient is resolved against the household's simulated stock for real
+     availability. Extend the list to force more dishes. */
+  var IGHO_FORCE_RECIPE=[{ rx:/cauliflower[^]*?(steak|stick)|(steak|stick)[^]*?cauliflower|air\s*fry(er)?[^]*?cauliflower/i,
+    title:'Easy Air Fryer Cauliflower Steaks w/ Parmesan Cheese',
+    yt:'https://www.youtube.com/watch?v=VPeGpQfqLG0',
+    ings:[['Cauliflower',25],['Olive Oil',15],['Salt',0.6],['Pepper',0.6],['Garlic Powder',1.3],['Parmesan Cheese',25],['Parsley',7.5]] }];
+  ['B','L','D','S'].forEach(function(sl){ var _m=(meta[sl]||{}); var _pax=(+_m.people|| h.people ||1)*ighoPaxFactor(h);
+    (res.slots[sl]||[]).forEach(function(en){ var _dn=String(en.dish||'').toLowerCase();
+      for(var _fi=0;_fi<IGHO_FORCE_RECIPE.length;_fi++){ var F=IGHO_FORCE_RECIPE[_fi]; if(!F.rx.test(_dn)) continue;
+        en.rows=F.ings.map(function(pr){ var ing=pr[0], q=Math.round(pr[1]*_pax*100)/100, u='g', g=ighoPieceG(ing);
+          var rf=ighoResolveFood(sim,ing,u,g); var st=rf.have>=q?'ok':rf.have>0?'short':'no';
+          return {n:ing,q:q,u:u,st:st,lab:(st==='ok'?'available'+(rf.via.length?' (as '+rf.via[0]+')':''):st==='short'?('have '+IGHOENG.hovQ(rf.have,u)+' of '+IGHOENG.hovQ(q,u)):'not available'),via:(rf.via.length?rf.via.join(' + '):null),added:true}; });
+        en.gap=false; en.container=false; en.forced=true; en.dish=F.title; en.forcedYt=F.yt; en.yt=F.yt; break;
+      }
+    }); });
   return {slots:res.slots,buy:res.buy,meta:meta,missing:[]};
 }
 
@@ -3950,7 +3967,7 @@ function _boot(){
   // paint FIRST so the UI always comes up, even if a later step misbehaves
   try{paint();}catch(e){try{var v=document.getElementById('view');if(v)v.innerHTML='<div class="card"><div class="eyebrow">Notice</div><h2>Couldn\u2019t render this view</h2><div class="note">'+(e&&e.message||'error')+'</div></div>';}catch(_){}}
   try{applyAllSubs();paint();}catch(e){}
-  try{var __eid='PP_EMBED::MASTER_1097::v21_792';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{var _su2=_sheetUrl();if(_su2){loadFromUrl(_su2);}else{hydrate();}}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{var _su=_sheetUrl();if(_su){loadFromUrl(_su);}else{hydrate();}}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
+  try{var __eid='PP_EMBED::MASTER_1098::v21_793';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{var _su2=_sheetUrl();if(_su2){loadFromUrl(_su2);}else{hydrate();}}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{var _su=_sheetUrl();if(_su){loadFromUrl(_su);}else{hydrate();}}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
   try{armMidnightRoll();}catch(e){}
 }
 // Fire boot as soon as the DOM is usable, with multiple safety nets. _boot is idempotent.
