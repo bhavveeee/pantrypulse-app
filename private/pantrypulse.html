@@ -682,7 +682,7 @@ function ppDeductionAudit(wb){
 }
 window.ppDeductionAudit=ppDeductionAudit;
 
-const BUILD='v21_788';const BUILD_TS='2026-09-27T17:32'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
+const BUILD='v21_789';const BUILD_TS='2026-09-27T17:36'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
 const SEED={date:'2026-07-12',currentHouse:null,dishes:[],__build:BUILD,houses:[]};function __reseedFromEmbed(){try{if(!window.__EMBEDDED_WB_B64__)return false;var bs=atob(window.__EMBEDDED_WB_B64__);var ua=new Uint8Array(bs.length);for(var i=0;i<bs.length;i++)ua[i]=bs.charCodeAt(i);var st=parseWorkbookToApp(ua);if(st&&st.houses&&st.houses.length){S=st;try{rollDate();}catch(e){}try{applyAllSubs();}catch(e){}try{save();}catch(e){}return true;}}catch(e){}return false;}
 /* ===== household data is loaded at runtime from PantryPulse-MASTER.xlsx (thin app, no baked data) ===== */
 function _wb_num(v){var n=parseFloat(v);return isNaN(n)?0:n;}
@@ -2307,8 +2307,18 @@ function ighoBuildDay(h,iso,sim){
      bracket/self-priced/recipe rows exist on an entry it is NOT "no recipe found" — clear the gap flag so
      it prices and never lands in the amber "no recipe" list. Only a genuinely empty entry (NA on the sheet
      AND no bracket foods) stays a gap, which is the real case where the operator must add it to the sheet. */
+  /* CONTAINER dishes (Bhavya standing rule): salad, protein shake, fruit bowl, sauteed vegetables and
+     stir-fried vegetables are the SAME category — the dish has NO recipe of its own; ONLY the foods written
+     in its bracket are picked up. A container that is a gap (no recipe on the sheet) is therefore NOT
+     "no recipe found": clear the gap so it renders as a benign container carrying its bracket foods, or
+     nothing at all when the bracket is empty. A container that DID match a real sheet recipe isn't a gap,
+     so it is untouched. */
+  var CONTAINER=/\b(salad|protein\s*shake|fruit\s*bowl|saut[e\u00e9]?ed\s+veg\w*|stir[\s-]?fried\s+veg\w*|veg\w*\s+stir[\s-]?fry)\b/i;
   ['B','L','D','S'].forEach(function(sl){ (res.slots[sl]||[]).forEach(function(en){
-    if(en.gap && (en.rows||[]).length){ en.gap=false; en.naBracket=true; }
+    if(!en.gap) return;
+    if((en.rows||[]).length){ en.gap=false; en.naBracket=true; return; }   /* bracket foods exist -> not "no recipe" */
+    var nm=String(en.dish||'').toLowerCase().replace(/\(.*?\)/g,' ').trim();
+    if(CONTAINER.test(nm)){ en.gap=false; en.container=true; }             /* empty-bracket container -> benign, no amber flag */
   }); });
   return {slots:res.slots,buy:res.buy,meta:meta,missing:[]};
 }
@@ -3932,7 +3942,7 @@ function _boot(){
   // paint FIRST so the UI always comes up, even if a later step misbehaves
   try{paint();}catch(e){try{var v=document.getElementById('view');if(v)v.innerHTML='<div class="card"><div class="eyebrow">Notice</div><h2>Couldn\u2019t render this view</h2><div class="note">'+(e&&e.message||'error')+'</div></div>';}catch(_){}}
   try{applyAllSubs();paint();}catch(e){}
-  try{var __eid='PP_EMBED::MASTER_1093::v21_788';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{var _su2=_sheetUrl();if(_su2){loadFromUrl(_su2);}else{hydrate();}}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{var _su=_sheetUrl();if(_su){loadFromUrl(_su);}else{hydrate();}}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
+  try{var __eid='PP_EMBED::MASTER_1094::v21_789';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{var _su2=_sheetUrl();if(_su2){loadFromUrl(_su2);}else{hydrate();}}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{var _su=_sheetUrl();if(_su){loadFromUrl(_su);}else{hydrate();}}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
   try{armMidnightRoll();}catch(e){}
 }
 // Fire boot as soon as the DOM is usable, with multiple safety nets. _boot is idempotent.
