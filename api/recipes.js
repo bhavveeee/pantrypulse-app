@@ -13,7 +13,7 @@ function parseCsv(t){ const rows=[]; let row=[], f="", q=false;
   if(f||row.length){ row.push(f); rows.push(row); } return rows; }
 const SYN = {avacado:"avocado",panir:"paneer",biriyani:"biryani",tamato:"tomato",capsicdum:"capsicum"};
 function singular(w){ return w.replace(/ies$/,"y").replace(/([^s])s$/,"$1"); }
-function norm(dish){ return dish.toLowerCase().replace(/\(.*?\)/g," ").replace(/[^a-z0-9 ]/g," ").split(/\s+/).filter(Boolean).map(w=>SYN[w]||singular(w)).join(" ").trim(); }
+function norm(dish){ return dish.toLowerCase().replace(/&/g," and ").replace(/\(.*?\)/g," ").replace(/[^a-z0-9 ]/g," ").split(/\s+/).filter(Boolean).map(w=>SYN[w]||singular(w)).join(" ").trim(); }
 const STOP = new Set(["the","and","with","of","fresh","dried","dry","powder","whole","chopped","sliced","grated","boneless","skinless","large","small","medium","red","green","yellow","white","black","raw","cooked","leaves","leaf","seeds","seed","paste","oil","for","or"]);
 function keywords(label){ const w=String(label).toLowerCase().replace(/\(.*?\)/g," ").replace(/[^a-z ]/g," ").split(/\s+/).filter(x=>x.length>=3&&!STOP.has(x)); const out=[]; if(w.length){ out.push(w.join(" ")); w.forEach(x=>{ if(!out.includes(x)) out.push(x); }); } return out.length?out:[String(label).toLowerCase().trim()]; }
 function role(cls){ cls=String(cls||"").toLowerCase(); if(cls.startsWith("hero")) return "hero"; if(cls.startsWith("fat")) return "fat"; if(cls.startsWith("garnish")) return "garnish"; return "base"; }
@@ -33,7 +33,8 @@ async function build(){
     const dish=String(r[cD]||"").trim(); const ing=String(r[cI]||"").trim(); if(!dish||!ing) continue;
     function plurWord(w){ if(/s$/.test(w)) return w; if(/[^aeiou]y$/.test(w)) return w.slice(0,-1)+"ies"; if(/[sxz]$|[cs]h$/.test(w)) return w+"es"; return /[a-z0-9]$/.test(w)?w+"s":w; }
     function plur(x){ var parts=x.split(" "); if(!parts.length) return x; parts[parts.length-1]=plurWord(parts[parts.length-1]); return parts.join(" "); }
-    const _base=[dish.toLowerCase(), dish.toLowerCase().replace(/\(.*?\)/g," ").replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim(), norm(dish)];
+    const _dlc=dish.toLowerCase(), _damp=_dlc.replace(/&/g," and ").replace(/\s+/g," ").trim();
+    const _base=[_dlc, _dlc.replace(/\(.*?\)/g," ").replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim(), norm(dish), _damp, _damp.replace(/\(.*?\)/g," ").replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ").trim()];
     const dkeys=[..._base, ..._base.map(plur)];
     const q=parseFloat(String(r[cQ]||"").replace(/[^0-9.]/g,"")); if(!(q>=0)) continue;
     const u=unit(r[cU]); const cls=r[cC];
