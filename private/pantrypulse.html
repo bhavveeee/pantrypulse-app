@@ -2109,6 +2109,12 @@ function ighoResolveFood(sim, name, want, g){
     if(conv==null){ if(p.unit===want)conv=p.qty; else return; }
     out.have+=conv; out.rows.push(p); if(String(p.n).toLowerCase()!==String(name).toLowerCase())out.via.push(String(p.n)); }); }
   try{ take(IGHOENG.hovResolveAll(sim,{n:name,kw:kw})||[]); }catch(e){}
+  /* FAMILY POOL (Bhavya, 28-Sep): when a recipe ingredient is a broad protein/produce family and the
+     shelf holds more than one variant (Chicken + Chicken breast + Chicken fillet), pool ALL variants so
+     kitchen-available is the true total and variant names (chicken fillet -> whatever chicken is there)
+     resolve. take() dedups by row name, so this never double-counts rows already matched above. */
+  try{ var _nl=String(name).toLowerCase(); var _FAM=[[/chicken/,/chicken/],[/prawn|shrimp/,/prawn|shrimp/],[/paneer/,/paneer/],[/tofu/,/tofu/],[/mutton|lamb|goat/,/mutton|lamb|goat/],[/\bfish\b|mackerel|salmon|basa|rohu|catla|pomfret|sardine|tuna/,/\bfish\b|mackerel|salmon|basa|rohu|catla|pomfret|sardine|tuna/]];
+    for(var _fi=0;_fi<_FAM.length;_fi++){ if(_FAM[_fi][0].test(_nl)){ take(sim.filter(function(p){return _FAM[_fi][1].test(String(p.n||'').toLowerCase());})); break; } } }catch(e){}
   if(out.have<=0){ /* spelling-tolerant fallback on the FOOD word, not a shared generic suffix (sauce/oil/…).
        'soy sauce' must NOT match 'mustard sauce' just because both end in 'sauce'; it matches only when a
        real food token overlaps (soy<->soya). Generic words are stripped before comparing. */
