@@ -682,7 +682,7 @@ function ppDeductionAudit(wb){
 }
 window.ppDeductionAudit=ppDeductionAudit;
 
-const BUILD='v21_815';const BUILD_TS='2026-10-02T02:34'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
+const BUILD='v21_816';const BUILD_TS='2026-10-02T03:14'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
 const SEED={date:'2026-07-12',currentHouse:null,dishes:[],__build:BUILD,houses:[]};function __reseedFromEmbed(){try{if(!window.__EMBEDDED_WB_B64__)return false;var bs=atob(window.__EMBEDDED_WB_B64__);var ua=new Uint8Array(bs.length);for(var i=0;i<bs.length;i++)ua[i]=bs.charCodeAt(i);var st=parseWorkbookToApp(ua);if(st&&st.houses&&st.houses.length){S=st;try{rollDate();}catch(e){}try{applyAllSubs();}catch(e){}try{save();}catch(e){}return true;}}catch(e){}return false;}
 /* ===== household data is loaded at runtime from PantryPulse-MASTER.xlsx (thin app, no baked data) ===== */
 function _wb_num(v){var n=parseFloat(v);return isNaN(n)?0:n;}
@@ -1611,6 +1611,34 @@ function smlBuyTbl(rows,bg){if(!rows.length)return '<div class="note" style="pad
   return '<tr style="background:'+bg+'"><td class="hn"><b>'+r.disp+'</b>'+(r.via?'<div style="font-size:9px;color:#777">matched: '+r.via+'</div>':'')+'</td><td class="hq">'+r.req+' '+r.un+'</td><td class="hq">'+r.have+'</td><td style="font-size:10px;color:#666">'+r.forr+'</td></tr>';}).join('')+'</table>';}
 function smlEnough(rows){return '<div style="columns:2;font-size:10.5px;margin-top:4px">'+rows.sort(function(a,b){return a.disp<b.disp?-1:1;}).map(function(r){
  return '<div style="break-inside:avoid;padding:2px 4px;background:#EAF1EC;margin:1px;border-radius:4px"><b style="color:#1b7f4d">[OK]</b> '+r.disp+' <span style="color:#999">\u2014 need '+r.req+r.un+', have '+r.have+'</span></div>';}).join('')+'</div>';}
+/* v21_816 DAILY CHECK (from each household's Tequila shadow group). Rahul & Radhika and Pratik & Sakshi get a fixed
+   list of items Bhavya posts every day as "smart list:". Items = those appearing in >= ~1/4 of the posts (R&R 19 posts,
+   P&S 16 posts, read 1-Oct-2026). Each row shows what the LIVE board holds for it; nothing is estimated. */
+var PP_DAILY_CHECK={
+ 'h5':{src:'Rahul & Radhika shadow group, 19 smart-list posts',items:[
+  ['Almond milk',/almond\s*(milk|drink)/i],['Oat milk',/\boat\s*(milk|drink)|alt\s*co/i],['Heritage full cream milk',/heritage|full\s*cream\s*milk/i],['Nandini milk',/nandini/i],
+  ['Skyr (all sizes)',/skyr/i],['Flavoured yogurt cups',/epigamia|berry\s*yog|flavou?red\s*yog|mixed\s*berr/i],['Big yogurt tub',/curd|dahi|plain\s*yog|yog(h)?urt\s*tub/i],
+  ['Paneer',/paneer/i,/masala/i],['Sourdough',/sourdough/i],['Oats',/\boats?\b/i,/milk|drink/i],['Quinoa',/quinoa/i],['Chicken',/chicken/i,/masala|stock|cube|broth|bouillon|zoey/i],
+  ['Spinach',/spinach|palak/i],['Eggs',/\beggs?\b/i,/plant|noodle/i],['Bell peppers',/bell\s*pepper|capsicum/i],['Brazil nut',/brazil/i],['Avocado (check if gone bad)',/avocado/i],
+  ['Matta rice',/matta/i],['Chole',/chole|kabuli|chickpea/i,/flour|besan|masala/i],['Gobbleright almond wrap (exact count)',/gobble|almond\s*wrap/i],
+  ['Rajma (left after soaking)',/rajma|kidney\s*bean/i,/masala/i],['Green moong (left after soaking)',/green\s*moong|moong\s*sabut|whole\s*moong/i],['Mushroom',/mushroom/i],['Butter',/butter/i,/peanut|garlic\s*&/i],['Chia seeds',/chia/i]]},
+ 'h8':{src:'Pratik & Sakshi shadow group, 16 smart-list posts + standing always-check',note:'Capsicum: order only when Ammu akka asks (a lot gets ordered for one meal and goes unused).',items:[
+  ['Spinach',/spinach|palak/i],['Eggs',/\beggs?\b/i,/plant|noodle/i],['Greek yogurt',/greek|protein\s*yog|athena/i],['Cucumber',/cucumber/i],['Tofu',/tofu/i],
+  ['Tomato',/tomato/i,/ketchup|paste|puree|sauce|sun.?dried/i],['Coriander leaves',/coriander/i,/powder|seed/i],['Mushroom',/mushroom/i],['Paneer',/paneer/i,/masala/i],
+  ['Carrot',/carrot/i],['Onion',/onion/i,/spring|powder/i],['Cauliflower',/cauliflower|gobi/i],['Capsicum (only if Ammu akka asks)',/capsicum|bell\s*pepper/i],
+  ['Mint',/\bmint\b|pudina/i],['Poha',/poha/i],['Chole',/chole|kabuli|chickpea/i,/flour|besan|masala/i],['Sattu',/sattu/i],['Broccoli',/broccoli/i],
+  ['Matta rice',/matta/i],['Potato',/potato/i,/sweet/i],['Zero maida bread',/zero\s*maida|bread/i,/crumb/i],['Moong dal',/moong\s*dal|yellow\s*moong/i],
+  ['Salt',/\bsalt\b/i],['Sugar',/\bsugar\b/i,/free|syrup/i],['Ghee',/ghee/i]]}
+};
+function ppDailyCheckBlock(h){try{var cfg=h&&PP_DAILY_CHECK[h.id];if(!cfg)return '';
+ var rows=(h.perish||[]).filter(function(p){return p&&p.n&&p.status!=='out'&&(p.onhand||0)>0;});
+ var miss=0;var tr=cfg.items.map(function(it){var inc=it[1],exc=it[2];var hits=rows.filter(function(p){return inc.test(p.n)&&!(exc&&exc.test(p.n));});
+  if(!hits.length){miss++;return '<tr style="background:#FDECEC"><td class="hn"><b>'+it[0]+'</b></td><td class="hq">0</td><td><b style="color:#b3261e">NOT ON BOARD</b> &mdash; check / order</td></tr>';}
+  var have=hits.map(function(p){return p.n+' '+(Math.round(p.onhand*10)/10)+(p.unit==='pc'||p.unit==='pcs'?' pc':' '+(p.unit||''));}).join(' + ');
+  return '<tr style="background:#EAF1EC"><td class="hn"><b>'+it[0]+'</b></td><td class="hq" colspan="1">'+have+'</td><td><b style="color:#1b7f4d">on board</b> &mdash; count it</td></tr>';}).join('');
+ return smlBand('DAILY CHECK \u2014 from shadow group (count these every day)',cfg.items.length+' items \u00b7 '+miss+' not on board','#3b5b8c')
+  +'<div class="note" style="font-size:11px;margin:4px 0">'+cfg.src+(cfg.note?' &middot; <b>'+cfg.note+'</b>':'')+'</div>'
+  +'<table class="htbl"><tr><th>Item</th><th>On the board now</th><th>Status</th></tr>'+tr+'</table>';}catch(e){return '';}}
 function smartListViewLocked(){
  /* v21_662: Smart list is under rework — locked to a work-in-progress notice on
     Bhavya's instruction. Nothing from the tab is computed or rendered until the
@@ -1654,7 +1682,7 @@ function smartListViewLocked(){
    +smlBand('TIGHT \u2014 within 20% buffer',g.TIGHT.length,'#B07D2B')+smlBuyTbl(g.TIGHT,'#FBF3E0')
    +smlBand('ENOUGH IN STOCK',g.ENOUGH.length,'#26402F')+smlEnough(g.ENOUGH)+'</div>';
  }
- return head+btns+body;
+ return head+btns+ppDailyCheckBlock(h)+body;
 }
 let HOV_CARTDAYS={Mon:true,Tue:true,Wed:true,Thu:true,Fri:true,Sat:true};
 /* ================= SMART LIST v3 (v21_700) =================
@@ -3997,7 +4025,7 @@ function _boot(){
   // paint FIRST so the UI always comes up, even if a later step misbehaves
   try{paint();}catch(e){try{var v=document.getElementById('view');if(v)v.innerHTML='<div class="card"><div class="eyebrow">Notice</div><h2>Couldn\u2019t render this view</h2><div class="note">'+(e&&e.message||'error')+'</div></div>';}catch(_){}}
   try{applyAllSubs();paint();}catch(e){}
-  try{var __eid='PP_EMBED::MASTER_1179::v21_815';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{hydrate();}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{/* v21_811: the baked workbook is the single source of truth; never let a saved external sheet URL replace it on reload */try{_setSheetUrl('');}catch(_x){}hydrate();}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
+  try{var __eid='PP_EMBED::MASTER_1180::v21_816';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{hydrate();}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{/* v21_811: the baked workbook is the single source of truth; never let a saved external sheet URL replace it on reload */try{_setSheetUrl('');}catch(_x){}hydrate();}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
   try{armMidnightRoll();}catch(e){}
 }
 // Fire boot as soon as the DOM is usable, with multiple safety nets. _boot is idempotent.
