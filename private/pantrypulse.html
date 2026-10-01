@@ -682,7 +682,7 @@ function ppDeductionAudit(wb){
 }
 window.ppDeductionAudit=ppDeductionAudit;
 
-const BUILD='v21_820';const BUILD_TS='2026-10-02T03:29'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
+const BUILD='v21_821';const BUILD_TS='2026-10-02T03:41'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
 const SEED={date:'2026-07-12',currentHouse:null,dishes:[],__build:BUILD,houses:[]};function __reseedFromEmbed(){try{if(!window.__EMBEDDED_WB_B64__)return false;var bs=atob(window.__EMBEDDED_WB_B64__);var ua=new Uint8Array(bs.length);for(var i=0;i<bs.length;i++)ua[i]=bs.charCodeAt(i);var st=parseWorkbookToApp(ua);if(st&&st.houses&&st.houses.length){S=st;try{rollDate();}catch(e){}try{applyAllSubs();}catch(e){}try{save();}catch(e){}return true;}}catch(e){}return false;}
 /* ===== household data is loaded at runtime from PantryPulse-MASTER.xlsx (thin app, no baked data) ===== */
 function _wb_num(v){var n=parseFloat(v);return isNaN(n)?0:n;}
@@ -1631,7 +1631,7 @@ function ppDailyCheckBlock(h){try{var cfg=h&&(PP_DAILY_CHECK[h.id]||PP_DAILY_DEF
   if(!hits.length){miss++;return '<tr style="background:#FDECEC"><td class="hn"><b>'+it[0]+'</b></td><td class="hq">0</td><td><b style="color:#b3261e">NOT ON BOARD</b> &mdash; check / order</td></tr>';}
   var have=hits.map(function(p){return p.n+' '+(Math.round(p.onhand*10)/10)+(p.unit==='pc'||p.unit==='pcs'?' pc':' '+(p.unit||''));}).join(' + ');
   return '<tr style="background:#EAF1EC"><td class="hn"><b>'+it[0]+'</b></td><td class="hq" colspan="1">'+have+'</td><td><b style="color:#1b7f4d">on board</b> &mdash; count it</td></tr>';}).join('');
- return smlBand('DAILY CHECK \u2014 from shadow group (count these every day)',cfg.items.length+' items \u00b7 '+miss+' not on board','#3b5b8c')
+ return smlBand('DAILY CHECK \u2014 every-day items (always on the list, count them)',cfg.items.length+' items \u00b7 '+miss+' not on board','#3b5b8c')
   +'<div class="note" style="font-size:11px;margin:4px 0">'+cfg.src+(cfg.note?' &middot; <b>'+cfg.note+'</b>':'')+'</div>'
   +'<table class="htbl"><tr><th>Item</th><th>On the board now</th><th>Status</th></tr>'+tr+'</table>';}catch(e){return '';}}
 function smartListViewLocked(){
@@ -1786,7 +1786,7 @@ function smartListView(){
      ingredient is synced from ighoBuildDay: same matcher, synonyms, pc/g, bare-food self-pricing, pax factor. */
   var h=cur(); if(!h) return '';
   if(typeof IGHOENG==='undefined'||!IGHO.ready){ try{ighoBoot();}catch(e){}
-    return '<div class="card"><div class="eyebrow">'+esc(h.name)+' · Smart list</div><div class="note">Loading the IGHO engine, the live recipe sheet and this week\u2019s plan\u2026 (the planner can take ~30 s to wake). This list is now synced to IGHO.</div></div>'; }
+    return '<div class="card"><div class="eyebrow">'+esc(h.name)+' · Smart list</div><div class="note">Loading the IGHO engine, the live recipe sheet and this week\u2019s plan\u2026 (the planner can take ~30 s to wake). This list is now synced to IGHO.</div></div>'+ppDailyCheckBlock(h); }
   var name=(typeof HOV_NAME!=='undefined'&&HOV_NAME[h.name])||h.name;
   var planWeekNeeded=false, days=ighoDays(h);
   days.forEach(function(d){ if(!IGHO.plans.hasOwnProperty(name+'|'+ighoISOWeek(new Date(d[2]+'T00:00:00')))) planWeekNeeded=true; });
@@ -4041,7 +4041,7 @@ function _boot(){
   // paint FIRST so the UI always comes up, even if a later step misbehaves
   try{paint();}catch(e){try{var v=document.getElementById('view');if(v)v.innerHTML='<div class="card"><div class="eyebrow">Notice</div><h2>Couldn\u2019t render this view</h2><div class="note">'+(e&&e.message||'error')+'</div></div>';}catch(_){}}
   try{applyAllSubs();paint();}catch(e){}
-  try{var __eid='PP_EMBED::MASTER_1184::v21_820';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{hydrate();}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{/* v21_811: the baked workbook is the single source of truth; never let a saved external sheet URL replace it on reload */try{_setSheetUrl('');}catch(_x){}hydrate();}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
+  try{var __eid='PP_EMBED::MASTER_1185::v21_821';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{hydrate();}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{/* v21_811: the baked workbook is the single source of truth; never let a saved external sheet URL replace it on reload */try{_setSheetUrl('');}catch(_x){}hydrate();}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
   try{armMidnightRoll();}catch(e){}
 }
 // Fire boot as soon as the DOM is usable, with multiple safety nets. _boot is idempotent.
