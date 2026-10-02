@@ -126,10 +126,10 @@ function load() {
 export default function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
   if (req.method !== "GET") { res.status(405).json({ error: "read-only: GET only" }); return; }
-  const key = process.env.STOCK_FEED_KEY;
+  const key = String(process.env.STOCK_FEED_KEY || "").trim().replace(/^["']+|["']+$/g, "").trim();
   if (!key) { res.status(503).json({ error: "feed not configured (STOCK_FEED_KEY unset)" }); return; }
   const auth = String(req.headers.authorization || "");
-  const given = auth.startsWith("Bearer ") ? auth.slice(7).trim() : "";
+  const given = /^bearer\s+/i.test(auth) ? auth.replace(/^bearer\s+/i, "").trim().replace(/^["']+|["']+$/g, "") : "";
   if (!given || !safeEqual(given, key)) { res.status(401).json({ error: "unauthorized" }); return; }
   try {
     const data = load();
