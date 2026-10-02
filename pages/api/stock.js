@@ -104,7 +104,7 @@ function load() {
     const items = [];
     for (const r of Object.keys(ws).map(Number).sort((a, b) => a - b)) {
       if (r < 2) continue;
-      const c = ws[r]; if (!c[2]) continue;
+      const c = ws[r]; if (!c[2] || /^(none|null|undefined|nan)$/i.test(String(c[2]).trim())) continue;
       const q = c[3];
       const lu = c[10] ?? c[9];
       items.push({
