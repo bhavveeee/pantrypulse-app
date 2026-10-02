@@ -15,6 +15,8 @@ import zlib from "zlib";
   GET /api/stock                      -> all households
   GET /api/stock?household=h18        -> one household (id or name, case-insensitive)
   GET /api/stock?in_stock=1           -> only rows with quantity > 0 and not "out"
+  GET /api/stock?version=1            -> just {build, built_at_ist, embed} (cheap change check)
+  Sends ETag = embed; repeat calls with If-None-Match get 304 until PantryPulse changes.
 */
 
 let CACHE = { embed: null, data: null };
@@ -131,6 +133,13 @@ export default function handler(req, res) {
   if (!given || !safeEqual(given, key)) { res.status(401).json({ error: "unauthorized" }); return; }
   try {
     const data = load();
+    const etag = '"' + data.embed + '"';
+    res.setHeader("ETag", etag);
+    if (["1", "true", "yes"].includes(String(req.query.version || "").toLowerCase())) {
+      res.status(200).json({ source: data.source, build: data.build, built_at_ist: data.built_at_ist, embed: data.embed });
+      return;
+    }
+    if (String(req.headers["if-none-match"] || "") === etag) { res.status(304).end(); return; }
     let hs = data.households;
     const h = String(req.query.household || "").trim().toLowerCase();
     if (h) hs = hs.filter((x) => x.id.toLowerCase() === h || x.name.toLowerCase() === h);
