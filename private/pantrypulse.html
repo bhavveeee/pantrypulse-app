@@ -682,7 +682,7 @@ function ppDeductionAudit(wb){
 }
 window.ppDeductionAudit=ppDeductionAudit;
 
-const BUILD='v21_823';const BUILD_TS='2026-10-02T17:46'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
+const BUILD='v21_824';const BUILD_TS='2026-10-02T17:50'/*rev v21_1: as-of date -> 2026-07-09 so 9-Jul orders count in dashboard; +bulb/coriander/peeled-garlic*/;
 const SEED={date:'2026-07-12',currentHouse:null,dishes:[],__build:BUILD,houses:[]};function __reseedFromEmbed(){try{if(!window.__EMBEDDED_WB_B64__)return false;var bs=atob(window.__EMBEDDED_WB_B64__);var ua=new Uint8Array(bs.length);for(var i=0;i<bs.length;i++)ua[i]=bs.charCodeAt(i);var st=parseWorkbookToApp(ua);if(st&&st.houses&&st.houses.length){S=st;try{rollDate();}catch(e){}try{applyAllSubs();}catch(e){}try{save();}catch(e){}return true;}}catch(e){}return false;}
 /* ===== household data is loaded at runtime from PantryPulse-MASTER.xlsx (thin app, no baked data) ===== */
 function _wb_num(v){var n=parseFloat(v);return isNaN(n)?0:n;}
@@ -786,7 +786,7 @@ function ppPurgeStaleSaves(){try{for(var i=localStorage.length-1;i>=0;i--){var k
   try{ppPurgeStaleSaves();}catch(e){}
   /* v21_730: HOV_NAME corrected (Akshita Prerik->Prerit etc). Drop every cached planner pull ONCE per client so the
      new names are re-fetched instead of a stale 404/empty week being shown. Guarded by a marker so it runs only once. */
-  try{ if(localStorage.getItem('pp_planpurge')!=='v21_823'){ for(var i=localStorage.length-1;i>=0;i--){ var k=localStorage.key(i); if(k&&(k.indexOf('igho_plan_')===0||k.indexOf('pplw_')===0)) localStorage.removeItem(k); } localStorage.setItem('pp_planpurge','v21_823'); } }catch(e){}
+  try{ if(localStorage.getItem('pp_planpurge')!=='v21_824'){ for(var i=localStorage.length-1;i>=0;i--){ var k=localStorage.key(i); if(k&&(k.indexOf('igho_plan_')===0||k.indexOf('pplw_')===0)) localStorage.removeItem(k); } localStorage.setItem('pp_planpurge','v21_824'); } }catch(e){}
   try{if(hasCloud){var _try=function(keys){if(!keys.length)return;var k=keys[0];Promise.race([window.storage.get(k,false),new Promise(r=>setTimeout(()=>r(null),2500))]).then(function(r){var ok=false;if(r&&r.value){try{ok=_useState(JSON.parse(r.value));}catch(e){}}if(!ok)_try(keys.slice(1));}).catch(function(){_try(keys.slice(1));});};_try([KEY].concat(PRIORKEYS_CLOUD));return;}}catch(e){}
   try{var keys=[KEY].concat(PRIORKEYS_CLOUD);for(var i=0;i<keys.length;i++){var raw=localStorage.getItem(keys[i]);if(raw){try{if(_useState(JSON.parse(raw)))return;}catch(e){}}}}catch(e){}
 }
@@ -2180,6 +2180,7 @@ function ighoUnitConv(p,want,gg,name){ var a=ighoUnitNorm(p.unit), b=ighoUnitNor
 function ighoWrongForm(name,row){ var n=String(name||'').toLowerCase(), r=String(row||'').toLowerCase();
   if(/\bghee\b/.test(n)&&!/ghee|tuppa|clarified/.test(r))return true;
   if(/^\s*ice(\s*cubes?)?\s*$/.test(n)&&!/\bice\b/.test(r))return true;
+  if(/(all.?purpose|\bmaida\b|refined flour|plain flour)/.test(n)&&!/(all.?purpose|\bmaida\b|refined|plain flour)/.test(r))return true;
   var FORM=/(sauce|paste|pickle|powder|chutney|masala|flakes|ketchup|puree|\boil\b|mayo|crisp|chips|thecha|vinegar)/;
   if(/(chill?i|chillies|chilies|ginger|garlic|tomato|coriander|cilantro|mint|onion|lemon|lime|spinach|peas)/.test(n)&&!FORM.test(n)&&FORM.test(r))return true;
   if(/\b(yogh?urt|curd|dahi)\b/.test(n)&&!/(berry|mango|strawberry|blueberry|flavou?r|fruit|sweet|vanilla|chocolate)/.test(n)&&/(berry|mango|strawberry|blueberry|flavou?r|chocolate|vanilla|fruit yog)/.test(r))return true;
@@ -2188,6 +2189,10 @@ function ighoResolveFood(sim, name, want, g){
   var r=ighoResolveFood0(sim,name,want,g);
   if(!(r&&r.have>0)){ var n2=String(name||'').replace(/\b(boiled|cooked|sliced|chopped|minced|diced|grated|steamed|roasted|mini|baby|fresh|finely|large|small|medium|whole|raw|ripe|thinly|cubed|shredded)\b/gi,' ').replace(/\s+/g,' ').trim();
     if(n2&&n2.toLowerCase()!==String(name||'').toLowerCase()){ var r2=ighoResolveFood0(sim,n2,want,g); if(r2&&r2.have>0) return r2; } }
+  if(!(r&&r.have>0)){ var _nn=String(name||'').toLowerCase(); var alt=null;
+    if(/\b(red|white|brown|yellow)\s+onions?\b/.test(_nn)&&!/spring/.test(_nn)) alt='onion';
+    else if(/spring\s*onions?\s*(white|green|greens|bulb)?/.test(_nn)) alt='spring onion';
+    if(alt){ var r3=ighoResolveFood0(sim,alt,want,g); if(r3&&r3.have>0) return r3; } }
   return r; }
 function ighoResolveFood0(sim, name, want, g){
   var out={have:0,via:[],rows:[]}; if(!sim) return out; want=want||'g';
@@ -4069,7 +4074,7 @@ function _boot(){
   // paint FIRST so the UI always comes up, even if a later step misbehaves
   try{paint();}catch(e){try{var v=document.getElementById('view');if(v)v.innerHTML='<div class="card"><div class="eyebrow">Notice</div><h2>Couldn\u2019t render this view</h2><div class="note">'+(e&&e.message||'error')+'</div></div>';}catch(_){}}
   try{applyAllSubs();paint();}catch(e){}
-  try{var __eid='PP_EMBED::MASTER_1192::v21_823';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{hydrate();}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{/* v21_811: the baked workbook is the single source of truth; never let a saved external sheet URL replace it on reload */try{_setSheetUrl('');}catch(_x){}hydrate();}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
+  try{var __eid='PP_EMBED::MASTER_1193::v21_824';var __pv=null;try{__pv=localStorage.getItem('pp_embed_id');}catch(_p){}if(window.__EMBEDDED_WB_B64__&&__pv!==__eid){try{var __bs=atob(window.__EMBEDDED_WB_B64__);var __ua=new Uint8Array(__bs.length);for(var __i=0;__i<__bs.length;__i++){__ua[__i]=__bs.charCodeAt(__i);}var __st=parseWorkbookToApp(__ua);S=__st;try{rollDate();}catch(_r){}try{applyAllSubs();}catch(_a){}try{localStorage.setItem('pp_embed_id',__eid);}catch(_s){}try{save();}catch(_sv){}paint();try{toast&&toast('Reseeded from '+__eid+' \u2014 '+S.houses.length+' households');}catch(_t){}}catch(__e){/* the reseed failed — never fall back silently, the board would show stale numbers */try{var _b=document.createElement('div');_b.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99999;background:#8a3c1c;color:#fff;font:600 13px/1.4 system-ui;padding:10px 14px;text-align:center';_b.textContent='\u26a0 STALE DATA \u2014 could not load the baked workbook for '+__eid+'. The numbers below are from a previous build. Clear this site\u2019s data and reload. ('+((__e&&__e.message)||'error')+')';document.body.appendChild(_b);}catch(_bb){}try{hydrate();}catch(_h){try{hydrate();}catch(_h2){}}}}else{try{/* v21_811: the baked workbook is the single source of truth; never let a saved external sheet URL replace it on reload */try{_setSheetUrl('');}catch(_x){}hydrate();}catch(e){try{hydrate();}catch(_){}}try{setTimeout(function(){if(!S||!S.houses||!S.houses.length){if(__reseedFromEmbed())paint();}},1200);}catch(_g){}}}catch(eOuter){try{hydrate();}catch(_){}}
   try{armMidnightRoll();}catch(e){}
 }
 // Fire boot as soon as the DOM is usable, with multiple safety nets. _boot is idempotent.
