@@ -5,6 +5,7 @@ module.exports = {
     outputFileTracingIncludes: {
       "/api/app": ["./private/**"],
       "/api/igho": ["./private/igho/**"],
+      "/api/stock": ["./private/pantrypulse.html"],
     },
   },
 };
